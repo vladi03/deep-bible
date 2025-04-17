@@ -4,16 +4,15 @@ import {
   TopAppBar,
   TopAppBarRow,
   TopAppBarSection,
-  TopAppBarTitle
-} from 'rmwc/top-app-bar'
-import { Grid, GridCell } from 'rmwc/grid'
-import {
+  TopAppBarTitle,
+  Grid,
+  GridCell,
   Card,
   CardPrimaryAction,
   CardActions,
   CardActionButtons,
   CardActionButton
-} from 'rmwc/card'
+} from 'rmwc'
 
 function App() {
   // Static data for major topics
