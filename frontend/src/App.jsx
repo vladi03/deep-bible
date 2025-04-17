@@ -1,36 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
-// Import RMWC components
-import { Button } from 'rmwc'
+import {
+  TopAppBar,
+  TopAppBarRow,
+  TopAppBarSection,
+  TopAppBarTitle
+} from 'rmwc/top-app-bar'
+import { Grid, GridCell } from 'rmwc/grid'
+import {
+  Card,
+  CardPrimaryAction,
+  CardActions,
+  CardActionButtons,
+  CardActionButton
+} from 'rmwc/card'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Static data for major topics
+  const topics = [
+    {
+      title: 'All Nations',
+      description: 'This topic contains biblical scriptures categorized under various themes related to fear. It explores aspects such as reverence for God, fear of man or worldly threats, divine reassurance, human experiences of fear, fear of judgment, and overcoming fear through faith and love.',
+      article_url: 'https://example.com/articles/fear'
+    },
+    {
+      title: 'Fear',
+      description: 'This topic contains biblical scriptures categorized under various themes related to fear. It explores aspects such as reverence for God, fear of man or worldly threats, divine reassurance, human experiences of fear, fear of judgment, and overcoming fear through faith and love.',
+      article_url: 'https://example.com/articles/fear'
+    }
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        {/* RMWC Material Design Button */}
-        <Button raised onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TopAppBar>
+        <TopAppBarRow>
+          <TopAppBarSection alignStart>
+            <TopAppBarTitle>Deep Bible</TopAppBarTitle>
+          </TopAppBarSection>
+        </TopAppBarRow>
+      </TopAppBar>
+      <main style={{ padding: '16px' }}>
+        <Grid style={{ alignItems: 'start', gap: '16px' }}>
+          {topics.map((topic) => (
+            <GridCell span={3} tablet={6} phone={12} key={topic.title}>
+              <Card style={{ height: '100%' }}>
+                <CardPrimaryAction style={{ padding: '16px' }}>
+                  <h2>{topic.title}</h2>
+                  <p>{topic.description}</p>
+                </CardPrimaryAction>
+                <CardActions>
+                  <CardActionButtons>
+                    <CardActionButton href={topic.article_url} target="_blank">
+                      Read More
+                    </CardActionButton>
+                  </CardActionButtons>
+                </CardActions>
+              </Card>
+            </GridCell>
+          ))}
+        </Grid>
+      </main>
     </>
   )
 }
