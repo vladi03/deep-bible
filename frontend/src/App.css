@@ -36,8 +36,9 @@
 
 /* Container for main content with max width and centering */
 .container {
+  /* Container for main content: wider top spacing before cards */
   max-width: 1280px;
-  margin: 16px auto;
+  margin: 32px auto; /* 32px top & bottom, auto left/right */
   padding: 0 16px;
 }
 .read-the-docs {
