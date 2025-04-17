@@ -11,10 +11,9 @@ import {
   CardPrimaryAction,
   CardActions,
   CardActionButtons,
-  CardActionButton,
-  TabBar,
-  Tab
+  CardActionButton
 } from 'rmwc'
+import { TabBar, Tab } from '@rmwc/tabs'
 
 function App() {
   // State for major topics data
