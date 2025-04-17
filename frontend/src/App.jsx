@@ -55,7 +55,8 @@ function App() {
                       display: 'flex',
                       flexDirection: 'column',
                       width: '100%',
-                      aspectRatio: '4 / 3'
+                      aspectRatio: '4 / 3',
+                      backgroundColor: '#fffff0'
                     }}
                   >
                     <CardPrimaryAction
@@ -65,7 +66,7 @@ function App() {
                         overflow: 'hidden'
                       }}
                     >
-                      <h2>{topic.title}</h2>
+                      <h2 className='cardTitle'>{topic.title}</h2>
                       <p className="description">{topic.description}</p>
                     </CardPrimaryAction>
                     <CardActions style={{ marginTop: 'auto' }}>
