@@ -70,8 +70,12 @@ function App() {
                   setActiveTab(evt.detail.index)
                 }}
               >
-                {selectedTopic.categories.map(cat => (
-                  <Tab key={cat.category_name} label={cat.category_name} />
+                {selectedTopic.categories.map((cat, idx) => (
+                  <Tab
+                    key={cat.category_name}
+                    label={cat.category_name}
+                    onInteraction={() => setActiveTab(idx)}
+                  />
                 ))}
               </TabBar>
               <div style={{ marginTop: '16px' }}>
