@@ -22,6 +22,15 @@
   margin-bottom: 0;
 }
 
+.topicTitle {
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+.topicDescription {
+  margin-left: 10px;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -61,8 +61,8 @@ function App() {
               >
                 ← Back to Topics
               </button>
-              <h1>{selectedTopic.title}</h1>
-              <p>{selectedTopic.description}</p>
+              <h1 class="topicTitle">{selectedTopic.title}</h1>
+              <p class="topicDescription">{selectedTopic.description}</p>
               {/* Category Tabs */}
               <div className="tabs">
                 {selectedTopic.categories.map((cat, idx) => (
@@ -76,8 +76,8 @@ function App() {
                 ))}
               </div>
               <div style={{ marginTop: '16px' }}>
-                <h2>{selectedTopic.categories[activeTab].category_name}</h2>
-                <p>{selectedTopic.categories[activeTab].category_description}</p>
+                <h2 class="topicTitle">{selectedTopic.categories[activeTab].category_name}</h2>
+                <p class="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
                 {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
                   <Card key={i} style={{ margin: '8px 0' }}>
                     <CardPrimaryAction style={{ padding: '16px' }}>
