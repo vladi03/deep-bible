@@ -13,7 +13,7 @@ import {
   CardActionButtons,
   CardActionButton
 } from 'rmwc'
-import { TabBar, Tab } from '@rmwc/tabs'
+// Removed RMWC Tabs—using simple buttons for tabs
 
 function App() {
   // State for major topics data
@@ -63,21 +63,18 @@ function App() {
               </button>
               <h1>{selectedTopic.title}</h1>
               <p>{selectedTopic.description}</p>
-              <TabBar
-                activeTabIndex={activeTab}
-                onActivate={evt => {
-                  console.log('Tab activated:', evt.detail.index)
-                  setActiveTab(evt.detail.index)
-                }}
-              >
+              {/* Category Tabs */}
+              <div className="tabs">
                 {selectedTopic.categories.map((cat, idx) => (
-                  <Tab
+                  <button
                     key={cat.category_name}
-                    label={cat.category_name}
-                    onInteraction={() => setActiveTab(idx)}
-                  />
+                    className={`tab ${activeTab === idx ? 'active' : ''}`}
+                    onClick={() => setActiveTab(idx)}
+                  >
+                    {cat.category_name}
+                  </button>
                 ))}
-              </TabBar>
+              </div>
               <div style={{ marginTop: '16px' }}>
                 <h2>{selectedTopic.categories[activeTab].category_name}</h2>
                 <p>{selectedTopic.categories[activeTab].category_description}</p>
