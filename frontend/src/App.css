@@ -38,8 +38,8 @@
 /* Container for main content, offset below TopAppBar */
 .container {
   max-width: 1280px;
-  margin: 16px auto; /* 16px top & bottom spacing above cards */
-  padding: 0 16px;
+  margin: 0 auto; /* 0px top & bottom spacing above cards */
+  padding: 0 0;
 }
 
 /* Ensure Top App Bar is flush to the viewport edges */
