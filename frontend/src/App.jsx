@@ -11,13 +11,18 @@ import {
   CardPrimaryAction,
   CardActions,
   CardActionButtons,
-  CardActionButton
+  CardActionButton,
+  TabBar,
+  Tab
 } from 'rmwc'
 
 function App() {
   // State for major topics data
   const [topics, setTopics] = useState([])
   const [loading, setLoading] = useState(true)
+  // State for detail view
+  const [selectedTopic, setSelectedTopic] = useState(null)
+  const [activeTab, setActiveTab] = useState(0)
 
   useEffect(() => {
     fetch('/data/bible_scripture_categories.json')
@@ -46,6 +51,51 @@ function App() {
         <div className="container">
           {loading ? (
             <p>Loading topics...</p>
+          ) : selectedTopic ? (
+            <div>
+              <button
+                onClick={() => {
+                  setSelectedTopic(null)
+                  setActiveTab(0)
+                }}
+                style={{ marginBottom: '16px' }}
+              >
+                ← Back to Topics
+              </button>
+              <h1>{selectedTopic.title}</h1>
+              <p>{selectedTopic.description}</p>
+              <TabBar
+                activeTabIndex={activeTab}
+                onActivate={evt => setActiveTab(evt.detail.index)}
+              >
+                {selectedTopic.categories.map(cat => (
+                  <Tab key={cat.category_name} label={cat.category_name} />
+                ))}
+              </TabBar>
+              <div style={{ marginTop: '16px' }}>
+                <h2>{selectedTopic.categories[activeTab].category_name}</h2>
+                <p>{selectedTopic.categories[activeTab].category_description}</p>
+                {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
+                  <Card key={i} style={{ margin: '8px 0' }}>
+                    <CardPrimaryAction style={{ padding: '16px' }}>
+                      <h3 style={{ margin: 0 }}>{s.reference}</h3>
+                      <p style={{ fontWeight: 'bold', margin: '8px 0 4px' }}>
+                        {s.text}
+                      </p>
+                      <p
+                        style={{
+                          fontStyle: 'italic',
+                          color: '#555',
+                          margin: 0
+                        }}
+                      >
+                        {s.context_description}
+                      </p>
+                    </CardPrimaryAction>
+                  </Card>
+                ))}
+              </div>
+            </div>
           ) : (
             <Grid style={{ alignItems: 'start', gap: '16px' }}>
               {topics.map((topic) => (
@@ -71,7 +121,7 @@ function App() {
                     </CardPrimaryAction>
                     <CardActions style={{ marginTop: 'auto' }}>
                       <CardActionButtons>
-                        <CardActionButton href={topic.article_url} target="_blank">
+                        <CardActionButton onClick={() => setSelectedTopic(topic)}>
                           Read More
                         </CardActionButton>
                       </CardActionButtons>
