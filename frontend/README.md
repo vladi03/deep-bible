@@ -6,6 +6,22 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## UI Library: RMWC
+
+This project uses [RMWC (React Material Web Components)](https://rmwc.io/) for Material Design components.
+
+1. Install the package in the project:
+   ```bash
+   npm install rmwc
+   ```
+2. Import the base styles in `src/main.jsx`:
+   ```js
+   import 'rmwc/styles'
+   ```
+3. Import and use components in your React code:
+   ```js
+   import { Button, Card } from 'rmwc'
+   ```
 
 ## Expanding the ESLint configuration
 
