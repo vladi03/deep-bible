@@ -50,3 +50,11 @@
 .read-the-docs {
   color: #888;
 }
+/* Clamp overflowing description text in cards */
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

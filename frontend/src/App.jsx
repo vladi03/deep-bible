@@ -50,12 +50,25 @@ function App() {
             <Grid style={{ alignItems: 'start', gap: '16px' }}>
               {topics.map((topic) => (
                 <GridCell span={3} tablet={6} phone={12} key={topic.title}>
-                  <Card style={{ height: '100%' }}>
-                    <CardPrimaryAction style={{ padding: '16px' }}>
+                  <Card
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      width: '100%',
+                      aspectRatio: '4 / 3'
+                    }}
+                  >
+                    <CardPrimaryAction
+                      style={{
+                        padding: '16px',
+                        flex: '1 1 auto',
+                        overflow: 'hidden'
+                      }}
+                    >
                       <h2>{topic.title}</h2>
-                      <p>{topic.description}</p>
+                      <p className="description">{topic.description}</p>
                     </CardPrimaryAction>
-                    <CardActions>
+                    <CardActions style={{ marginTop: 'auto' }}>
                       <CardActionButtons>
                         <CardActionButton href={topic.article_url} target="_blank">
                           Read More
