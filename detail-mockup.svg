@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wireframe mockup of the article detail page -->
+<svg width="800" height="650" viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="#0D47A1" />
+  <text x="20" y="38" font-size="24" fill="#FFFFFF" font-family="Arial, sans-serif">Deep Bible</text>
+
+  <!-- Back Button -->
+  <rect x="20" y="80" width="80" height="30" rx="4" fill="#E0E0E0" />
+  <text x="30" y="100" font-size="14" fill="#000000" font-family="Arial, sans-serif">← Back</text>
+
+  <!-- Article Title -->
+  <text x="20" y="140" font-size="28" fill="#000000" font-family="Arial, sans-serif" font-weight="bold">Article Title Goes Here</text>
+
+  <!-- Meta Info -->
+  <text x="20" y="165" font-size="14" fill="#555555" font-family="Arial, sans-serif">By Author Name • Jan 1, 2025</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="180" x2="780" y2="180" stroke="#DDDDDD" stroke-width="1" />
+
+  <!-- Content Placeholder -->
+  <rect x="20" y="200" width="760" height="300" fill="#FAFAFA" />
+  <text x="30" y="230" font-size="16" fill="#333333" font-family="Arial, sans-serif">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+  </text>
+
+  <!-- Scriptures Section Title -->
+  <text x="20" y="530" font-size="20" fill="#000000" font-family="Arial, sans-serif" font-weight="bold">Scriptures on This Topic</text>
+
+  <!-- Scripture Item -->
+  <circle cx="28" cy="560" r="5" fill="#0D47A1" />
+  <text x="40" y="564" font-size="16" fill="#333333" font-family="Arial, sans-serif">
+    Psalm 23:1 “The Lord is my shepherd; I shall not want.”
+  </text>
+  <circle cx="28" cy="590" r="5" fill="#0D47A1" />
+  <text x="40" y="594" font-size="16" fill="#333333" font-family="Arial, sans-serif">
+    Proverbs 1:7 “The fear of the Lord is the beginning of knowledge…”
+  </text>
+</svg>

@@ -11,6 +11,12 @@ Deep Bible offers a fast, modern way to explore Scripture by theme. Whether you'
 
 Experience Scripture in a fresh, user‑friendly interface that brings clarity and inspiration to your study.
 
+## 📷 Article Detail Page Preview
+
+Clicking **Read More** on a topic card navigates to a detailed article view. Below is a wireframe mockup:
+
+![Article Detail Mockup](./detail-mockup.svg)
+
 ## 📖 Application Overview
 
 Deep Bible is a React single-page application built with Vite and RMWC (React Material Web Components). It loads categorized scripture topics from JSON files and displays them as responsive cards. Each card shows a topic’s title and a truncated description, with a “Read More” button linking to related articles. The app is optimized for both desktop and mobile, leveraging Material Design for a clean, intuitive browsing experience.
