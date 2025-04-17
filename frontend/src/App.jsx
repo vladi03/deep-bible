@@ -65,7 +65,10 @@ function App() {
               <p>{selectedTopic.description}</p>
               <TabBar
                 activeTabIndex={activeTab}
-                onActivate={evt => setActiveTab(evt.detail.index)}
+                onActivate={evt => {
+                  console.log('Tab activated:', evt.detail.index)
+                  setActiveTab(evt.detail.index)
+                }}
               >
                 {selectedTopic.categories.map(cat => (
                   <Tab key={cat.category_name} label={cat.category_name} />
