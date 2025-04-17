@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Reset margins/padding on root elements for full-bleed layout */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

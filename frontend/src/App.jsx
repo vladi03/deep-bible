@@ -38,7 +38,8 @@ function App() {
           </TopAppBarSection>
         </TopAppBarRow>
       </TopAppBar>
-      <main>
+      {/* Apply fixed adjust to offset content for Top App Bar height */}
+      <main className="mdc-top-app-bar--fixed-adjust">
         <div className="container">
           <Grid style={{ alignItems: 'start', gap: '16px' }}>
           {topics.map((topic) => (

@@ -35,11 +35,17 @@
 /* .card class no longer used; styling via RMWC Card components */
 
 /* Container for main content with max width and centering */
+/* Container for main content, offset below TopAppBar */
 .container {
-  /* Container for main content: wider top spacing before cards */
   max-width: 1280px;
-  margin: 32px auto; /* 32px top & bottom, auto left/right */
+  margin: 16px auto; /* 16px top & bottom spacing above cards */
   padding: 0 16px;
+}
+
+/* Ensure Top App Bar is flush to the viewport edges */
+.mdc-top-app-bar {
+  top: 0;
+  left: 0;
 }
 .read-the-docs {
   color: #888;
