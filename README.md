@@ -42,3 +42,7 @@ All schemas enforce `additionalProperties: false` to reject unknown fields.
 
 - **Article → Scripture**: In the Articles Schema, the `topics` array lists major topic titles (strings) that must exactly match the `title` field of a major topic in the Bible Scripture Schema (`major_topics[].title`). This establishes which scripture topics relate to each article.
 - **Scripture → Article**: In the Bible Scripture Schema, each major topic includes an `article_url` (string, URI) that should point to the corresponding article resource, completing the bidirectional link between scriptures and articles.
+ 
+## Links
+
+- Frontend React SPA documentation: [frontend/README.md](./frontend/README.md)
