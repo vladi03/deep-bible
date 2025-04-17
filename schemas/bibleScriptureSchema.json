@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Bible Scripture Categories Schema",
+    "description": "Schema for a JSON file containing biblical scriptures organized by major topics. Each major topic includes a title, a detailed description, an article URL for additional context, and an array of associated categories. Each category contains a name, description, and an array of scripture objects with reference, text, and context description.",
+    "type": "object",
+    "properties": {
+      "major_topics": {
+        "type": "array",
+        "description": "An array of major topics. Each major topic represents a high-level theme and contains its own categories of scriptures.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the major topic (e.g., 'Fear')."
+            },
+            "description": {
+              "type": "string",
+              "description": "A detailed description of the major topic."
+            },
+            "article_url": {
+              "type": "string",
+              "format": "uri",
+              "description": "A URL linking to an article or resource that further explains or discusses the major topic."
+            },
+            "categories": {
+              "type": "array",
+              "description": "An array of categories associated with this major topic. Each category groups scriptures by thematic focus.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "category_name": {
+                    "type": "string",
+                    "description": "The name of the category, for example, 'Reverence for God' or 'Fear of Man or Worldly Threats'."
+                  },
+                  "category_description": {
+                    "type": "string",
+                    "description": "A detailed explanation of what the category represents."
+                  },
+                  "scriptures": {
+                    "type": "array",
+                    "description": "An array of scripture objects that belong to this category.",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "reference": {
+                          "type": "string",
+                          "description": "The citation for the scripture, including the book, chapter, and verse (e.g., 'Deuteronomy 10:12')."
+                        },
+                        "text": {
+                          "type": "string",
+                          "description": "The text of the scripture passage."
+                        },
+                        "context_description": {
+                          "type": "string",
+                          "description": "A brief summary describing the context or significance of the scripture within the theme."
+                        }
+                      },
+                      "required": [
+                        "reference",
+                        "text",
+                        "context_description"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "category_name",
+                  "category_description",
+                  "scriptures"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "title",
+            "description",
+            "article_url",
+            "categories"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "major_topics"
+    ],
+    "additionalProperties": false
+  }
