@@ -38,8 +38,9 @@ function App() {
           </TopAppBarSection>
         </TopAppBarRow>
       </TopAppBar>
-      <main style={{ padding: '16px' }}>
-        <Grid style={{ alignItems: 'start', gap: '16px' }}>
+      <main>
+        <div className="container">
+          <Grid style={{ alignItems: 'start', gap: '16px' }}>
           {topics.map((topic) => (
             <GridCell span={3} tablet={6} phone={12} key={topic.title}>
               <Card style={{ height: '100%' }}>
@@ -57,7 +58,8 @@ function App() {
               </Card>
             </GridCell>
           ))}
-        </Grid>
+          </Grid>
+        </div>
       </main>
     </>
   )
