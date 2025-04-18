@@ -43,5 +43,3 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId:              ${{ secrets.FIREBASE_PROJECT_ID }}
           channelId:              live
-          entryPoint:             frontend     # ← look here for firebase.json & .firebaserc
-          # target:                ${{ secrets.FIREBASE_TARGET }}  # optional if you use hosting.targets
