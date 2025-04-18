@@ -1,5 +1,8 @@
 # deep-bible
 
+
+Link: [Check out the Site](https://netware-326600.web.app/)
+
 ## 🌟 Description
 
 Deep Bible offers a fast, modern way to explore Scripture by theme. Whether you're a student, teacher, or curious reader, you can:
@@ -15,7 +18,7 @@ Experience Scripture in a fresh, user‑friendly interface that brings clarity a
 
 Clicking **Read More** on a topic card navigates to a detailed article view. Below is a wireframe mockup:
 
-![Article Detail Mockup](./detail-mockup.svg)
+![Article Detail Mockup](./detail-mockup.png)
 
 ## 📖 Application Overview
 
@@ -70,3 +73,4 @@ All schemas enforce `additionalProperties: false` to reject unknown fields.
 ## Links
 
 - Frontend React SPA documentation: [frontend/README.md](./frontend/README.md)
+- Pipeline Vars and Secrets: [README_pipe.md](./README_pipe.md)
