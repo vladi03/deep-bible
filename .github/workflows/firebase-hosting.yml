@@ -13,7 +13,7 @@ jobs:
       NODE_VERSION:     '22'
       BUILD_COMMAND:    ${{ secrets.BUILD_COMMAND  || 'npm run build' }}
       PUBLIC_DIR:       ${{ secrets.PUBLIC_DIR     || 'build' }}
-      FIREBASE_PROJECT: ${{ secrets.FIREBASE_PROJECT_ID }}
+      FIREBASE_PROJECT: ${{ vars.FIREBASE_PROJECT_ID }}
       FIREBASE_TARGET:  ${{ secrets.FIREBASE_TARGET || '' }}
 
     steps:
@@ -41,5 +41,5 @@ jobs:
         with:
           repoToken:              ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId:              ${{ env.FIREBASE_PROJECT_ID }}
+          projectId:              ${{ env.FIREBASE_PROJECT }}
           channelId:              live
