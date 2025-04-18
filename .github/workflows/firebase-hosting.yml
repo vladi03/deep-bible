@@ -37,15 +37,11 @@ jobs:
         working-directory: frontend
         run: ${{ env.BUILD_COMMAND }}
 
-      - name: Deploy to Firebase Hosting
-        uses: w9jds/firebase-action@v1.5.0
-        # remove working-directory here…
+      - name: Deploy to Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          args: >
-            deploy
-            --project ${{ env.FIREBASE_PROJECT }}
-            ${{ env.FIREBASE_TARGET && format('--only hosting:%s', env.FIREBASE_TARGET) }}
-            --public frontend/${{ env.PUBLIC_DIR }}
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          repoToken:           ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId:           ${{ secrets.FIREBASE_PROJECT_ID }}
+          channelId:           live
 
