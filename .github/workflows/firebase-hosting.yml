@@ -25,6 +25,10 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Verify Node version
+        run: node --version
+        # this should print v20.x.x
+
       - name: Install dependencies
         working-directory: frontend
         run: npm ci
