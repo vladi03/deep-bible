@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NODE_VERSION:     ${{ secrets.NODE_VERSION   || '18' }}
+      NODE_VERSION:     ${{ secrets.NODE_VERSION   || '20' }}
       BUILD_COMMAND:    ${{ secrets.BUILD_COMMAND  || 'npm run build' }}
       PUBLIC_DIR:       ${{ secrets.PUBLIC_DIR     || 'build' }}
       FIREBASE_PROJECT: ${{ secrets.FIREBASE_PROJECT_ID }}
