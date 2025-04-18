@@ -27,7 +27,7 @@ jobs:
 
       - name: Verify Node version
         run: node --version
-        # this should print v20.x.x
+        # should print something like v22.x.x
 
       - name: Install dependencies
         working-directory: frontend
@@ -40,8 +40,9 @@ jobs:
       - name: Deploy to Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken:           ${{ secrets.GITHUB_TOKEN }}
+          repoToken:              ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId:           ${{ secrets.FIREBASE_PROJECT_ID }}
-          channelId:           live
-
+          projectId:              ${{ secrets.FIREBASE_PROJECT_ID }}
+          channelId:              live
+          # If you have multiple hosting targets, uncomment the next line:
+          # target:                ${{ secrets.FIREBASE_TARGET }}
