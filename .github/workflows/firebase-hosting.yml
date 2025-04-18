@@ -3,18 +3,18 @@ name: Build & Deploy to Firebase Hosting
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:  # ← enables manual “Run workflow” button
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     env:
-      NODE_VERSION:      ${{ secrets.NODE_VERSION   || '16' }}
-      BUILD_COMMAND:     ${{ secrets.BUILD_COMMAND  || 'npm run build' }}
-      PUBLIC_DIR:        ${{ secrets.PUBLIC_DIR     || 'build' }}
-      FIREBASE_PROJECT:  ${{ secrets.FIREBASE_PROJECT_ID }}
-      FIREBASE_TARGET:   ${{ secrets.FIREBASE_TARGET || '' }}
+      NODE_VERSION:     ${{ secrets.NODE_VERSION   || '16' }}
+      BUILD_COMMAND:    ${{ secrets.BUILD_COMMAND  || 'npm run build' }}
+      PUBLIC_DIR:       ${{ secrets.PUBLIC_DIR     || 'build' }}
+      FIREBASE_PROJECT: ${{ secrets.FIREBASE_PROJECT_ID }}
+      FIREBASE_TARGET:  ${{ secrets.FIREBASE_TARGET || '' }}
 
     steps:
       - name: Checkout repo
@@ -34,13 +34,14 @@ jobs:
         run: ${{ env.BUILD_COMMAND }}
 
       - name: Deploy to Firebase Hosting
-        working-directory: frontend
         uses: w9jds/firebase-action@v1.5.0
+        # remove working-directory here…
         with:
           args: >
             deploy
             --project ${{ env.FIREBASE_PROJECT }}
             ${{ env.FIREBASE_TARGET && format('--only hosting:%s', env.FIREBASE_TARGET) }}
-            --public ${{ env.PUBLIC_DIR }}
+            --public frontend/${{ env.PUBLIC_DIR }}
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
