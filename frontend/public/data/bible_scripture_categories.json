@@ -1,24 +1,342 @@
 {
     "major_topics": [{
-            "title": "All Nations",
-            "description": "The statment the nations is an important statement through out the Bible. This statment shows that God's plan has always been for Israel and the gentiles.",
-            "article_url": "https://example.com/articles/fear",
-            "categories": [{
-                    "category_name": "All for God",
-                    "category_description": "Fear as reverence, awe, and respect for God, often called the 'fear of the Lord,' which leads to obedience and worship.",
-                    "scriptures": [{
-                            "reference": "Deuteronomy 10:12",
-                            "text": "And now, Israel, what does the LORD your God require of you, but to fear the LORD your God, to walk in all his ways, to love him, to serve the LORD your God with all your heart and with all your soul,",
-                            "context_description": "Moses urges Israel to revere and obey God, summarizing true devotion as fearing God and keeping His commands."
-                        }, {
-                            "reference": "Psalm 111:10",
-                            "text": "The fear of the LORD is the beginning of wisdom; all those who practice it have a good understanding. His praise endures forever!",
-                            "context_description": "A psalmist teaches that true wisdom starts with reverence for God. Fearing God (standing in awe of Him) is portrayed as foundational to understanding."
-                        }
-                    ]
-                }
-            ]
-        }, {
+      "title": "All the Nations",
+      "description": "From the earliest chapters of Scripture, God reveals his purpose to redeem and bless people from every nation. This theme unfolds through God’s covenant with Abraham, the inclusion of non-Israelites in Old Testament worship, the prophetic visions of a worldwide kingdom, Jesus’s own ministry reaching beyond Israel, the Great Commission and apostolic mission to all nations, and finally the end-time fulfillment where believers from every people and language worship God together.",
+      "article_url": "https://www.crossway.org/articles/gods-mission-in-creation-why-did-he-make-us/",
+      "categories": [
+        {
+          "category_name": "God's Covenant and Promise to Bless All Nations",
+          "category_description": "God establishes His covenant with Abraham and his descendants with the intention of blessing all the families of the earth. These promises, repeated to the patriarchs, show that from the start, God's plan was to use Israel as a channel of blessing to every nation.",
+          "scriptures": [
+            {
+              "reference": "Genesis 12:3",
+              "text": "I will bless those who bless you, and him who dishonors you I will curse, and in you all the families of the earth shall be blessed.”",
+              "context_description": "God’s initial promise to Abram includes a promise to bless all the families of the earth through him, revealing that God’s covenant with Abraham was aimed at bringing blessing to all peoples, not just Israel."
+            },
+            {
+              "reference": "Genesis 18:18",
+              "text": "Abraham shall surely become a great and mighty nation, and all the nations of the earth shall be blessed in him.",
+              "context_description": "God reaffirms that through Abraham (and his offspring) all nations will receive blessing. This indicates that Abraham’s calling was tied to God’s redemptive plan for every nation on earth."
+            },
+            {
+              "reference": "Genesis 22:18",
+              "text": "and in your offspring shall all the nations of the earth be blessed, because you have obeyed my voice.”",
+              "context_description": "After Abraham’s act of obedience with Isaac, God repeats the covenant promise, emphasizing that through Abraham’s seed (ultimately Christ), the blessing will extend to all nations of the earth."
+            },
+            {
+              "reference": "Genesis 26:4",
+              "text": "I will multiply your offspring as the stars of heaven and will give to your offspring all these lands. And in your offspring all the nations of the earth shall be blessed.",
+              "context_description": "God passes the Abrahamic promise to Isaac, ensuring that the mission to bless all nations continues through Abraham’s line. It shows continuity in God’s plan across generations to include all peoples in His blessing."
+            },
+            {
+              "reference": "Genesis 28:14",
+              "text": "Your offspring shall be like the dust of the earth, and you shall spread abroad to the west and to the east and to the north and to the south, and in you and your offspring shall all the families of the earth be blessed.",
+              "context_description": "God extends the same promise to Jacob, Abraham’s grandson, confirming that the destiny of Israel (Jacob’s family) is tied to the blessing of all families of the earth. God’s covenant purpose remains globally focused."
+            },
+            {
+              "reference": "Psalm 72:17",
+              "text": "May people be blessed in him, all nations call him blessed!",
+              "context_description": "In this royal psalm about the ideal king (ultimately fulfilled in the Messiah), there is a prayer echoing God’s promise to Abraham—that through the king’s line, people would be blessed and all nations would call him blessed. It connects the Abrahamic blessing with the Messianic kingdom reaching all nations."
+            },
+            {
+              "reference": "Galatians 3:8",
+              "text": "And the Scripture, foreseeing that God would justify the Gentiles by faith, preached the gospel beforehand to Abraham, saying, “In you shall all the nations be blessed.”",
+              "context_description": "Paul explains that the promise to Abraham was essentially the gospel in advance—that God would justify Gentiles (the nations) through faith. He shows that the inclusion of the Gentiles was always part of the covenant promise, not a new idea."
+            },
+            {
+              "reference": "Galatians 3:14",
+              "text": "so that in Christ Jesus the blessing of Abraham might come to the Gentiles, so that we might receive the promised Spirit through faith.",
+              "context_description": "This verse connects the work of Christ to the Abrahamic blessing, explicitly stating that through Jesus, the blessing given to Abraham (justification and the Spirit) has now come to the Gentiles. It underlines that God’s covenant promise finds fulfillment in blessing all nations in Christ."
+            },
+            {
+              "reference": "Acts 3:25",
+              "text": "You are the sons of the prophets and of the covenant that God made with your fathers, saying to Abraham, ‘And in your offspring shall all the families of the earth be blessed.’",
+              "context_description": "The apostle Peter reminds his Jewish audience that they are heirs of God’s covenant with Abraham which included the promise to bless all families of the earth. He implies that this promise is being fulfilled through Jesus the offspring, and thus the blessing is now going out beyond Israel."
+            }
+          ]
+        },
+        {
+          "category_name": "God's Inclusion of the Gentiles in Worship and Salvation",
+          "category_description": "Throughout the Old Testament, God made provisions for non-Israelites to join in the worship of Yahweh and experience His salvation. Gentiles who embraced Israel’s God were welcomed among His people. These laws and stories demonstrate that God's grace was available to foreigners, foreshadowing the full inclusion of Gentiles in the New Covenant.",
+          "scriptures": [
+            {
+              "reference": "Exodus 12:38",
+              "text": "A mixed multitude also went up with them, and very much livestock, both flocks and herds.",
+              "context_description": "When Israel left Egypt during the Exodus, a \"mixed multitude\" of people of other nationalities went with them. This indicates that non-Israelites chose to align themselves with God’s people and were allowed to partake in the deliverance from Egypt, showing God’s salvation was not limited by ethnicity."
+            },
+            {
+              "reference": "Exodus 12:48–49",
+              "text": "If a stranger shall sojourn with you and would keep the Passover to the LORD, let all his males be circumcised. Then he may come near and keep it; he shall be as a native of the land. But no uncircumcised person shall eat of it. There shall be one law for the native and for the stranger who sojourns among you.",
+              "context_description": "God’s law allowed Gentile foreigners to celebrate the Passover and become as \"native\" Israelites, provided they embraced the covenant sign (circumcision). This command establishes that Gentile believers could fully join in Israel’s worship and covenant life. God makes no distinction in law or spiritual privilege between Israelites and grafted-in foreigners, foreshadowing the equal standing of Gentiles and Jews in Christ."
+            },
+            {
+              "reference": "Numbers 15:15–16",
+              "text": "For the assembly, there shall be one statute for you and for the stranger who sojourns with you, a statute forever throughout your generations. You and the sojourner shall be alike before the LORD. One law and one rule shall be for you and for the stranger who sojourns with you.”",
+              "context_description": "God emphasizes that the same instructions and standards of worship apply both to native Israelites and to foreigners living among them. In God’s eyes, those Gentiles who joined Israel (“sojourners”) were to be treated equally in the covenant community. This reveals God’s inclusive heart and the principle that all who seek Him are on equal footing in worship."
+            },
+            {
+              "reference": "1 Kings 8:41–43",
+              "text": "“Likewise, when a foreigner, who is not of your people Israel, comes from a far country for your name's sake (for they shall hear of your great name and your mighty hand, and of your outstretched arm), when he comes and prays toward this house, hear in heaven your dwelling place and do according to all for which the foreigner calls to you, in order that all the peoples of the earth may know your name and fear you, as do your people Israel, and that they may know that this house that I have built is called by your name.",
+              "context_description": "King Solomon, in his temple dedication prayer, asks God to hear the prayers of Gentile foreigners who come seeking the Lord. He acknowledges that people from all nations will hear of God’s greatness and come to worship. Solomon prays that God would answer them so that all peoples of the earth might know and revere the Lord. This shows Israel’s temple was intended as a house of prayer for all peoples (as later quoted by Jesus)."
+            },
+            {
+              "reference": "Psalm 86:9",
+              "text": "All the nations you have made shall come and worship before you, O Lord, and shall glorify your name.",
+              "context_description": "This psalm anticipates a time when every nation created by God will come to worship Him. It declares God’s sovereignty over all peoples and foresees Gentiles turning in reverence to the Lord, implying that worship of the true God will extend far beyond Israel."
+            },
+            {
+              "reference": "Psalm 117:1",
+              "text": "Praise the LORD, all nations! Extol him, all peoples!",
+              "context_description": "The shortest psalm directly addresses all nations and peoples, calling them to worship and praise Yahweh. Though written within Israel, it shows that God’s invitation to praise extends worldwide. This call implies that Gentiles are not only permitted but expected to join in the worship of the Lord."
+            },
+            {
+              "reference": "Isaiah 56:6–8",
+              "text": "“And the foreigners who join themselves to the LORD, to minister to him, to love the name of the LORD, and to be his servants, everyone who keeps the Sabbath and does not profane it, and holds fast my covenant— these I will bring to my holy mountain, and make them joyful in my house of prayer; their burnt offerings and their sacrifices will be accepted on my altar; for my house shall be called a house of prayer for all peoples.” The Lord GOD, who gathers the outcasts of Israel, declares, “I will gather yet others to him besides those already gathered.”",
+              "context_description": "Through Isaiah, God affirms that Gentile believers (“foreigners”) who bind themselves to Him will be brought into His presence and their worship will be acceptable. He explicitly states that the temple is meant to be a \"house of prayer for all peoples.\" God promises to gather not only dispersed Israelites but also others (Gentiles), revealing His plan to incorporate outsiders fully into His worshiping community."
+            },
+            {
+              "reference": "Jonah 4:11",
+              "text": "And should not I pity Nineveh, that great city, in which there are more than 120,000 persons who do not know their right hand from their left, and also much cattle?”",
+              "context_description": "God’s rebuke to Jonah highlights His compassion for the Gentile city of Nineveh. Despite not being Israelites, the people of Nineveh mattered to God. He cared that these 120,000 ignorant people (Gentiles) be given a chance to repent. This underscores that God's mercy and concern extend to pagan nations, aligning with the theme that salvation is not exclusive to Israel."
+            },
+            {
+              "reference": "Malachi 1:11",
+              "text": "For from the rising of the sun to its setting my name will be great among the nations, and in every place incense will be offered to my name, and a pure offering. For my name will be great among the nations, says the LORD of hosts.",
+              "context_description": "In the final book of the Old Testament, God declares a future in which His name is honored globally. Incense (prayer or worship) and pure offerings in \"every place\" indicate Gentiles around the world worshiping the Lord. This prophetic statement reiterates that God’s ultimate intention is for peoples everywhere to know Him and offer true worship."
+            }
+          ]
+        },
+        {
+          "category_name": "Prophetic Declarations of a Global Kingdom",
+          "category_description": "The prophets of Israel vividly foretold a coming era when God’s reign would extend over all the earth. They envisioned nations streaming to Jerusalem, Gentiles seeking the God of Israel, and a Messiah whose rule brings salvation to the ends of the earth. These prophecies show that God’s kingdom was always meant to encompass all peoples.",
+          "scriptures": [
+            {
+              "reference": "Isaiah 2:2–3",
+              "text": "It shall come to pass in the latter days that the mountain of the house of the LORD shall be established as the highest of the mountains, and shall be lifted up above the hills; and all the nations shall flow to it, and many peoples shall come, and say: “Come, let us go up to the mountain of the LORD, to the house of the God of Jacob, that he may teach us his ways and that we may walk in his paths.”",
+              "context_description": "Isaiah predicts a future time when the Lord’s temple mountain in Jerusalem becomes a spiritual focal point for the whole world. \"All the nations\" streaming in means Gentiles will eagerly seek God’s truth and instruction. This vision portrays a worldwide pilgrimage to God – a clear picture of global inclusion in God’s kingdom."
+            },
+            {
+              "reference": "Isaiah 11:10",
+              "text": "In that day the root of Jesse, who shall stand as a signal for the peoples—of him shall the nations inquire, and his resting place shall be glorious.",
+              "context_description": "Isaiah speaks of the \"root of Jesse\" (the Messiah from David’s line) as a banner for all peoples. The Gentile nations will seek out this Messianic king. This prophecy indicates that the Messiah’s influence is international and that Gentiles will come under His lordship, finding glory in His kingdom."
+            },
+            {
+              "reference": "Isaiah 42:6–7",
+              "text": "“I am the LORD; I have called you in righteousness; I will take you by the hand and keep you; I will give you as a covenant for the people, a light for the nations, to open the eyes that are blind, to bring out the prisoners from the dungeon, from the prison those who sit in darkness.”",
+              "context_description": "God describes the mission of His Servant (the Messiah) as a \"light for the nations.\" The Servant’s role is not just for Israel (“the people”) but also for the Gentiles. He will enlighten spiritually blind eyes and release those in darkness everywhere. This is a direct statement that the Messiah’s redemptive work is intended for all ethnic groups."
+            },
+            {
+              "reference": "Isaiah 49:6",
+              "text": "he says: “It is too light a thing that you should be my servant to raise up the tribes of Jacob and to bring back the preserved of Israel; I will make you as a light for the nations, that my salvation may reach to the end of the earth.”",
+              "context_description": "God reveals that the mission of the Messiah (His Servant) is greater than just restoring Israel; it extends to being a light for the Gentiles. The Servant is tasked with delivering God’s salvation \"to the end of the earth.\" This prophecy unmistakably shows God’s intent that all nations share in the salvation He provides through the Messiah."
+            },
+            {
+              "reference": "Isaiah 60:3",
+              "text": "And nations shall come to your light, and kings to the brightness of your rising.",
+              "context_description": "In a chapter describing Zion’s future glory, Isaiah proclaims that Gentile nations and their leaders will be drawn to the light of God’s presence among His people. This poetic imagery portrays a worldwide response to God’s glory, with even kings coming to worship. It signifies the global scope of the coming kingdom, where Gentiles eagerly participate."
+            },
+            {
+              "reference": "Daniel 7:14",
+              "text": "And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.",
+              "context_description": "Daniel describes a vision of the Son of Man (the Messiah) receiving an eternal kingdom from God. Crucially, \"all peoples, nations, and languages\" serve Him. This means the Messianic kingdom is not limited to Israel but embraces people from every ethnicity and language. It’s a prophetic picture of a universal kingdom under Christ’s rule."
+            },
+            {
+              "reference": "Psalm 22:27",
+              "text": "All the ends of the earth shall remember and turn to the LORD, and all the families of the nations shall worship before you.",
+              "context_description": "This Messianic psalm foresees a time when people from the farthest parts of the earth turn in repentance to worship the Lord. The phrase \"all the families of the nations\" parallels the Abrahamic promise, indicating that ultimately every group will participate in worshiping God. It’s an Old Testament glimpse of the global worship assembly to come."
+            },
+            {
+              "reference": "Psalm 67:2–4",
+              "text": "that your way may be known on earth, your saving power among all nations. Let the peoples praise you, O God; let all the peoples praise you! Let the nations be glad and sing for joy, for you judge the peoples with equity and guide the nations upon earth.",
+              "context_description": "In this psalm, Israel prays for God’s blessing not just for themselves but so that His salvation would be known \"among all nations.\" It envisions all peoples praising God and rejoicing in His just rule. This prayerful song reflects God’s heart that every nation experience His guidance, justice, and salvation, resulting in joyful worship worldwide."
+            },
+            {
+              "reference": "Psalm 72:11",
+              "text": "May all kings fall down before him, all nations serve him!",
+              "context_description": "In describing the ideal king (ultimately the Messiah), this psalm asks that all the rulers of the world bow to him and all nations serve him. It’s a prayer and prophecy of the universal reign of God’s anointed king. Such language underscores that the Messianic rule was expected to transcend Israel’s borders and command global allegiance."
+            },
+            {
+              "reference": "Zephaniah 3:9",
+              "text": "“For at that time I will change the speech of the peoples to a pure speech, that all of them may call upon the name of the LORD and serve him with one accord.",
+              "context_description": "Zephaniah foresees a purification of the Gentile nations (“peoples”) so that they will call on the Lord with one voice. Reversing the division of languages (as at Babel), God will unify hearts and lips in true worship. This implies a future conversion of Gentiles worldwide, joining together in serving God."
+            },
+            {
+              "reference": "Zechariah 2:11",
+              "text": "And many nations shall join themselves to the LORD in that day, and shall be my people. And I will dwell in your midst, and you shall know that the LORD of hosts has sent me to you.",
+              "context_description": "Zechariah prophesies that \"many nations\" will attach themselves to the Lord and be counted as His people. This goes beyond Israel—Gentiles too will belong to God. The promise \"I will dwell in your midst\" combined with the inclusion of many nations shows a future where God’s presence is shared among a multi-national community of His people."
+            },
+            {
+              "reference": "Zechariah 8:22–23",
+              "text": "Many peoples and strong nations shall come to seek the LORD of hosts in Jerusalem and to entreat the favor of the LORD. Thus says the LORD of hosts: In those days ten men from the nations of every tongue shall take hold of the robe of a Jew, saying, ‘Let us go with you, for we have heard that God is with you.’”",
+              "context_description": "This prophecy pictures peoples from many nations actively seeking God. It even imagines men of diverse languages grabbing a Jewish person’s robe begging to join them in worship because they recognize God’s presence with Israel. It’s a dramatic image of Gentiles desiring inclusion in God’s people and traveling to worship Him. The scene captures the yearning of the nations to know Israel’s God and affirms they will be welcomed."
+            },
+            {
+              "reference": "Zechariah 14:9",
+              "text": "And the LORD will be king over all the earth. On that day the LORD will be one and his name one.",
+              "context_description": "Zechariah foresees the Lord’s kingship acknowledged universally. \"King over all the earth\" indicates no part of the world outside His reign. The Lord being one and His name one implies that He alone will be worshiped by all, with no rival gods. This is a clear declaration of God’s global rule in the age to come, when every nation submits to His kingship."
+            },
+            {
+              "reference": "Zechariah 14:16",
+              "text": "Then everyone who survives of all the nations that have come against Jerusalem shall go up year after year to worship the King, the LORD of hosts, and to keep the Feast of Booths.",
+              "context_description": "Zechariah depicts even former enemy nations turning to worship God. After God’s final victory, survivors from \"all the nations\" annually travel to Jerusalem to worship the LORD and celebrate the Feast. This shows a future where Gentile nations are not only subdued but willingly worshiping Israel’s King, participating in the feasts of the Lord. It’s a vivid prophetic picture of worldwide worship and unity under God."
+            }
+          ]
+        },
+        {
+          "category_name": "Jesus’ Ministry to the Gentiles",
+          "category_description": "During His earthly ministry, Jesus primarily ministered to Israel, yet He also purposefully engaged with Gentiles and Samaritans. These encounters, teachings, and miracles signaled the inclusion of non-Jews in the blessings of the Messiah. Jesus broke cultural barriers and even praised the faith of Gentiles, indicating the broad reach of His mission.",
+          "scriptures": [
+            {
+              "reference": "Matthew 8:10–11",
+              "text": "When Jesus heard this, he marveled and said to those who followed him, “Truly, I tell you, with no one in Israel have I found such faith. I tell you, many will come from east and west and recline at table with Abraham, Isaac, and Jacob in the kingdom of heaven,",
+              "context_description": "After Jesus healed the servant of a Roman centurion, He praised the centurion’s extraordinary faith (greater than any in Israel). Jesus then prophesied that many people from outside Israel (\"east and west\") will join the Jewish patriarchs in God’s kingdom banquet. This was a startling announcement that Gentiles with faith would inherit the promises and fellowship of the kingdom."
+            },
+            {
+              "reference": "Matthew 15:27–28",
+              "text": "She said, “Yes, Lord, yet even the dogs eat the crumbs that fall from their masters’ table.” Then Jesus answered her, “O woman, great is your faith! Be it done for you as you desire.” And her daughter was healed instantly.",
+              "context_description": "In the region of Tyre and Sidon, a Canaanite (Gentile) woman begged Jesus to heal her daughter. Though Jesus initially tested her, her humble and persistent reply (even a Gentile can receive a crumb of God’s mercy) moved Him. Jesus commended her great faith and granted the healing. This encounter demonstrates Jesus’ compassion toward a non-Jew and affirms that Gentiles who have faith in Him can receive God’s grace."
+            },
+            {
+              "reference": "Luke 4:25–27",
+              "text": "But in truth, I tell you, there were many widows in Israel in the days of Elijah, ... and Elijah was sent to none of them but only to Zarephath, in the land of Sidon, to a woman who was a widow. And there were many lepers in Israel in the time of the prophet Elisha, ... and none of them was cleansed, but only Naaman the Syrian.”",
+              "context_description": "In His hometown of Nazareth, Jesus reminded the Jews that Elijah and Elisha, two great prophets, brought God’s miraculous help to Gentiles (a Sidonian widow and a Syrian leper) rather than Israelites. By citing these examples, Jesus implied that Gentiles could have receptive faith that Israel sometimes lacked. This angered His audience but highlighted God’s historical concern for Gentiles and foreshadowed the gospel’s reach beyond Israel."
+            },
+            {
+              "reference": "John 4:21–23",
+              "text": "Jesus said to her, “Woman, believe me, the hour is coming when neither on this mountain nor in Jerusalem will you worship the Father. You worship what you do not know; we worship what we know, for salvation is from the Jews. But the hour is coming, and is now here, when the true worshipers will worship the Father in spirit and truth, for the Father is seeking such people to worship him.”",
+              "context_description": "Speaking to the Samaritan woman at the well, Jesus revealed a coming change: worship of God will not be confined to specific locations or ethnic groups (neither Samaritan mountain nor just Jerusalem). He affirms that salvation’s source is Jewish, but He announces that \"the hour\" has arrived when anyone—Samaritan or otherwise—can truly worship God in spirit and truth. This conversation breaks social norms and shows Jesus actively bringing God’s hope to a non-Jewish community."
+            },
+            {
+              "reference": "Luke 17:17–18",
+              "text": "Then Jesus answered, “Were not ten cleansed? Where are the nine? Was no one found to return and give praise to God except this foreigner?”",
+              "context_description": "After Jesus healed ten lepers, only one returned to thank Him—and he was a Samaritan (whom Jews considered a foreigner). Jesus highlighted that this outsider was the one who glorified God. By commending the Samaritan’s gratitude and faith, Jesus once again points out that those outside Israel (\"this foreigner\") can exemplify true faith and receive God’s grace."
+            },
+            {
+              "reference": "John 10:16",
+              "text": "And I have other sheep that are not of this fold. I must bring them also, and they will listen to my voice. So there will be one flock, one shepherd.",
+              "context_description": "Jesus refers to \"other sheep\" not of the Jewish fold, indicating Gentiles who would also become His followers. He foretells that these, too, will heed His voice, and eventually there will be one united flock under Him as the one Shepherd. This metaphor clearly alludes to the inclusion of Gentiles into His people and the unity of Jews and Gentiles in one community of faith under Christ."
+            },
+            {
+              "reference": "Mark 11:17",
+              "text": "And he was teaching them and saying to them, “Is it not written, ‘My house shall be called a house of prayer for all the nations’? But you have made it a den of robbers.”",
+              "context_description": "Cleansing the temple, Jesus quotes Isaiah 56:7, reminding the people that God intended the temple to be \"a house of prayer for all nations.\" By driving out the money-changers from the Court of Gentiles, Jesus defended the right of Gentiles to worship in the temple. His action underscored God’s desire that people from every nation have access to Him in worship without obstruction."
+            },
+            {
+              "reference": "John 12:20–21, 32",
+              "text": "Now among those who went up to worship at the feast were some Greeks. So these came to Philip... and asked him, “Sir, we wish to see Jesus.” ... [Jesus said,] “And I, when I am lifted up from the earth, will draw all people to myself.”",
+              "context_description": "During Passover, some Greek Gentiles expressed a desire to meet Jesus, signaling the attraction of non-Jews to Christ. In response (shortly before His crucifixion), Jesus declared that His being \"lifted up\" (crucified and exalted) would draw \"all people\" to Himself. \"All people\" indicates both Jews and Gentiles. This scene highlights that Jesus’ mission and death would have a worldwide impact, drawing people of every background to salvation in Him."
+            }
+          ]
+        },
+        {
+          "category_name": "Apostolic Mission to All Nations",
+          "category_description": "After Jesus’ resurrection, the early church carried the gospel from Jerusalem to the ends of the earth in direct obedience to His commission. The New Testament records clear commands to reach all nations and shows the Holy Spirit guiding the inclusion of Gentiles. The apostles preached to Jew and Gentile alike, affirming that in Christ the dividing wall is gone and that the multi-ethnic church is the fulfillment of God’s plan.",
+          "scriptures": [
+            {
+              "reference": "Matthew 28:19–20",
+              "text": "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.”",
+              "context_description": "In the Great Commission, the risen Jesus explicitly sends His disciples to \"all nations.\" They are to make disciples of every people group, baptizing and teaching them. This command is the clearest mandate for a global mission, making it the church’s duty to spread the gospel universally. Jesus also promises His presence with them as they fulfill this worldwide mission."
+            },
+            {
+              "reference": "Luke 24:46–47",
+              "text": "[Jesus said to them,] “Thus it is written, that the Christ should suffer and on the third day rise from the dead, and that repentance for the forgiveness of sins should be proclaimed in his name to all nations, beginning from Jerusalem.”",
+              "context_description": "The risen Jesus summarized the scriptural mission: the Messiah’s death and resurrection would be followed by the preaching of repentance and forgiveness \"to all nations.\" He specifies the message (repentance and forgiveness in His name) and the scope (all nations), with the starting point at Jerusalem. This underscores that the gospel, though rooted in Israel, is intended for the whole world."
+            },
+            {
+              "reference": "Acts 1:8",
+              "text": "“But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem and in all Judea and Samaria, and to the end of the earth.”",
+              "context_description": "Jesus’ final words before His ascension outline the geographical expansion of the gospel: starting in Jerusalem, then Judea (the Jewish heartland), Samaria (crossing into a mixed Jewish-Gentile population), and ultimately to \"the end of the earth\" (all Gentile lands). Empowered by the Spirit, the apostles are to testify about Christ everywhere. This sets the trajectory for the entire Book of Acts and the church’s mission beyond."
+            },
+            {
+              "reference": "Acts 2:5",
+              "text": "Now there were dwelling in Jerusalem Jews, devout men from every nation under heaven.",
+              "context_description": "On the day of Pentecost, Jews from across the known world (“every nation under heaven”) were present in Jerusalem. When the Holy Spirit enabled the apostles to speak in various languages, these people heard the gospel in their mother tongues. Pentecost thus served as a strategic kickoff: visitors from many nations believed and then carried the message back home, prefiguring the international spread of Christianity."
+            },
+            {
+              "reference": "Acts 10:34–35",
+              "text": "So Peter opened his mouth and said: “Truly I understand that God shows no partiality, but in every nation anyone who fears him and does what is right is acceptable to him.”",
+              "context_description": "When Peter preached to Cornelius (a Roman centurion) and his household, he received a revelation: God does not show favoritism based on ethnicity. Peter realized that in any nation, people who reverence God and seek righteousness are welcome to Him. This was a turning point where the early Jewish Christians understood that the Gentiles could directly receive the grace of God through Christ."
+            },
+            {
+              "reference": "Acts 13:47",
+              "text": "For so the Lord has commanded us, saying, “I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth.”",
+              "context_description": "Paul and Barnabas, when faced with Jewish rejection in Pisidian Antioch, quoted Isaiah 49:6 about being a light to the Gentiles. They applied this mandate to themselves as apostles to the Gentiles. By doing so, they acknowledged God’s command that the salvation offered by the Messiah must reach \"the ends of the earth.\" This demonstrates the early church’s consciousness of their biblical commission to evangelize the Gentile world."
+            },
+            {
+              "reference": "Acts 15:14–15",
+              "text": "Simeon has related how God first visited the Gentiles, to take from them a people for his name. And with this the words of the prophets agree, just as it is written...",
+              "context_description": "At the Jerusalem Council, Peter (Simeon) testified how God saved Gentiles (like Cornelius) and gave them the Holy Spirit. James affirmed that this was in line with prophecy (quoting Amos about the Gentiles called by God’s name). The council recognized that God was indeed forming a people for Himself from among the Gentiles. This was a pivotal moment confirming that Gentile converts were fully part of God’s people without first becoming Jewish, validating the church’s global mission."
+            },
+            {
+              "reference": "Acts 28:28",
+              "text": "“Therefore let it be known to you that this salvation of God has been sent to the Gentiles; they will listen.”",
+              "context_description": "Paul, speaking to Jewish leaders in Rome who were divided about the gospel, announced that God’s salvation has been dispatched to the Gentiles and that they will respond. This statement at the end of Acts highlights the shift that occurred: while many in Israel rejected the message, the Gentiles were open and receiving it. It confirms that the gospel had effectively spread to the nations and that this was God’s intention."
+            },
+            {
+              "reference": "Romans 1:5",
+              "text": "through whom we have received grace and apostleship to bring about the obedience of faith for the sake of his name among all the nations",
+              "context_description": "Paul opens his letter to the Romans by describing his mission: he was graced and sent as an apostle to call people of all nations to the obedience that comes from faith in Christ. His ministry was explicitly \"among all the nations\" for the honor of Jesus’ name. This underscores that Paul saw the scope of the gospel as global, aiming to glorify Christ worldwide through Gentile conversion."
+            },
+            {
+              "reference": "Romans 10:12–13",
+              "text": "For there is no distinction between Jew and Greek; for the same Lord is Lord of all, bestowing his riches on all who call on him. For “everyone who calls on the name of the Lord will be saved.”",
+              "context_description": "Paul emphasizes that in terms of salvation, God does not distinguish between Jew and Gentile. Jesus is Lord over all humanity, and He richly blesses all who call on Him, regardless of ethnic background. Quoting Scripture (“everyone who calls on the Lord will be saved”), Paul reinforces the universality of the gospel promise: it is open to anyone, Jew or Greek. This foundational principle drove the inclusive mission of the church."
+            },
+            {
+              "reference": "Romans 15:12",
+              "text": "And again Isaiah says, “The root of Jesse will come, even he who arises to rule the Gentiles; in him will the Gentiles hope.”",
+              "context_description": "Paul, in explaining God’s plan for Jews and Gentiles, quotes Isaiah 11:10 about the Messiah (root of Jesse) ruling over Gentiles and being their hope. He uses Old Testament proof to show that the Gentiles hoping in Christ was foretold. This highlights that the Gentile mission was the fulfillment of prophecy and that Jesus’ reign includes Gentiles who put their hope in Him as their King."
+            },
+            {
+              "reference": "Romans 16:25–26",
+              "text": "Now to him who is able to strengthen you according to my gospel and the preaching of Jesus Christ, ... according to the command of the eternal God, to bring about the obedience of faith— to the only wise God be glory forevermore through Jesus Christ! Amen.",
+              "context_description": "In the closing doxology of Romans, Paul mentions that the gospel he preaches, now revealed and made known to all nations, is going forth by God’s command to bring about the obedience of faith. Though the text is abbreviated above, it indicates that the mystery of the gospel, once hidden, is now revealed to \"all nations\" by God’s command. Paul thus frames the entire gospel mission as part of God’s eternal plan and something that results in glory to God as people from every nation come to faith."
+            },
+            {
+              "reference": "Ephesians 3:6",
+              "text": "This mystery is that the Gentiles are fellow heirs, members of the same body, and partakers of the promise in Christ Jesus through the gospel.",
+              "context_description": "Paul defines the \"mystery\" that was not fully understood in previous ages: through the gospel, the Gentiles now share equally with Jews in the inheritance of God, belong to the same body (the church), and receive the promises (like the Holy Spirit) in Christ. This was revolutionary news—that believing Gentiles are on equal footing with Jewish believers. It explains the theological foundation for the church’s mission to and inclusion of all ethnic groups."
+            }
+          ]
+        },
+        {
+          "category_name": "Eschatological Vision of All Peoples Worshiping God",
+          "category_description": "The culmination of God’s redemptive plan is a diverse multitude united in worship of the one true God. Scripture gives us glimpses of the end of the age, where people from every tribe, language, and nation stand together before God’s throne. In the new creation, the divisions of earth are gone and the nations find healing and unity in God’s presence, fulfilling the promise that all peoples would be blessed through Abraham’s seed.",
+          "scriptures": [
+            {
+              "reference": "Isaiah 66:23",
+              "text": "From new moon to new moon, and from Sabbath to Sabbath, all flesh shall come to worship before me, declares the LORD.",
+              "context_description": "Isaiah’s final chapter describes a scene in the new heavens and new earth where “all flesh” – meaning all humanity – regularly comes to worship God. The continual nature (from month to month, week to week) implies the eternal worship by all peoples in God’s presence. This is an Old Testament look at the ultimate fulfillment of God’s plan: universal worship in the age to come."
+            },
+            {
+              "reference": "Revelation 5:9–10",
+              "text": "And they sang a new song, saying, “Worthy are you to take the scroll and to open its seals, for you were slain, and by your blood you ransomed people for God from every tribe and language and people and nation, and you have made them a kingdom and priests to our God, and they shall reign on the earth.”",
+              "context_description": "In John’s heavenly vision, the worshipers around the Lamb (Christ) sing of His redeeming death that purchased people for God from every tribe, language, people, and nation. This song celebrates the Lamb’s accomplishment in creating a multi-ethnic kingdom of priests. It explicitly confirms that the redeemed community is drawn from all humanity. In the end, these diverse peoples are united as one kingdom under Christ, fulfilling God’s ancient promises."
+            },
+            {
+              "reference": "Revelation 7:9–10",
+              "text": "After this I looked, and behold, a great multitude that no one could number, from every nation, from all tribes and peoples and languages, standing before the throne and before the Lamb, clothed in white robes, with palm branches in their hands, and crying out with a loud voice, “Salvation belongs to our God who sits on the throne, and to the Lamb!”",
+              "context_description": "John sees a vision of the redeemed in heaven: an uncountable crowd from every conceivable people group worshiping God and the Lamb. They all wear white (signifying purity/salvation) and joyfully acknowledge that salvation comes from God. This is the ultimate picture of God’s global family – the fulfillment of the promise to Abraham and the prophecies – a gathered congregation of all nations worshiping together. It highlights the success of God’s mission: the gospel reached the ends of the earth and bore fruit in every nation."
+            },
+            {
+              "reference": "Revelation 15:4",
+              "text": "Who will not fear, O Lord, and glorify your name? For you alone are holy. All nations will come and worship you, for your righteous acts have been revealed.",
+              "context_description": "Those who overcame sing the song of Moses and the Lamb, proclaiming that all nations will come to fear and worship the Lord. In the end, God’s holiness and righteous deeds will be acknowledged universally. This verse echoes the prophetic expectation (like in Psalms and Isaiah) that the nations would ultimately bow in worship. In Revelation, it is shown as a certainty in God’s future kingdom."
+            },
+            {
+              "reference": "Revelation 21:24, 26",
+              "text": "By its light will the nations walk, and the kings of the earth will bring their glory into it... They will bring into it the glory and the honor of the nations.",
+              "context_description": "In John’s vision of the New Jerusalem (the eternal city of God), \"the nations\" are present and walk in its light (the glory of God and the Lamb). The imagery of kings bringing their splendor into the city signifies that the cultural riches or honor of various peoples are welcomed and find their place in God’s city. This portrays a redeemed diversity: the unique “glory and honor” of each nation is brought into the service of God’s glory. It demonstrates that God’s plan was not to erase the nations but to redeem them, so that every culture contributes to the tapestry of His eternal kingdom."
+            },
+            {
+              "reference": "Revelation 22:2",
+              "text": "... the leaves of the tree were for the healing of the nations.",
+              "context_description": "In the vision of the restored Eden (the New Jerusalem), the Tree of Life produces leaves that bring healing to the nations. This final picture suggests that all the strife, sickness, and sorrows that afflicted the nations are cured. The \"nations\"—now present in the eternal city—experience wholeness and unity. It’s a beautiful finale: the nations that once were divided and at odds are healed and together under the loving reign of God forever."
+            }
+          ]
+        }
+      ]
+    }, {
             "title": "Fear",
             "description": "This topic contains biblical scriptures categorized under various themes related to fear. It explores aspects such as reverence for God, fear of man or worldly threats, divine reassurance, human experiences of fear, fear of judgment, and overcoming fear through faith and love.",
             "article_url": "https://example.com/articles/fear",
@@ -326,6 +644,738 @@
                     ]
                 }
             ]
+        }, {
+    "title": "Jesus' Interactions",
+    "description": "Jesus interacted with people in a variety of ways. This deep dive shows that Jesus has just as many Negative Interactions as Positive",
+    "article_url": "https://example.com/articles/interactions",
+    "categories": [{
+            "category_name": "Positive Interactions",
+            "category_description": "Instances where Jesus speaks to people with compassion, encouragement, praise, or offers healing, forgiveness, and invitations. These interactions highlight Jesus’ kindness, mercy, and positive affirmation toward the individual or group addressed.",
+            "scriptures": [{
+                    "reference": "Matthew 3:15",
+                    "text": "Let it be so now, for thus it is fitting for us to fulfill all righteousness.",
+                    "context_description": "Jesus insists that John the Baptist proceed with baptizing Him, affirming it as the proper way to fulfill God’s plan."
+                }, {
+                    "reference": "Matthew 4:19",
+                    "text": "Follow me, and I will make you fishers of men.",
+                    "context_description": "Jesus calls Simon Peter and Andrew to leave their fishing nets and follow Him, promising them a new purpose of bringing people into God’s kingdom."
+                }, {
+                    "reference": "Matthew 5:14",
+                    "text": "You are the light of the world. A city set on a hill cannot be hidden.",
+                    "context_description": "In the Sermon on the Mount, Jesus addresses His disciples (and the crowd) to encourage them that their faith and example shine brightly for others to see."
+                }, {
+                    "reference": "Matthew 8:3",
+                    "text": "I will; be clean.",
+                    "context_description": "Jesus responds willingly to a leper’s plea for healing by immediately cleansing him of leprosy, demonstrating compassion and power."
+                }, {
+                    "reference": "Matthew 8:7",
+                    "text": "I will come and heal him.",
+                    "context_description": "When a Roman centurion asks for his servant to be healed, Jesus readily agrees to go heal the servant, showing His readiness to help even a Gentile petitioner."
+                }, {
+                    "reference": "Matthew 8:10",
+                    "text": "Truly, I tell you, with no one in Israel have I found such faith.",
+                    "context_description": "Jesus marvels at the centurion’s great faith (in trusting Jesus’ word for healing at a distance) and publicly commends it as greater than any He has seen among the Israelites."
+                }, {
+                    "reference": "Matthew 8:13",
+                    "text": "Go; let it be done for you as you have believed.",
+                    "context_description": "Jesus dismisses the centurion with assurance that his servant is healed according to the centurion’s faith. The servant was healed at that very moment."
+                }, {
+                    "reference": "Matthew 9:2",
+                    "text": "Take heart, my son; your sins are forgiven.",
+                    "context_description": "Jesus speaks kindly to a paralyzed man brought to Him, first giving the man spiritual healing (forgiveness of sins) before later healing his paralysis."
+                }, {
+                    "reference": "Matthew 9:6",
+                    "text": "Rise, pick up your bed and go home.",
+                    "context_description": "To demonstrate His authority to forgive sins, Jesus directly commands the paralyzed man to get up and walk. The man immediately rises and goes home healed."
+                }, {
+                    "reference": "Matthew 9:9",
+                    "text": "Follow me.",
+                    "context_description": "Jesus calls Matthew (Levi), a tax collector, to leave his booth and become His disciple. This was an invitation to a despised tax man to join Jesus’ inner circle."
+                }, {
+                    "reference": "Matthew 9:22",
+                    "text": "Take heart, daughter; your faith has made you well.",
+                    "context_description": "Jesus addresses a woman who had been healed from a bleeding ailment after touching His garment. He kindly calls her “daughter” and affirms that her faith in Him resulted in her healing."
+                }, {
+                    "reference": "Matthew 9:28",
+                    "text": "Do you believe that I am able to do this?",
+                    "context_description": "Jesus questions two blind men indoors about their faith before healing them. By asking this, He invites them to express their belief in His power to restore their sight."
+                }, {
+                    "reference": "Matthew 9:29",
+                    "text": "According to your faith be it done to you.",
+                    "context_description": "Immediately after the blind men profess faith, Jesus touches their eyes and declares that their healing follows their faith. Their sight is then restored."
+                }, {
+                    "reference": "Matthew 11:4-5",
+                    "text": "Go and tell John what you hear and see: the blind receive their sight and the lame walk, lepers are cleansed and the deaf hear, and the dead are raised up, and the poor have good news preached to them.",
+                    "context_description": "Jesus instructs messengers from John the Baptist to report the evidence of His miracles: the healing of the blind, lame, lepers, deaf, raising the dead, and the preaching of good news to the poor. This reassures John (who is in prison and had doubts) that Jesus truly is the expected Messiah."
+                }, {
+                    "reference": "Matthew 11:28",
+                    "text": "Come to me, all who labor and are heavy laden, and I will give you rest.",
+                    "context_description": "Jesus issues a compassionate invitation to the crowd, especially those burdened and weary. He promises spiritual rest and relief to all who come to Him."
+                }, {
+                    "reference": "Matthew 12:13",
+                    "text": "Stretch out your hand.",
+                    "context_description": "Jesus addresses a man with a withered hand inside the synagogue. When the man obeys and stretches it out, his hand is miraculously restored. Jesus does this healing despite Pharisees watching critically on the Sabbath."
+                }, {
+                    "reference": "Matthew 13:16",
+                    "text": "But blessed are your eyes, for they see, and your ears, for they hear.",
+                    "context_description": "Speaking privately to His disciples about why He teaches in parables, Jesus praises them because God has blessed them with spiritual sight and hearing to understand truths that others do not perceive."
+                }, {
+                    "reference": "Matthew 14:27",
+                    "text": "Take heart; it is I. Do not be afraid.",
+                    "context_description": "Jesus calls out to His terrified disciples while walking on the water toward their storm-tossed boat. He encourages them to take courage and reassures them of His presence to calm their fear."
+                }, {
+                    "reference": "Matthew 15:28",
+                    "text": "O woman, great is your faith! Be it done for you as you desire.",
+                    "context_description": "Jesus addresses the Canaanite (Syrophoenician) woman after she persists in asking Him to heal her demon-possessed daughter. He expresses admiration for her faith and grants her request, healing her daughter that very hour."
+                }, {
+                    "reference": "Matthew 16:17",
+                    "text": "Blessed are you, Simon Bar-Jonah! For flesh and blood has not revealed this to you, but my Father who is in heaven.",
+                    "context_description": "After Peter confesses Jesus as the Christ, the Son of God, Jesus praises him. He explains that such insight did not come from human sources but was revealed to Peter by God the Father, and He pronounces Peter blessed for it."
+                }, {
+                    "reference": "Matthew 17:7",
+                    "text": "Rise, and have no fear.",
+                    "context_description": "During the Transfiguration on the mountain, Peter, James, and John fall face down in terror when they hear God’s voice. Jesus comes and touches them, gently telling them to get up and not be afraid, calming them after that overwhelming vision."
+                }, {
+                    "reference": "Matthew 19:14",
+                    "text": "Let the little children come to me and do not hinder them, for to such belongs the kingdom of heaven.",
+                    "context_description": "Jesus corrects His disciples who were trying to turn away parents bringing little children to Him. He welcomes the children warmly and declares that the kingdom of heaven belongs to those who have childlike humility and trust."
+                }, {
+                    "reference": "Matthew 19:26",
+                    "text": "With man this is impossible, but with God all things are possible.",
+                    "context_description": "After the rich young ruler leaves and the disciples wonder who can be saved, Jesus encourages them by noting that what is impossible for humans (salvation of those who seem unlikely) is possible with God’s power. It’s a hopeful reminder of God’s ability to save anyone."
+                }, {
+                    "reference": "Matthew 20:32",
+                    "text": "What do you want me to do for you?",
+                    "context_description": "Jesus stops in response to two blind beggars calling out to Him near Jericho. He asks this compassionate question, inviting them to express their need, which leads to Him restoring their sight."
+                }, {
+                    "reference": "Matthew 26:26",
+                    "text": "Take, eat; this is my body.",
+                    "context_description": "At the Last Supper, Jesus directly addresses His disciples as He breaks bread. He gives them the bread to eat, explaining that it represents His body – instituting the memorial of communion in a loving, intimate moment."
+                }, {
+                    "reference": "Matthew 26:27-28",
+                    "text": "Drink of it, all of you, for this is my blood of the covenant, which is poured out for many for the forgiveness of sins.",
+                    "context_description": "Continuing at the Last Supper, Jesus offers the cup of wine to His disciples. He explains that it symbolizes His blood of the new covenant, shed to bring forgiveness of sins for many – a positive promise of redemption."
+                }, {
+                    "reference": "Matthew 28:9",
+                    "text": "Greetings!",
+                    "context_description": "After rising from the dead, Jesus suddenly meets a group of women (including Mary Magdalene) who were leaving the empty tomb. He joyfully greets them (“Rejoice!” or “Greetings!”). They respond by worshiping at His feet, overjoyed that He is alive."
+                }, {
+                    "reference": "Matthew 28:10",
+                    "text": "Do not be afraid; go and tell my brothers to go to Galilee, and there they will see me.",
+                    "context_description": "The risen Jesus speaks kindly to the women at the tomb, calming their fear and giving them a commission. He calls the disciples “my brothers” and instructs the women to inform them that He will meet them in Galilee."
+                }, {
+                    "reference": "Matthew 28:19-20",
+                    "text": "Go therefore and make disciples of all nations... teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.",
+                    "context_description": "Jesus addresses the eleven disciples on a mountain after His resurrection, giving the Great Commission. He commands them to spread the gospel to all nations and teach new disciples to obey His teachings. He concludes with the comforting promise of His continual presence with them."
+                }, {
+                    "reference": "Mark 5:19",
+                    "text": "Go home to your friends and tell them how much the Lord has done for you, and how he has had mercy on you.",
+                    "context_description": "After delivering a man from a legion of demons, Jesus instructs the man (who wanted to follow Jesus physically) to instead return to his home region. Jesus positively commissions him to share the testimony of God’s mercy and his healing with his friends and family."
+                }, {
+                    "reference": "Mark 5:36",
+                    "text": "Do not fear, only believe.",
+                    "context_description": "Jesus speaks this encouragement to Jairus, a synagogue leader, right after Jairus receives news that his daughter has died. Jesus urges him not to be afraid but to keep trusting – shortly after, Jesus goes and raises the little girl back to life."
+                }, {
+                    "reference": "Mark 6:31",
+                    "text": "Come away by yourselves to a desolate place and rest a while.",
+                    "context_description": "Seeing that His apostles were exhausted from ministry and had not even had time to eat, Jesus invites them to withdraw with Him for rest. He shows care for His disciples’ well-being by encouraging them to take a break in solitude."
+                }, {
+                    "reference": "Mark 9:23",
+                    "text": "‘If you can’! All things are possible for one who believes.",
+                    "context_description": "When a desperate father says to Jesus, “If you can do anything, help us,” Jesus picks up on the phrase “If you can” with a gentle challenge. He reassures the man that anything is possible through faith, encouraging him to trust fully in Jesus’ power to heal his son."
+                }, {
+                    "reference": "Mark 12:34",
+                    "text": "You are not far from the kingdom of God.",
+                    "context_description": "Jesus affirms a Jewish scribe who wisely acknowledged that loving God and neighbor is more important than religious sacrifices. In this positive interaction, Jesus notes that the man’s understanding brings him close to God’s kingdom, implying he is on the right track spiritually."
+                }, {
+                    "reference": "Luke 5:10",
+                    "text": "Do not be afraid; from now on you will be catching men.",
+                    "context_description": "After the miraculous catch of fish, Peter feels unworthy and fearful in Jesus’ presence. Jesus addresses Peter (and James and John) to calm his fear and calls them to a new mission – they will fish for people (become evangelists). This is essentially their call to discipleship, given with reassurance."
+                }, {
+                    "reference": "Luke 6:20",
+                    "text": "Blessed are you who are poor, for yours is the kingdom of God.",
+                    "context_description": "In the Beatitudes of Luke’s Gospel (Sermon on the Plain), Jesus speaks directly to His disciples, pronouncing God’s favor on the poor. He promises that, despite their present poverty, they possess the kingdom of God – a comfort and honor to those with little in worldly terms."
+                }, {
+                    "reference": "Luke 7:13",
+                    "text": "Do not weep.",
+                    "context_description": "Jesus speaks to a grieving widow in Nain as her only son’s body is being carried out for burial. Moved with compassion, He gently tells her not to cry. Immediately after, He raises her son back to life, turning her weeping into joy."
+                }, {
+                    "reference": "Luke 7:14",
+                    "text": "Young man, I say to you, arise.",
+                    "context_description": "At the same funeral in Nain, Jesus directly addresses the dead young man on the bier. By His authoritative word, He brings the boy back to life. This compassionate miracle restores the widow’s son to her."
+                }, {
+                    "reference": "Luke 7:48",
+                    "text": "Your sins are forgiven.",
+                    "context_description": "While dining at a Pharisee’s house, Jesus says this to a woman known as a sinner who had anointed His feet with her tears and perfume. He openly declares her sins forgiven, offering her grace and acceptance, which scandalizes the onlookers but affirms the woman’s faith and repentance."
+                }, {
+                    "reference": "Luke 7:50",
+                    "text": "Your faith has saved you; go in peace.",
+                    "context_description": "Jesus further addresses the same repentant woman, assuring her of salvation because of her faith. He sends her off with a benediction of peace. This interaction highlights Jesus’ mercy and the woman’s faith that led to her forgiveness."
+                }, {
+                    "reference": "Luke 8:54",
+                    "text": "Child, arise.",
+                    "context_description": "At Jairus’s house, Jesus takes the hand of Jairus’s deceased 12-year-old daughter and speaks directly to her. By His command, the girl’s spirit returns and she gets up. Jesus tenderly refers to her as “child” (or “little girl”), and this powerful miracle restores her to life."
+                }, {
+                    "reference": "Luke 9:50",
+                    "text": "Do not stop him, for the one who is not against you is for you.",
+                    "context_description": "When John reports that they stopped someone casting out demons in Jesus’ name (because he wasn’t part of their group), Jesus corrects the disciples. He tells them not to hinder such a person. It’s a positive, inclusive teaching that anyone acting in Jesus’ name and not opposing Him is effectively on their side."
+                }, {
+                    "reference": "Luke 10:28",
+                    "text": "You have answered correctly; do this, and you will live.",
+                    "context_description": "A lawyer tests Jesus about inheriting eternal life and correctly cites the greatest commandments (love God and love neighbor). Jesus positively acknowledges the correct answer and encourages him to practice that love, promising that living out those commandments leads to life."
+                }, {
+                    "reference": "Luke 10:37",
+                    "text": "You go, and do likewise.",
+                    "context_description": "After telling the Parable of the Good Samaritan, Jesus asks the lawyer which person was a true neighbor. When the lawyer identifies the merciful Samaritan, Jesus exhorts him to follow that example. It’s a call to compassionate action, indicating approval of mercy and urging the lawyer to implement it."
+                }, {
+                    "reference": "Luke 12:4",
+                    "text": "My friends, do not fear those who kill the body, and after that have nothing more that they can do.",
+                    "context_description": "Jesus addresses His disciples affectionately as “friends” and encourages them not to fear human opponents or persecutors. Though people can kill the body, they cannot harm the soul. This comfort strengthens them to face persecution with courage."
+                }, {
+                    "reference": "Luke 12:32",
+                    "text": "Fear not, little flock, for it is your Father’s good pleasure to give you the kingdom.",
+                    "context_description": "Jesus speaks tenderly to His disciples, calling them His “little flock.” He tells them not to be afraid because God the Father is delighted to give them the kingdom. It’s a profoundly reassuring statement about God’s gracious will and care for them, even as they are a small, vulnerable group."
+                }, {
+                    "reference": "Luke 19:5",
+                    "text": "Zacchaeus, hurry and come down, for I must stay at your house today.",
+                    "context_description": "Seeing Zacchaeus (a chief tax collector) perched in a sycamore tree to get a glimpse of Him, Jesus calls him by name. In a warm, public gesture, Jesus invites Himself over to Zacchaeus’s home. This positive interaction leads to Zacchaeus’s joyful hospitality and repentance."
+                }, {
+                    "reference": "Luke 19:9-10",
+                    "text": "Today salvation has come to this house, since he also is a son of Abraham. For the Son of Man came to seek and to save the lost.",
+                    "context_description": "After Zacchaeus repents and pledges to make restitution for wrongs, Jesus declares that salvation has come to Zacchaeus’s household. He affirms Zacchaeus as a true descendant of Abraham (a member of God’s people) and explains His own mission to seek out and save those who are lost, like Zacchaeus had been."
+                }, {
+                    "reference": "Luke 19:40",
+                    "text": "I tell you, if these were silent, the very stones would cry out.",
+                    "context_description": "When Pharisees urge Jesus to rebuke His disciples for praising Him as King during the triumphal entry, Jesus refuses. Instead, He asserts that if the crowd didn’t shout, the stones themselves would – implying that His messianic identity will be proclaimed no matter what. It’s a poetic way of approving the praise being offered to Him."
+                }, {
+                    "reference": "Luke 22:15",
+                    "text": "I have earnestly desired to eat this Passover with you before I suffer.",
+                    "context_description": "At the Last Supper, Jesus expresses to His apostles how deeply He longed to share that Passover meal with them prior to His upcoming suffering. It’s a heartfelt statement of love and desire for fellowship with them in these final hours."
+                }, {
+                    "reference": "Luke 22:26",
+                    "text": "But not so with you. Rather, let the greatest among you become as the youngest, and the leader as one who serves.",
+                    "context_description": "During the Last Supper, the disciples were arguing about who among them was the greatest. Jesus addresses them to redefine greatness in positive terms of humility and service. He gently corrects their mindset by teaching that true greatness in His kingdom is shown by serving others, as He Himself does."
+                }, {
+                    "reference": "Luke 22:31-32",
+                    "text": "Simon, Simon, behold, Satan demanded to have you, that he might sift you like wheat, but I have prayed for you that your faith may not fail. And when you have turned again, strengthen your brothers.",
+                    "context_description": "Jesus speaks directly to Peter (calling him by his old name, Simon) with a mix of warning and encouragement. He reveals that Satan wants to test all the disciples (“you” in verse 31 is plural), but Jesus has specifically prayed for Peter’s own faith not to fail completely. Jesus also looks beyond Peter’s impending denial, foreseeing his repentance (“turned again”) and instructing him to support the others afterward. This shows Jesus’ personal care for Peter and confidence in his restoration."
+                }, {
+                    "reference": "Luke 23:43",
+                    "text": "Truly, I say to you, today you will be with me in Paradise.",
+                    "context_description": "While Jesus was on the cross, one of the criminals crucified next to Him expressed faith, asking Jesus to remember him. Jesus responds with a profound promise: that very day the repentant thief would join Him in Paradise. It’s an assurance of salvation and a comforting word given in the midst of suffering."
+                }, {
+                    "reference": "Luke 24:36",
+                    "text": "Peace to you!",
+                    "context_description": "After His resurrection, Jesus suddenly appears among His disciples who were gathered in a locked room, and He greets them with a blessing of peace. This calms and reassures the frightened disciples, confirming that it is truly Jesus alive among them."
+                }, {
+                    "reference": "John 1:39",
+                    "text": "Come and you will see.",
+                    "context_description": "When two of John the Baptist’s disciples ask Jesus where He is staying, He extends an open invitation: “Come and see.” Jesus welcomes them to spend the day with Him. This positive response begins the relationship where these men (one of whom was Andrew) become His followers."
+                }, {
+                    "reference": "John 1:42",
+                    "text": "You are Simon the son of John. You shall be called Cephas.",
+                    "context_description": "Upon meeting Simon (brought by his brother Andrew), Jesus immediately gives him a new name, Cephas (or Peter, meaning Rock). This is a prophetic affirmation of the role Simon Peter will have. It’s a positive, identity-shaping moment where Jesus sees Peter’s future potential."
+                }, {
+                    "reference": "John 1:47",
+                    "text": "Behold, an Israelite indeed, in whom there is no deceit!",
+                    "context_description": "Jesus says this as He sees Nathanael approaching. He positively characterizes Nathanael as a true Israelite with a genuine heart (no deceit). This surprised Nathanael, as it showed Jesus knew his character even before meeting him, leading to Nathanael’s faith in Jesus."
+                }, {
+                    "reference": "John 1:48",
+                    "text": "Before Philip called you, when you were under the fig tree, I saw you.",
+                    "context_description": "Nathanael asks Jesus how He knows about him. Jesus reveals a supernatural knowledge: He saw Nathanael under a fig tree even before Philip brought him. This personal insight convinces Nathanael that Jesus is the Son of God. It’s a gentle unveiling of Jesus’ omniscience in a way that wins Nathanael’s trust."
+                }, {
+                    "reference": "John 1:50",
+                    "text": "Because I said to you, ‘I saw you under the fig tree,’ do you believe? You will see greater things than these.",
+                    "context_description": "After Nathanael responds in faith, Jesus kindly teases him for believing just from that one sign, and then promises that Nathanael (and the other disciples) will witness even greater revelations and miracles. It’s an encouraging hint at the amazing things to come."
+                }, {
+                    "reference": "John 4:10",
+                    "text": "If you knew the gift of God, and who it is that is saying to you, ‘Give me a drink,’ you would have asked him, and he would have given you living water.",
+                    "context_description": "At the well in Samaria, Jesus engages a Samaritan woman. He hints that if she truly understood who He is (the Messiah and God’s gift), she would ask Him for “living water” – meaning eternal life and the Holy Spirit. This statement piques her interest and begins a life-changing conversation, offering her a chance for spiritual satisfaction."
+                }, {
+                    "reference": "John 4:26",
+                    "text": "I who speak to you am he.",
+                    "context_description": "In the same conversation at the well, when the Samaritan woman mentions the coming Messiah, Jesus reveals Himself plainly as the Messiah (“he”). This is a remarkably direct and positive self-disclosure to someone marginalized. It leads the woman to faith and to share the news with her town."
+                }, {
+                    "reference": "John 4:50",
+                    "text": "Go; your son will live.",
+                    "context_description": "A royal official from Capernaum implores Jesus to heal his dying son. Jesus simply speaks these words, assuring the man that his son will recover. The man believes Jesus and departs; later he discovers his son was healed at that exact moment. Jesus’ words gave the man hope and indeed brought healing."
+                }, {
+                    "reference": "John 5:6",
+                    "text": "Do you want to be healed?",
+                    "context_description": "At the pool of Bethesda, Jesus asks a man who had been disabled for 38 years this question. It may seem obvious, but Jesus’ question invites the man to voice his desire and focus his hope. It’s a compassionate engagement with someone who had lost hope, right before Jesus heals him."
+                }, {
+                    "reference": "John 5:8",
+                    "text": "Get up, take up your bed, and walk.",
+                    "context_description": "Jesus commands the invalid at Bethesda with these words. The man immediately becomes well, picks up his mat, and walks. This direct address instantly heals a decades-long paralysis, demonstrating Jesus’ life-giving authority and mercy."
+                }, {
+                    "reference": "John 9:3",
+                    "text": "It was not that this man sinned, or his parents, but that the works of God might be displayed in him.",
+                    "context_description": "Jesus speaks to His disciples about a man born blind (within the blind man’s hearing). They assumed the blindness was punishment for sin. Jesus corrects this, saying the blindness wasn’t due to personal sin but allowed so that God’s power could be shown. This reframes the situation positively – the man’s healing will glorify God, which Jesus then accomplishes."
+                }, {
+                    "reference": "John 9:37",
+                    "text": "You have seen him, and it is he who is speaking to you.",
+                    "context_description": "After healing the man born blind (who was later cast out by the Pharisees), Jesus finds him and asks if he believes in the Son of Man (the Messiah). The man asks who that is, and Jesus reveals that it is Himself. This gentle revelation leads the healed man to worship Jesus, completing not just his physical sight but his spiritual insight."
+                }, {
+                    "reference": "John 11:23",
+                    "text": "Your brother will rise again.",
+                    "context_description": "Jesus comforts Martha after her brother Lazarus has died. She expresses sorrow that Jesus hadn’t arrived sooner. Jesus assures her that Lazarus will rise. Martha initially interprets this as a reference to the final resurrection, but Jesus is also hinting at the immediate miracle He is about to perform (raising Lazarus that very day)."
+                }, {
+                    "reference": "John 11:25-26",
+                    "text": "I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live, and everyone who lives and believes in me shall never die. Do you believe this?",
+                    "context_description": "Continuing His conversation with Martha, Jesus makes a profound declaration of His identity and power over death, promising eternal life to those who believe in Him. He then invites Martha to affirm her faith. This interaction both consoles her and challenges her to trust Him even in the face of her brother’s death."
+                }, {
+                    "reference": "John 11:43",
+                    "text": "Lazarus, come out.",
+                    "context_description": "Standing at Lazarus’s tomb, Jesus cries out this short command. Despite Lazarus having been dead for four days, Jesus’ word causes Lazarus to come back to life and exit the tomb, still wrapped in graveclothes. It’s a dramatic display of Jesus’ life-giving power spoken directly to a dead man, and Lazarus responds by rising."
+                }, {
+                    "reference": "John 12:35-36",
+                    "text": "The light is among you for a little while longer. Walk while you have the light, lest darkness overtake you... While you have the light, believe in the light, that you may become sons of light.",
+                    "context_description": "Addressing a crowd in Jerusalem just days before His crucifixion, Jesus refers to Himself as the light present with them. He urges the people to take advantage of this opportunity (“walk” and “believe” in the light) so that they can become children of light. It’s a plea for them to respond in faith to Him before it’s too late."
+                }, {
+                    "reference": "John 13:7",
+                    "text": "What I am doing you do not understand now, but afterward you will understand.",
+                    "context_description": "When Jesus began washing the disciples’ feet, Peter objected, not understanding why Jesus, their Master, would do a servant’s task. Jesus gently explains to Peter that though he doesn’t grasp it at the moment, he will later. This is a patient reassurance that there is a purpose to Jesus’ humble act (teaching them about servanthood) that will become clear."
+                }, {
+                    "reference": "John 13:34",
+                    "text": "A new commandment I give to you, that you love one another: just as I have loved you, you also are to love one another.",
+                    "context_description": "During the Last Supper, Jesus addresses His disciples and gives them a “new” commandment. It’s an exhortation to show selfless, Christ-like love to each other. By calling it new and referencing His own love as the standard, Jesus highlights the importance of mutual love as the defining mark of His followers."
+                }, {
+                    "reference": "John 14:1",
+                    "text": "Let not your hearts be troubled. Believe in God; believe also in me.",
+                    "context_description": "Knowing His disciples are anxious about His talk of leaving and the trials ahead, Jesus comforts them. He tells them to calm their troubled hearts by trusting in God and in Himself. This is the opening of a deeply reassuring discourse where He promises them a place in the Father’s house and the coming of the Holy Spirit."
+                }, {
+                    "reference": "John 14:27",
+                    "text": "Peace I leave with you; my peace I give to you... Let not your hearts be troubled, neither let them be afraid.",
+                    "context_description": "Still in the upper room, Jesus bestows His peace upon the disciples. He differentiates His peace from what the world gives and urges them again not to be troubled or fearful. It’s a tender benediction of inner peace, meant to sustain them after He departs."
+                }, {
+                    "reference": "John 15:15",
+                    "text": "No longer do I call you servants... but I have called you friends, for all that I have heard from my Father I have made known to you.",
+                    "context_description": "In His farewell discourse, Jesus elevates the relationship with His disciples from master-servant to friendship. He explains that He has shared with them everything He learned from the Father, treating them as close friends who know His heart and plans. This is a gracious, affirming statement that shows the intimacy and love He has for them."
+                }, {
+                    "reference": "John 15:16",
+                    "text": "You did not choose me, but I chose you and appointed you that you should go and bear fruit and that your fruit should abide...",
+                    "context_description": "Jesus reminds the disciples that it was His initiative to choose them. He encourages them by stating He has a purpose for them: to produce lasting spiritual fruit in the world (such as new disciples or righteous deeds). This gives them confidence and identity, knowing Jesus personally selected and commissioned them for a fruitful mission."
+                }, {
+                    "reference": "John 16:33",
+                    "text": "In the world you will have tribulation. But take heart; I have overcome the world.",
+                    "context_description": "Jesus concludes His farewell talk with the disciples by acknowledging they will face troubles in this world. Yet He tells them to have courage because He has conquered the world (through His victory over sin, death, and Satan). This triumphant assurance is meant to give them peace and confidence as they face hardship."
+                }, {
+                    "reference": "John 19:26-27",
+                    "text": "Woman, behold, your son!... Behold, your mother!",
+                    "context_description": "Even while suffering on the cross, Jesus addresses His mother Mary and the Apostle John with great care. He calls Mary “Woman” respectfully and entrusts her to John’s care (“behold, your son”), and likewise tells John to treat Mary as his own mother. This ensures Mary will be looked after. It’s a loving provision for His mother, showing Jesus’ concern for others even in His agony."
+                }, {
+                    "reference": "John 20:16",
+                    "text": "Mary.",
+                    "context_description": "Outside the empty tomb on resurrection morning, Mary Magdalene did not recognize the risen Jesus at first. Jesus simply speaks her name, “Mary.” That one word, said in the familiar way Jesus spoke it, immediately opens her eyes to His identity. It’s an intensely personal and joyful moment as Mary turns and recognizes her “Rabboni” (Teacher)."
+                }, {
+                    "reference": "John 20:17",
+                    "text": "Do not cling to me, for I have not yet ascended to the Father; but go to my brothers and say to them...",
+                    "context_description": "After Mary Magdalene recognizes Jesus, she apparently grabs hold of Him. Jesus gently tells her not to hold on to Him, since He has not yet ascended to the Father (implying she doesn’t have to fear losing Him immediately). He then commissions Mary to go announce to His “brothers” (the disciples) the news of His upcoming ascension to God the Father. This not only gives Mary a mission as the first witness of the resurrection, but also conveys Jesus’ continued relationship with the disciples."
+                }, {
+                    "reference": "John 20:21",
+                    "text": "Peace be with you. As the Father has sent me, even so I am sending you.",
+                    "context_description": "On the evening of His resurrection, Jesus greets the gathered disciples (minus Thomas) with a blessing of peace, calming their fears. He then commissions them for their apostolic mission: just as God the Father sent Jesus into the world, now Jesus sends His followers to continue His work. This is both a comforting and empowering address, establishing them as His emissaries."
+                }, {
+                    "reference": "John 20:27",
+                    "text": "Put your finger here, and see my hands; and put out your hand, and place it in my side. Do not disbelieve, but believe.",
+                    "context_description": "A week after the resurrection, Jesus appears again, this time when Thomas (who had doubted) is present. Jesus directly addresses Thomas’s expressed skepticism. He invites Thomas to touch His crucifixion wounds as proof and urges him to stop doubting and believe. Jesus’ approach is gentle but direct, providing Thomas the evidence he asked for and calling him to faith."
+                }, {
+                    "reference": "John 20:29",
+                    "text": "Have you believed because you have seen me? Blessed are those who have not seen and yet have believed.",
+                    "context_description": "After Thomas responds in faith (“My Lord and my God!”), Jesus addresses him again. He asks rhetorically if Thomas only believed because he saw physical proof. Jesus then pronounces a blessing on future believers who will believe in Him without seeing Him in person. This both acknowledges Thomas’s new faith and highlights the even greater blessedness of faith that doesn’t require sight."
+                }, {
+                    "reference": "John 21:5",
+                    "text": "Children, do you have any fish?",
+                    "context_description": "The resurrected Jesus stands on the shore at dawn while some disciples are out fishing (unaware it’s Jesus). He affectionately calls out to them as “children” and asks if they’ve caught anything. This friendly address preludes the miracle where He directs them to a massive catch of fish and is part of Jesus’ gentle approach before revealing Himself to them."
+                }, {
+                    "reference": "John 21:12",
+                    "text": "Come and have breakfast.",
+                    "context_description": "After the disciples come ashore with the miraculous catch, they find Jesus has prepared a charcoal fire with fish and bread. Jesus invites them to eat breakfast with Him. This is a warm, hospitable gesture, showing Jesus’ care for their physical hunger and His desire for fellowship. It likely reminded them of earlier feedings and further confirmed His identity."
+                }, {
+                    "reference": "John 21:17",
+                    "text": "Simon, son of John, do you love me?... Feed my sheep.",
+                    "context_description": "The third time Jesus asks Peter if Peter loves Him (mirroring Peter’s three earlier denials), Peter is hurt but affirms his love. Jesus then gives the command “Feed my sheep,” entrusting Peter with the care of His followers. In this interaction, Jesus restores Peter to ministry. Though it’s a challenging moment for Peter, it is fundamentally a positive reinstatement and a charge that shows Jesus still trusts and commissions him."
+                }
+            ]
+        }, {
+            "category_name": "Negative Interactions",
+            "category_description": "Instances where Jesus speaks in a corrective, stern, or confrontational manner. These include rebukes of sin or lack of faith, warnings of judgment, and forceful challenges toward individuals or groups whose actions or attitudes are wrong. Such interactions show Jesus’ holiness and His willingness to directly address error or hypocrisy.",
+            "scriptures": [{
+                    "reference": "Matthew 4:10",
+                    "text": "Be gone, Satan! For it is written, \"You shall worship the Lord your God and him only shall you serve.\"",
+                    "context_description": "During His temptation in the wilderness, Jesus rebukes the devil who was enticing Him with power and glory in exchange for worship. Jesus commands Satan to leave and quotes Scripture that only God is to be worshiped. It’s a strong dismissal of Satan’s influence."
+                }, {
+                    "reference": "Matthew 8:20",
+                    "text": "Foxes have holes, and birds of the air have nests, but the Son of Man has nowhere to lay his head.",
+                    "context_description": "A scribe enthusiastically offered to follow Jesus wherever He went. Jesus responds with this sobering statement, implying that following Him means a life of hardship and homelessness. He is cautioning the would-be disciple about the cost of discipleship."
+                }, {
+                    "reference": "Matthew 8:22",
+                    "text": "Follow me, and leave the dead to bury their own dead.",
+                    "context_description": "Another disciple asked for delay in following Jesus until he could bury his father. Jesus’ reply is a sharp challenge that allegiance to Him must come first. “Leave the dead to bury their own dead” suggests that the spiritually dead can take care of routine obligations – the man should immediately follow Jesus. It’s a stern test of priorities."
+                }, {
+                    "reference": "Matthew 8:26",
+                    "text": "Why are you afraid, O you of little faith?",
+                    "context_description": "Jesus says this to His disciples during the storm on the Sea of Galilee. As their boat was being swamped, they panicked and woke Him. Before calming the storm, Jesus rebukes their fear and small faith. His tone implies that by now they should trust Him more, even in dangerous circumstances."
+                }, {
+                    "reference": "Matthew 9:4",
+                    "text": "Why do you think evil in your hearts?",
+                    "context_description": "When Jesus told the paralyzed man his sins were forgiven (Matt 9:2), some scribes silently accused Jesus of blasphemy in their minds. Jesus, knowing their thoughts, confronts them with this question. He calls their skeptical, accusatory thoughts “evil,” thereby exposing their unbelief and malice."
+                }, {
+                    "reference": "Matthew 9:24",
+                    "text": "Go away, for the girl is not dead but sleeping.",
+                    "context_description": "Arriving at Jairus’s house where mourners were wailing over the dead girl, Jesus tells the crowd to leave because the girl is only sleeping (meaning her death will be temporary). They laughed at Him, but He put them out. His command “Go away” is a dismissive, authoritative order clearing out the scornful unbelief before He raises the girl. It’s stern in that context."
+                }, {
+                    "reference": "Matthew 12:7",
+                    "text": "And if you had known what this means, 'I desire mercy, and not sacrifice,' you would not have condemned the guiltless.",
+                    "context_description": "Jesus addresses the Pharisees who criticized His disciples for plucking grain on the Sabbath. He quotes Hosea 6:6 and rebukes them for their lack of understanding. By saying “if you had known,” He implies they are ignorant of God’s heart for mercy. He scolds them for condemning His innocent disciples over ritual matters, exposing their legalistic attitude."
+                }, {
+                    "reference": "Matthew 12:34",
+                    "text": "You brood of vipers! How can you speak good, when you are evil?",
+                    "context_description": "Confronting the Pharisees who had just attributed His miracles to Satan (Matthew 12:24), Jesus delivers a harsh rebuke. He calls them a “brood of vipers” (offspring of snakes), indicating their poisonous, deceitful nature. He questions how they could say anything good since their hearts are evil. This interaction shows Jesus’ righteous anger at their blasphemous and hypocritical words."
+                }, {
+                    "reference": "Matthew 12:39",
+                    "text": "An evil and adulterous generation seeks for a sign, but no sign will be given to it except the sign of the prophet Jonah.",
+                    "context_description": "Some scribes and Pharisees demanded a miraculous sign from Jesus to prove Himself. Jesus responds by condemning their attitude: He labels that generation as wicked and unfaithful (spiritually “adulterous”) for demanding signs when plenty of evidence has been given. He promises them only the sign of Jonah (His resurrection after three days). It’s a stern refusal that exposes their hard-hearted unbelief."
+                }, {
+                    "reference": "Matthew 15:7",
+                    "text": "You hypocrites! Well did Isaiah prophesy of you...",
+                    "context_description": "When Pharisees and scribes criticized Jesus’ disciples for not following ritual handwashing traditions, Jesus first accuses them of voiding God’s commands for the sake of their traditions (Matt 15:3-6), then calls them “hypocrites.” He quotes Isaiah’s prophecy about people honoring God with lips while their hearts are far away (Matt 15:8-9). This direct name-calling and Scripture application is a blunt exposure of their two-faced religiosity."
+                }, {
+                    "reference": "Matthew 15:26",
+                    "text": "It is not right to take the children’s bread and throw it to the dogs.",
+                    "context_description": "Initially, Jesus gives this stark reply to the Canaanite woman begging Him to heal her demon-possessed daughter. By “children,” He means the Israelites, and by “dogs,” a common term Jews used for Gentiles. This sounds very harsh, implying that His ministry (the children’s bread) isn’t meant for Gentiles at that moment. Jesus’ words test the woman’s humility and faith; she accepts the challenge and replies cleverly, and Jesus ultimately praises her faith and heals her daughter. But this statement itself is deliberately offensive, making it a negative interaction in tone."
+                }, {
+                    "reference": "Matthew 16:8",
+                    "text": "O you of little faith, why are you discussing among yourselves the fact that you have no bread?",
+                    "context_description": "After Jesus warned the disciples about the “leaven of the Pharisees and Sadducees,” they misunderstood and thought He was scolding them for forgetting bread. Aware of their confusion, Jesus rebukes them for their small faith. Having just recently fed multitudes miraculously, they shouldn’t worry about bread or miss His metaphor. His question chides them for still focusing on physical bread and not trusting His provision."
+                }, {
+                    "reference": "Matthew 16:23",
+                    "text": "Get behind me, Satan! You are a hindrance to me. For you are not setting your mind on the things of God, but on the things of man.",
+                    "context_description": "When Peter tried to dissuade Jesus from going to the cross (after Jesus predicted His death), Jesus turned and delivered this fierce rebuke to Peter. He even addresses Peter as “Satan,” meaning Peter was speaking under Satan’s influence by tempting Jesus to avoid suffering. Jesus calls Peter a stumbling block and explains that Peter’s thinking is human-centered, not aligned with God’s plan. It’s one of Jesus’ most severe corrections, aimed at a disciple He loved, because of the gravity of the issue."
+                }, {
+                    "reference": "Matthew 17:17",
+                    "text": "O faithless and twisted generation, how long am I to be with you? How long am I to bear with you? Bring him here to me.",
+                    "context_description": "Jesus says this in frustration when He comes down from the Transfiguration and finds the disciples unable to cast a demon out of a boy. He addresses the crowd (and possibly the disciples) as a “faithless and perverse generation.” His rhetorical questions (“How long...?”) express disappointment at their persistent lack of faith. He then tells them to bring the boy to Him, after which He casts out the demon. The rebuke highlights Jesus’ expectation for greater faith and His weariness of unbelief."
+                }, {
+                    "reference": "Matthew 17:20",
+                    "text": "Because of your little faith. For truly, I say to you, if you have faith like a grain of mustard seed... nothing will be impossible for you.",
+                    "context_description": "Later, when the disciples privately ask why they could not cast out the demon, Jesus tells them it was due to their small faith. He rebukes their unbelief but also teaches that even a tiny amount of genuine faith (as small as a mustard seed) can accomplish great things. While part of this is an encouragement, the initial answer clearly points out their failure as stemming from deficiency in faith."
+                }, {
+                    "reference": "Matthew 18:3",
+                    "text": "Truly, I say to you, unless you turn and become like children, you will never enter the kingdom of heaven.",
+                    "context_description": "When the disciples asked Jesus who is greatest in the kingdom, Jesus set a child before them and delivered this strong statement. By saying they won’t even enter the kingdom unless they change and humble themselves like children, He implicitly rebukes their pride and argument over status. It’s a corrective warning that their attitude must drastically change."
+                }, {
+                    "reference": "Matthew 19:21",
+                    "text": "If you would be perfect, go, sell what you possess and give to the poor, and you will have treasure in heaven; and come, follow me.",
+                    "context_description": "Jesus says this to the rich young ruler who claimed to have kept all the commandments and asked what he still lacked. Jesus, knowing the man’s attachment to wealth, issues a challenging directive: to sell all he has, give to the poor, and then follow Jesus. This exposes the man’s true heart—sadly, the man leaves sorrowful because he can’t part with his riches. Jesus’ words, while essentially an invitation, function as a pointed confrontation of the idol in the man’s life (his wealth)."
+                }, {
+                    "reference": "Matthew 20:22",
+                    "text": "You do not know what you are asking. Are you able to drink the cup that I am to drink?",
+                    "context_description": "When James and John (via their mother) request the top positions in Jesus’ kingdom, Jesus first responds with “You don’t realize what you’re asking.” He then asks if they can endure the suffering (“the cup”) He must face. This interaction is a mild reproof of their ambition and misunderstanding of greatness. Jesus implies they are seeking honor without comprehending the cost (His upcoming suffering)."
+                }, {
+                    "reference": "Matthew 21:13",
+                    "text": "It is written, 'My house shall be called a house of prayer,' but you make it a den of robbers.",
+                    "context_description": "Jesus speaks this while cleansing the temple in Jerusalem. He overturns the tables of the money-changers and drives out those selling animals, quoting Scripture (Isaiah 56:7 and Jeremiah 7:11). He condemns how they turned God’s house into a thieves’ hideout. This is a public and forceful rebuke of the merchants and religious authorities for corrupting the worship space with greed."
+                }, {
+                    "reference": "Matthew 21:16",
+                    "text": "Yes; have you never read, 'Out of the mouth of infants and nursing babies you have prepared praise'?",
+                    "context_description": "After the temple cleansing, children in the temple courts were shouting praises to Jesus as the Son of David, and the chief priests became indignant. In reply, Jesus quotes Psalm 8:2 to justify the children’s praises. The rhetorical “have you never read?” is a jab at these learned leaders’ failure to recognize Scripture being fulfilled. It’s a subtle but pointed way of saying that even children recognize His messianic identity, whereas the religious leaders, who should know better, do not."
+                }, {
+                    "reference": "Matthew 21:42-43",
+                    "text": "Have you never read in the Scriptures: 'The stone that the builders rejected has become the cornerstone'?... Therefore I tell you, the kingdom of God will be taken away from you and given to a people producing its fruits.",
+                    "context_description": "Speaking to the chief priests and Pharisees after the Parable of the Wicked Tenants, Jesus first cites Psalm 118:22 about the rejected stone becoming the cornerstone—implying that they (the builders) are rejecting Him (the cornerstone). He then delivers a severe warning: because of their rejection, God’s kingdom will be taken from them and given to others who will bear fruit. This is a pronouncement of judgment, essentially telling Israel’s religious leaders that their privileged position will be lost due to their unfaithfulness."
+                }, {
+                    "reference": "Matthew 22:18",
+                    "text": "Why put me to the test, you hypocrites?",
+                    "context_description": "The Pharisees and Herodians tried to trap Jesus with a question about paying taxes to Caesar. Before answering, Jesus recognizes their malicious intent. He openly calls them out as hypocrites for testing Him. By labeling them this way, He exposes their insincerity—they weren’t seeking truth but trying to ensnare Him. It’s a sharp reproach that precedes His clever answer about rendering to Caesar and God."
+                }, {
+                    "reference": "Matthew 22:29",
+                    "text": "You are wrong, because you know neither the Scriptures nor the power of God.",
+                    "context_description": "Jesus says this to the Sadducees who posed a trick question about marriage at the resurrection (a doctrine they denied). He bluntly tells them they’re mistaken in their premise. He attributes their error to ignorance of both Scripture and God’s power. This is a direct correction of their theological error and a critique of their spiritual blindness, delivered without any sugar-coating."
+                }, {
+                    "reference": "Matthew 23:13",
+                    "text": "But woe to you, scribes and Pharisees, hypocrites! For you shut the kingdom of heaven in people’s faces...",
+                    "context_description": "This is the first of a series of seven woes Jesus pronounces on the religious leaders in Matthew 23. He denounces the scribes and Pharisees as hypocrites, and specifically here, accuses them of preventing others from entering God’s kingdom (through their legalism and opposition to Jesus), while they themselves aren’t entering either. The “woe” is a declaration of judgment and sorrow for their spiritually deadly behavior."
+                }, {
+                    "reference": "Matthew 23:15",
+                    "text": "Woe to you, scribes and Pharisees, hypocrites! For you travel across sea and land to make a single proselyte, and when he becomes one, you make him twice as much a child of hell as yourselves.",
+                    "context_description": "Another woe against the religious leaders. Jesus condemns their zeal in making converts to their brand of Judaism, noting the tragic result: the convert becomes even more hell-bound than the Pharisees themselves. This indicates the Pharisees’ influence is spiritually ruinous. Calling them “children of hell” and saying they produce the same is extremely strong language, emphasizing how severely off-track their religion is."
+                }, {
+                    "reference": "Matthew 23:16",
+                    "text": "Woe to you, blind guides, who say, 'If anyone swears by the temple, it is nothing; but if anyone swears by the gold of the temple, he is bound by his oath.'",
+                    "context_description": "Here Jesus calls the Pharisees “blind guides,” mocking the fact that they are supposed to be spiritual leaders but are utterly blind to truth. He references one of their legalistic teachings about oaths—showing how they created loopholes (distinguishing between swearing by the temple vs. its gold) to evade honesty. This woe denounces their foolish and deceptive casuistry and highlights their spiritual blindness."
+                }, {
+                    "reference": "Matthew 23:23-24",
+                    "text": "Woe to you, scribes and Pharisees, hypocrites! For you tithe mint and dill and cumin, and have neglected the weightier matters of the law... You blind guides, straining out a gnat and swallowing a camel!",
+                    "context_description": "Jesus rebukes the Pharisees for their warped priorities. They meticulously tithe even the smallest garden herbs, yet they ignore the more important moral commands like justice, mercy, and faithfulness. He calls them blind guides again, using a vivid image: they filter out a tiny unclean insect (gnat) from their drink but gulp down a huge unclean animal (camel). This exaggeration underscores how they fuss over minutiae but commit great injustices. It’s a scathing indictment of their hypocrisy and misplaced focus."
+                }, {
+                    "reference": "Matthew 23:25",
+                    "text": "Woe to you, scribes and Pharisees, hypocrites! For you clean the outside of the cup and the plate, but inside they are full of greed and self-indulgence.",
+                    "context_description": "In this woe, Jesus compares the Pharisees to a dish that’s washed on the outside but filthy inside. It symbolizes their lives: they maintain an appearance of religious purity outwardly, but internally they are corrupt—filled with greed and indulgence. Jesus is condemning their focus on external rituals and reputation while harboring sinful motives and desires. It’s a clear call-out of their inner moral decay."
+                }, {
+                    "reference": "Matthew 23:27",
+                    "text": "Woe to you, scribes and Pharisees, hypocrites! For you are like whitewashed tombs, which outwardly appear beautiful, but within are full of dead people’s bones and all uncleanness.",
+                    "context_description": "Jesus uses another striking image to expose the Pharisees’ hypocrisy. He likens them to tombs that have been painted white on the outside (which was done to make them look nice and to warn people to avoid ritual impurity) but inside are full of death and decay. The Pharisees similarly look pious externally, but their hearts are full of corruption and death. This simile bluntly highlights the contrast between their public image and their true spiritual state."
+                }, {
+                    "reference": "Matthew 23:29",
+                    "text": "Woe to you, scribes and Pharisees, hypocrites! For you build the tombs of the prophets and decorate the monuments of the righteous...",
+                    "context_description": "Jesus condemns the Pharisees for honoring the Old Testament prophets with tombs and memorials while failing to heed their message. He implies that despite outwardly venerating slain prophets, they are the same as those who killed the prophets (in fact, they are plotting to kill Jesus, the greatest prophet). Following verses (23:30-32) make clear that they bear the same murderous mindset. Thus, this woe accuses them of hypocrisy in claiming they wouldn’t have killed prophets, while they carry the same guilt in their hearts."
+                }, {
+                    "reference": "Matthew 23:33",
+                    "text": "You serpents, you brood of vipers, how are you to escape being sentenced to hell?",
+                    "context_description": "Toward the end of the woes, Jesus intensifies the condemnation. He directly calls the religious leaders “snakes” and a family of vipers, echoing John the Baptist’s earlier rebuke (Matthew 3:7). He then pointedly asks how they could possibly escape hell’s judgment. This rhetorical question implies that their behavior is so evil that damnation is certain without drastic repentance. It is an extremely severe and final warning about the peril of their souls."
+                }, {
+                    "reference": "Matthew 23:37",
+                    "text": "O Jerusalem, Jerusalem, the city that kills the prophets and stones those who are sent to it! How often would I have gathered your children together... and you were not willing!",
+                    "context_description": "Here Jesus laments over Jerusalem with sorrow and frustration. Addressing the city (personifying its people and leaders), He acknowledges its history of murdering prophets and messengers from God. He then mournfully notes that He frequently longed to gather and protect her children as a hen does with chicks, but the city was unwilling. This is a negative interaction in the sense of a rebuke combined with grief – Jesus is both condemning the city’s hard-heartedness and expressing His heartbreak at their rejection of Him."
+                }, {
+                    "reference": "Matthew 26:10",
+                    "text": "Why do you trouble the woman? For she has done a beautiful thing to me.",
+                    "context_description": "When Mary of Bethany anointed Jesus with expensive perfume, some disciples (led by Judas) criticized it as wasteful. Jesus comes to her defense with a sharp question to the critics. By asking why they are bothering her, He rebukes them for their harsh attitude. He then affirms the value of her act of devotion. While this statement defends Mary, it’s negative toward the disciples’ perspective, correcting their misguided indignation."
+                }, {
+                    "reference": "Matthew 26:21",
+                    "text": "Truly, I say to you, one of you will betray me.",
+                    "context_description": "At the Last Supper, Jesus drops this solemn truth in front of all the Twelve. This assertion that one of His own disciples will hand Him over is not aimed at a specific individual by name here, but it’s a heavy indictment in the group setting. It causes each to question himself sorrowfully. It’s negative in that it exposes upcoming treachery among them, creating an atmosphere of dread and self-examination."
+                }, {
+                    "reference": "Matthew 26:25",
+                    "text": "You have said so.",
+                    "context_description": "Judas, who intends to betray Jesus, asks, “Is it I, Rabbi?” Jesus answers with this phrase, essentially affirming Judas’s words. “You have said so” is a way of saying, “Yes, it is as you say.” This indirect confirmation serves as a personal confrontation to Judas without alerting the others explicitly. It’s a tense interaction, effectively unmasking Judas’s guilt to him. Jesus’ response is curt and laden with the weight of Judas’s impending betrayal."
+                }, {
+                    "reference": "Matthew 26:31",
+                    "text": "You will all fall away because of me this night, for it is written, 'I will strike the shepherd, and the sheep of the flock will be scattered.'",
+                    "context_description": "On the Mount of Olives, just before His arrest, Jesus tells the disciples a hard truth: every one of them will abandon Him that very night. He supports this with a prophecy from Zechariah. This is a stern prediction that implies their coming failure of loyalty. It’s not a scolding in the moment, but it is a negative prophecy about their actions, likely delivered with a tone of sad certainty."
+                }, {
+                    "reference": "Matthew 26:34",
+                    "text": "Truly, I tell you, this very night, before the rooster crows, you will deny me three times.",
+                    "context_description": "Jesus directs this prophecy to Peter specifically, after Peter insists he will never fall away. Jesus, with solemn certainty (“Truly, I tell you”), tells Peter that contrary to his claims, he will deny knowing Jesus three times before the rooster crows at dawn. This is a personal rebuke/warning to Peter’s overconfidence and a prediction of his imminent failure. It is clearly a painful and negative revelation for Peter to hear."
+                }, {
+                    "reference": "Matthew 26:40",
+                    "text": "So, could you not watch with me one hour?",
+                    "context_description": "In Gethsemane, Jesus finds Peter, James, and John sleeping instead of keeping watch as He had asked. He addresses this question to Peter (whom He singles out by name in Mark’s account). The question is a mild rebuke expressing disappointment that they couldn’t stay awake and pray even for a short time while He agonized. It highlights their weakness during His hour of need."
+                }, {
+                    "reference": "Matthew 26:41",
+                    "text": "Watch and pray that you may not enter into temptation. The spirit indeed is willing, but the flesh is weak.",
+                    "context_description": "Continuing in Gethsemane, Jesus admonishes the sleepy disciples. He commands them to stay alert and pray to avoid falling into temptation (knowing the trial that is coming with His arrest). He comments that though they may have good intentions (“willing spirit”), their human weakness is overpowering. This statement both warns and explains their failure. It’s corrective, urging them to overcome physical weakness through vigilance and prayer."
+                }, {
+                    "reference": "Matthew 26:50",
+                    "text": "Friend, do what you came to do.",
+                    "context_description": "When Judas arrives in Gethsemane leading armed men and betrays Jesus with a kiss, Jesus responds with this statement. Calling Judas “Friend” in this context is poignant and possibly ironic, as Judas is acting as an enemy. “Do what you came to do” is essentially Jesus permitting the betrayal to proceed. While not a harsh insult, it’s a firm and resigned acknowledgment of Judas’s treachery. It carries a tone of sad resolve and dismisses Judas to carry out his deed."
+                }, {
+                    "reference": "Matthew 26:52",
+                    "text": "Put your sword back into its place. For all who take the sword will perish by the sword.",
+                    "context_description": "When Peter (identified in John’s Gospel) struck the high priest’s servant with a sword during Jesus’ arrest, Jesus rebukes him. He commands Peter to sheath his weapon and then issues a proverb/warning that violence breeds violence (“those who live by the sword die by the sword”). This is a stern correction of Peter’s attempt to fight, indicating that Jesus will not resist arrest with force and that His followers should not resort to violence."
+                }, {
+                    "reference": "Matthew 26:55",
+                    "text": "Have you come out as against a robber, with swords and clubs to capture me? Day after day I sat in the temple teaching, and you did not seize me.",
+                    "context_description": "As He’s being arrested, Jesus addresses the crowd of soldiers, temple guards, and leaders. He calls out the absurdity and cowardice of their approach — they’ve come armed as if He were a dangerous criminal, yet He was peacefully teaching in public every day and they never laid hands on Him then. This critique shames the authorities for their clandestine, forceful tactics. It’s spoken as an indictment of their intimidation and duplicity."
+                }, {
+                    "reference": "Matthew 26:64",
+                    "text": "You have said so. But I tell you, from now on you will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven.",
+                    "context_description": "During His trial before the Jewish Sanhedrin, the high priest demands Jesus to declare if He is the Messiah, the Son of God. Jesus first responds “You have said so,” essentially affirming the charge in their words. Then He delivers a powerful declaration: citing Daniel 7:13 and Psalm 110:1, He predicts that they will see Him, the Son of Man, exalted at God’s right hand and returning in glory. This is a bold pronouncement of His divine authority to those who are condemning Him. It’s perceived as blasphemy by the council and leads to their violent reaction. Jesus’ words are not a rebuke in the conventional sense, but they are a confrontational truth claim in the face of His accusers, effectively warning them of His future vindication and their judgment."
+                }, {
+                    "reference": "Luke 2:49",
+                    "text": "Why were you looking for me? Did you not know that I must be in my Father’s house?",
+                    "context_description": "At age 12, after Mary and Joseph found Him in the Temple following a frantic three-day search, young Jesus responds with these questions. He mildly chides His parents for not knowing where He’d be. The correction lies in reminding them of His unique identity and mission (“my Father’s house” meaning God’s Temple). It’s a perplexing but firm reply that shows Jesus expected them to understand His priorities, even at that age."
+                }, {
+                    "reference": "Luke 4:24",
+                    "text": "Truly, I say to you, no prophet is acceptable in his hometown.",
+                    "context_description": "While speaking in the synagogue of Nazareth (His hometown), Jesus anticipates the crowd’s skepticism toward Him. He makes this proverbial statement comparing Himself to prophets rejected by their own people. This is a rebuke of their underlying unbelief. He then recalls how Elijah and Elisha blessed Gentiles instead of Israelites, implying that Nazareth’s rejection of Him will cost them. The crowd takes great offense and attempts to kill Him, confirming the truth of His saying."
+                }, {
+                    "reference": "Luke 6:46",
+                    "text": "Why do you call me 'Lord, Lord,' and not do what I tell you?",
+                    "context_description": "In the conclusion of the Sermon on the Plain, Jesus directly challenges those listening. Many might profess Jesus as “Lord” verbally, but fail to obey His teachings. This pointed question exposes the inconsistency between their words and actions. It’s a general rebuke against empty lip-service devoid of obedience, urging true discipleship evidenced by doing what He says."
+                }, {
+                    "reference": "Luke 9:41",
+                    "text": "O faithless and twisted generation, how long am I to be with you and bear with you?",
+                    "context_description": "This mirrors Matthew 17:17 — after the disciples could not cast out a demon from a boy, Jesus expresses exasperation. Luke’s account (as part of 9:41) similarly shows Jesus lamenting the unbelief and perversity of the people (including perhaps His disciples). It underscores His frustration at their persistent lack of faith and spiritual insight. It’s both a rebuke and an expression of weariness at dealing with such persistent failure."
+                }, {
+                    "reference": "Luke 9:62",
+                    "text": "No one who puts his hand to the plow and looks back is fit for the kingdom of God.",
+                    "context_description": "To a man who said he wanted to follow Jesus but first wanted to say goodbye to his family, Jesus gives this stern proverb. It implies that discipleship requires single-minded commitment. Anyone who begins the journey with Jesus and keeps looking back longingly or is distracted by past ties is not suitable for God’s kingdom work. It’s a challenging correction against half-hearted or delayed commitment."
+                }, {
+                    "reference": "Luke 10:13",
+                    "text": "Woe to you, Chorazin! Woe to you, Bethsaida! For if the mighty works done in you had been done in Tyre and Sidon, they would have repented long ago...",
+                    "context_description": "Jesus pronounces woes on the Galilean towns of Chorazin and Bethsaida where He performed many miracles, yet they did not repent. He compares them unfavorably to the pagan cities of Tyre and Sidon, suggesting those cities would have repented if they saw such works. This is a strong indictment of Chorazin and Bethsaida’s hard-heartedness and a warning of coming judgment due to their unbelief."
+                }, {
+                    "reference": "Luke 10:15",
+                    "text": "And you, Capernaum... you shall be brought down to Hades.",
+                    "context_description": "Similarly, Jesus addresses Capernaum (the town that had been His base of operations and also witnessed many miracles). He asks rhetorically if Capernaum will be exalted to heaven and immediately answers that it will be brought down to Hades (the realm of the dead). This means that despite its privilege of Jesus’ presence and teaching, Capernaum faces severe judgment for not responding. It’s a grave warning and rebuke to that city’s inhabitants."
+                }, {
+                    "reference": "Luke 11:42",
+                    "text": "But woe to you Pharisees! For you tithe mint and rue and every herb, and neglect justice and the love of God...",
+                    "context_description": "During a dinner at a Pharisee’s house (Luke 11:37-52), Jesus pronounces a series of woes against the Pharisees and experts in the law, similar to Matthew 23. In this woe, He rebukes the Pharisees for their meticulous tithing of small garden herbs while neglecting the fundamental virtues of justice and love for God. It’s highlighting their inverted priorities and is a direct condemnation of their hypocrisy and majoring in minors. Jesus affirms they should do the small duties without leaving the big duties undone."
+                }, {
+                    "reference": "Luke 11:46",
+                    "text": "Woe to you lawyers also! For you load people with burdens hard to bear, and you yourselves do not touch the burdens with one of your fingers.",
+                    "context_description": "Here Jesus turns to the experts in the Law (scribes or 'lawyers'). He rebukes them for creating or promoting many legalistic rules that become heavy burdens on people’s shoulders, yet they themselves don’t help carry those burdens nor live by the spirit of them. Essentially, they make religion onerous for others while avoiding true responsibility themselves. Jesus calls this out as worthy of woe (judgment)."
+                }, {
+                    "reference": "Luke 11:52",
+                    "text": "Woe to you lawyers! For you have taken away the key of knowledge. You did not enter yourselves, and you hindered those who were entering.",
+                    "context_description": "In this final woe at that dinner, Jesus accuses the scholars of the Law of actually obscuring God’s truth (“the key of knowledge”) from the people. Their interpretations and traditions have not led them into true understanding or salvation, and worse, they block others from finding the truth. It’s a devastating critique: they, the supposed guides to scripture, have become obstacles to knowing God. Jesus condemns them for preventing people from entering the kingdom by their false teaching."
+                }, {
+                    "reference": "Luke 12:5",
+                    "text": "But I will warn you whom to fear: fear him who, after he has killed, has authority to cast into hell. Yes, I tell you, fear him!",
+                    "context_description": "Teaching His disciples, Jesus issues this strong warning about proper fear. Instead of fearing human beings who can only kill the body, Jesus says the one to fear is God, who has the authority over eternal judgment (to cast into hell after death). His repeated “fear him!” emphatically corrects any misplaced fear. While not directed at a single person as a rebuke, it’s a forceful admonition about taking God’s judgment seriously, countering the disciples’ tendency to fear man more than God."
+                }, {
+                    "reference": "Luke 12:14",
+                    "text": "Man, who made me a judge or arbitrator over you?",
+                    "context_description": "A man from a crowd asked Jesus to intervene in a family inheritance dispute. Jesus addresses him abruptly as “Man” (a form of address showing some distance) and declines the request, essentially saying it’s not His role to settle such civil disputes. The question implies a rebuke: Jesus didn’t come as a financial arbitrator, and the man’s request was out of place. Immediately after, Jesus warns the crowd about greed (Luke 12:15). So this statement dismisses the man’s demand and indirectly corrects his priorities."
+                }, {
+                    "reference": "Luke 13:3",
+                    "text": "No, I tell you; but unless you repent, you will all likewise perish.",
+                    "context_description": "Discussing recent tragedies (some Galileans killed by Pilate, and others killed by a tower collapse), Jesus twice emphasizes this point (in verses 3 and 5). The people thought victims might have been worse sinners. Jesus refutes that and instead warns that they all must repent or they too will face destruction. This statement is a general call to repentance delivered as a stern warning: it shifts the focus from others’ sins to the listeners’ own need to repent, under threat of perishing."
+                }, {
+                    "reference": "Luke 13:15",
+                    "text": "You hypocrites! Does not each of you on the Sabbath untie his ox or his donkey from the manger and lead it away to water?",
+                    "context_description": "After Jesus heals a disabled woman on the Sabbath in a synagogue, the synagogue ruler indignantly says healing should be done on other days. Jesus responds by angrily calling out the hypocrisy. He points out that every one of them would do the work of untying and watering their livestock on the Sabbath (an accepted necessity), yet they objected to a woman being freed from a crippling condition on the Sabbath. By highlighting this inconsistency, Jesus shames the religious leaders for caring more about animals than a person and for their hypocritical application of Sabbath rules."
+                }, {
+                    "reference": "Luke 14:3",
+                    "text": "Is it lawful to heal on the Sabbath, or not?",
+                    "context_description": "At a Pharisee’s house on the Sabbath, a man with dropsy (swelling) stood before Jesus. Knowing the Pharisees were watching to accuse Him, Jesus asks them this pointed question before healing the man. The Pharisees remain silent. Jesus’ question is a challenge to their strict Sabbath interpretations. It functions as a rebuke by forcing them to consider the righteousness of doing good (healing) on the Sabbath. Their silence indicates either their stubborn refusal to engage or that they have no reasonable answer without condemning themselves."
+                }, {
+                    "reference": "Luke 16:15",
+                    "text": "You are those who justify yourselves before men, but God knows your hearts. For what is exalted among men is an abomination in the sight of God.",
+                    "context_description": "When the Pharisees sneered at Jesus’ teaching about money (Luke 16:14), Jesus addressed them with this indictment. He accuses them of being concerned with outward appearance and human approval (“justify yourselves before men”) while God sees their true inner motives. He then delivers a general maxim that what people highly value (implying wealth or status, which the Pharisees loved) can be detestable to God. This is a strong rebuke uncovering their love of money and false piety, reminding them that God judges the heart."
+                }, {
+                    "reference": "Luke 17:17",
+                    "text": "Were not ten cleansed? Where are the nine?",
+                    "context_description": "After Jesus healed ten lepers and only one (a Samaritan) returned to thank Him, Jesus asks these questions. His tone clearly expresses disappointment that the other nine (who were Israelites) did not return to give thanks to God. By publicly asking “Where are the nine?”, Jesus is implicitly rebuking their lack of gratitude. He commends the foreigner’s faith but highlights the ingratitude of the rest. It’s a mild yet pointed chastisement of those who took their healing and failed to honor God."
+                }, {
+                    "reference": "Luke 22:48",
+                    "text": "Judas, would you betray the Son of Man with a kiss?",
+                    "context_description": "When Judas approaches to identify Jesus to the arresting party by kissing Him, Jesus speaks this heartbreaking question. By calling him by name and pointing out the bitter irony of betraying with a sign of affection, Jesus confronts Judas in the very act of betrayal. The question emphasizes the treachery and unnaturalness of what Judas is doing. It’s a personal rebuke that also highlights Judas’s ultimate act of falsehood."
+                }, {
+                    "reference": "Luke 22:51",
+                    "text": "No more of this!",
+                    "context_description": "After one of the disciples (Peter) struck the high priest’s servant and cut off his ear during the arrest attempt, Jesus emphatically stops the violence with “No more of this!” (or “Enough!”). He then heals the servant’s ear. This is a sharp command aimed at His followers to cease fighting. It rebukes the use of force in this situation and asserts Jesus’ willingness to be arrested according to God’s plan."
+                }, {
+                    "reference": "Luke 23:28",
+                    "text": "Daughters of Jerusalem, do not weep for me, but weep for yourselves and for your children.",
+                    "context_description": "As Jesus carries His cross to Golgotha, a group of women from Jerusalem wail in sympathy. Jesus turns to them with a prophetic warning: they should not cry for Him (for His suffering, which is temporary), but rather for themselves and their children. He’s indicating that terrible days are coming (referring to the siege and destruction of Jerusalem in 70 AD). This shifts the lament from His fate to the judgment looming over Jerusalem. While spoken with compassion, it is a negative prophecy that rebukes misplaced sorrow and urges them to recognize the real tragedy—their unrepentant city’s future."
+                }, {
+                    "reference": "Luke 24:25",
+                    "text": "O foolish ones, and slow of heart to believe all that the prophets have spoken!",
+                    "context_description": "This is Jesus’ reprimand to the two disciples on the road to Emmaus, before they recognize Him. They were discouraged about His death despite the resurrection reports. Jesus chides them for being foolish and sluggish in faith concerning the prophecies about the Messiah’s suffering and glory. He then explains the Scriptures to them. The rebuke is that they should have understood from the prophets that the Christ had to suffer and then enter His glory. By calling them foolish and slow-hearted, Jesus is firmly correcting their lack of understanding and belief."
+                }, {
+                    "reference": "Luke 24:38",
+                    "text": "Why are you troubled, and why do doubts arise in your hearts?",
+                    "context_description": "When the risen Jesus appears to the larger group of disciples (who think He might be a ghost), He asks this double question. It’s a mild rebuke of their fear and skepticism in that moment. Jesus had repeatedly told them He would rise, yet they’re startled and doubting. The questions call them out for being alarmed and harboring doubts instead of faith, even as He stands among them alive. He then shows them His wounds and eats fish to prove He’s real. This gentle challenge nudges them toward faith and calm instead of panic and unbelief."
+                }, {
+                    "reference": "John 2:4",
+                    "text": "Woman, what does this have to do with me? My hour has not yet come.",
+                    "context_description": "At the wedding in Cana, when Mary (Jesus’ mother) hints that He should do something about the wine running out, Jesus responds with this statement. Addressing her as “Woman” (a respectful term in that culture, but not warm like “Mother”) and essentially asking why she involves Him, He implies that performing a public miracle isn’t yet part of His divine timetable (“my hour has not yet come”). While not rude, His tone is distancing and corrective, gently rebuking Mary’s attempt to prompt Him. He does go on to perform the miracle of water to wine, but His initial response establishes that He acts on the Father’s timing, not human pressure."
+                }, {
+                    "reference": "John 2:16",
+                    "text": "Take these things away; do not make my Father’s house a house of trade.",
+                    "context_description": "During the first cleansing of the temple in John’s Gospel, Jesus drives out the merchants and money changers. He commands those selling pigeons, “Take these things away!” and declares they must not turn His Father’s house (the temple) into a marketplace. This is both a physical and verbal forceful action. He’s angrily rebuking them for corrupting the sacred space of worship with commercial activity. The zeal of this interaction fulfills Psalm 69:9 and sets a tone of righteous anger at greed in the temple."
+                }, {
+                    "reference": "John 3:10",
+                    "text": "Are you the teacher of Israel and yet you do not understand these things?",
+                    "context_description": "Jesus says this to Nicodemus, a Pharisee and prominent teacher, during their night-time conversation about being born again. Nicodemus is confused by Jesus’ teaching on spiritual rebirth. Jesus expresses astonishment and mild reproach that a renowned Jewish teacher lacks understanding of these spiritual truths (which were foreshadowed in Scripture). This question chides Nicodemus for his ignorance despite his status, implying he should know such things. It’s a corrective challenge pushing Nicodemus to recognize the depth of what Jesus is revealing."
+                }, {
+                    "reference": "John 4:17-18",
+                    "text": "You are right in saying, 'I have no husband'; for you have had five husbands, and the one you now have is not your husband.",
+                    "context_description": "In conversation with the Samaritan woman at the well, Jesus tells her to call her husband. When she evasively says she has no husband, Jesus responds with this statement, revealing His knowledge of her life. By recounting her five past husbands and current unmarried relationship, Jesus confronts her sin and brokenness directly but without harsh condemnation. It functions as a truthful exposure of her situation, leading her to perceive He is a prophet. It’s an uncomfortable but necessary part of the dialogue that leads to her transformation."
+                }, {
+                    "reference": "John 4:48",
+                    "text": "Unless you see signs and wonders you will not believe.",
+                    "context_description": "When a royal official begs Jesus to heal his dying son (John 4:46-49), Jesus first utters this remark, apparently addressed not only to the man but broadly (the “you” here is plural in Greek). It’s a lament or rebuke of the Galileans’ reliance on miracles for faith. Essentially, Jesus is criticizing a faith that depends on seeing miracles. It might sound discouraging, but the official persists in faith, and Jesus does heal the son. Still, this statement highlights Jesus’ frustration with people’s demand for signs as a basis for belief."
+                }, {
+                    "reference": "John 5:14",
+                    "text": "See, you are well! Sin no more, that nothing worse may happen to you.",
+                    "context_description": "Later on, Jesus finds the man He healed at the Bethesda pool (the man who had been lame for 38 years). Jesus gives him a warning: now that he’s physically well, he must stop sinning lest something worse befall him. “Something worse” could imply eternal judgment or a worse condition. This indicates that, in this man’s case, his past sin may have been linked to his ailment or that continued sin could result in severe consequences. Jesus’ words are a sober admonishment to pursue holiness after healing."
+                }, {
+                    "reference": "John 5:42",
+                    "text": "But I know that you do not have the love of God within you.",
+                    "context_description": "Speaking to the Jewish religious leaders (John 5:39-47) who opposed Him, Jesus makes this indictment. Despite their study of Scripture, their refusal to accept Him shows they lack genuine love for God. Telling them flat-out that God’s love isn’t in them is a strong rebuke, essentially accusing them of being estranged from God even as they claim to represent Him. It’s part of a broader chastisement that they seek human approval rather than God’s, leading to their rejection of the One whom God sent."
+                }, {
+                    "reference": "John 6:26",
+                    "text": "Truly, truly, I say to you, you are seeking me, not because you saw signs, but because you ate your fill of the loaves.",
+                    "context_description": "After feeding the 5,000, the crowd follows Jesus to the other side of the lake. Jesus confronts their motivation: they are chasing Him not out of true understanding (the “sign” pointing to Him as Messiah), but simply because they got a free meal. This is a frank rebuke of their shallow desire for physical food rather than spiritual truth. It sets the stage for His Bread of Life discourse, but many end up offended and leaving. Jesus’ candor here calls out their earthly-mindedness."
+                }, {
+                    "reference": "John 6:36",
+                    "text": "But I said to you that you have seen me and yet do not believe.",
+                    "context_description": "In the Bread of Life discourse, Jesus points out the crowd’s unbelief. Though they literally saw Him and witnessed His miracles (including the feeding), they still don’t trust in Him as the Son of God. This statement carries a note of reproach for their hard hearts. Jesus is emphasizing that even direct exposure to Him isn’t enough for those unwilling to believe, underlining their responsibility in their unbelief."
+                }, {
+                    "reference": "John 6:43",
+                    "text": "Do not grumble among yourselves.",
+                    "context_description": "When Jesus said He is the bread from heaven, the Jews began murmuring because they knew His human family and couldn’t accept His heavenly origin (John 6:41-42). Jesus responds with this command to stop grumbling. It’s a curt directive to cease their under-the-breath complaining. By telling them not to grumble, Jesus is implicitly warning them that their murmuring attitude is wrong—much like Israel in the wilderness. He then continues to explain spiritual truths. The injunction itself is a minor rebuke aimed at their resistant attitude."
+                }, {
+                    "reference": "John 6:70",
+                    "text": "Did I not choose you, the Twelve? And yet one of you is a devil.",
+                    "context_description": "After many disciples turn away over the hard teaching about eating His flesh, Jesus asks the Twelve if they will leave too. Peter affirms their faith. Jesus then soberly reminds them He chose them, yet one among them is “a devil.” This refers to Judas (as John 6:71 clarifies). Calling Judas “a devil” is extremely strong—indicating Judas is aligned with the enemy. Jesus is voicing the tragic reality that one hand-picked disciple harbors betrayal. It’s a negative, ominous statement meant to hint at Judas’s coming treachery and possibly to warn Judas that Jesus knows his heart."
+                }, {
+                    "reference": "John 7:7",
+                    "text": "The world cannot hate you, but it hates me because I testify about it that its works are evil.",
+                    "context_description": "Speaking to His brothers (who did not yet believe in Him and were urging Him to show Himself publicly), Jesus contrasts their relationship with the world versus His. He tells them the world doesn’t hate them (implying they are still of the world), but it does hate Him since He exposes its evil. This remark contains an implicit critique of His brothers’ unbelief and alignment with worldly perspectives. It’s somewhat sharp: it suggests they are not experiencing persecution because they haven’t taken a stand with Him. Meanwhile, it explains why He is hated – because He speaks uncomfortable truth about people’s sins."
+                }, {
+                    "reference": "John 7:19",
+                    "text": "Has not Moses given you the law? Yet none of you keeps the law. Why do you seek to kill me?",
+                    "context_description": "Speaking to the crowd in Jerusalem (which included religious leaders) at the Feast of Tabernacles, Jesus calls out their failure to keep the very Law of Moses they boast in. Despite having the law, they violate it—evidenced ultimately by their plot to kill Him (murder being against the law). This is a direct accusation especially aimed at the authorities who are plotting His death. The crowd denies having a demon and being out to kill Him (some were unaware of the leaders’ plans), but Jesus here unmasks the murderous intent in their midst and the hypocrisy of claiming to follow Moses while wanting to kill the one Moses wrote about."
+                }, {
+                    "reference": "John 7:24",
+                    "text": "Do not judge by appearances, but judge with right judgment.",
+                    "context_description": "Still addressing the Jerusalem crowd who were upset that He healed on a Sabbath, Jesus admonishes them to stop judging superficially. They had criticized His healing as unlawful because it was on the Sabbath, yet they would perform circumcision on the Sabbath to keep the law. Jesus points out that their judgment is flawed and hypocritical. “Judge with right judgment” is a corrective command—telling them to use righteous criteria (like mercy and the true intent of the law) rather than shallow appearances or technicalities. It’s a mild rebuke wrapped in an instruction to be fair and discerning."
+                }, {
+                    "reference": "John 8:7",
+                    "text": "Let him who is without sin among you be the first to throw a stone at her.",
+                    "context_description": "When the scribes and Pharisees brought a woman caught in adultery to Jesus, hoping to trap Him into contradicting the Law of Moses or Roman law, Jesus responds with this famous challenge. By saying that only a sinless person may cast the first stone, He convicts the consciences of her accusers. One by one, they depart without condemning her. Jesus’ words expose their hypocrisy and sinfulness, effectively rebuking their presumption to judge her. It’s simultaneously a masterful avoidance of their trap and a piercing indictment of their hearts."
+                }, {
+                    "reference": "John 8:19",
+                    "text": "You know neither me nor my Father. If you knew me, you would know my Father also.",
+                    "context_description": "During a debate in the temple treasury, the Pharisees questioned Jesus’ testimony about Himself, asking, “Where is your Father?” Jesus replies with this sharp spiritual indictment: they don’t truly know Him or God the Father. Despite their religious status, they lack genuine knowledge of God, evidenced by their failure to recognize God’s Son. This is a direct blow to their spiritual pride. Jesus ties knowing Him to knowing the Father, basically telling these experts in religion that they have missed both. It’s a deep rebuke of their spiritual condition."
+                }, {
+                    "reference": "John 8:23",
+                    "text": "You are from below; I am from above. You are of this world; I am not of this world.",
+                    "context_description": "Still addressing the unbelieving Jewish leaders, Jesus draws a stark contrast between them and Himself. By saying they are “from below” and “of this world,” He means they belong to a realm of earthly, sinful origin. In contrast, He claims a heavenly origin (“from above”) and that He’s not of this worldly system. This is a confrontational statement implying their values and mindset are earthly and opposed to God. It underscores why they don’t accept Him—because of fundamentally different origins and allegiances. It’s implicitly a rebuke, demoting their spiritual standing while affirming His."
+                }, {
+                    "reference": "John 8:24",
+                    "text": "Unless you believe that I am he you will die in your sins.",
+                    "context_description": "Jesus issues this warning to the Jewish audience (particularly the leaders) in the temple. “I am he” in context means the Messiah or the Divine One (even alluding to God’s name “I Am”). Jesus warns that if they don’t believe in His identity, they will die guilty, unforgiven for their sins. Telling devout religious individuals that they will die in sin is a grave and offensive statement to them. It’s a negative prediction conditioned on their refusal to accept Him—a last chance type of warning that salvation hinges on believing in Him."
+                }, {
+                    "reference": "John 8:37",
+                    "text": "I know that you are offspring of Abraham; yet you seek to kill me because my word finds no place in you.",
+                    "context_description": "Jesus acknowledges to His Jewish listeners that they are physical descendants of Abraham, but then points out the inconsistency: they are trying to kill Him. He explains the reason—they have no room in their hearts for His teaching (“my word finds no place in you”). This is a condemning statement that their murderous intent proves they’re not true spiritual children of Abraham. It directly challenges their self-perception and reveals the hostility in their hearts as evidence of their rejection of God’s word."
+                }, {
+                    "reference": "John 8:44",
+                    "text": "You are of your father the devil, and your will is to do your father’s desires...",
+                    "context_description": "This is one of Jesus’ most blistering rebukes to the unbelieving Jewish leaders. He flatly tells them that their true father is the devil, not God or even Abraham. He explains that they carry out the devil’s desires—implying lies and murder (as the verse continues to describe Satan as a murderer and liar). Essentially, Jesus is saying their hatred and intention to kill Him align them as children of Satan. This is extremely offensive to them but Jesus says it to unmask the true spiritual source behind their opposition. It’s a severe condemnation of their character and actions."
+                }, {
+                    "reference": "John 8:55",
+                    "text": "But you have not known him. I know him. If I were to say that I do not know him, I would be a liar like you...",
+                    "context_description": "As the confrontation in John 8 peaks, Jesus asserts that He knows God the Father, unlike His opponents who do not truly know God. He then adds that if He were to deny His relationship with the Father, He’d be a liar “like you.” Calling them liars to their face is strong. It references their earlier claim that God is their Father (8:41) and flips it—accusing them of falsehood. This statement accuses them of lacking genuine knowledge of God and equates their integrity with outright lying. It’s a direct insult aimed at their honesty and their spiritual knowledge."
+                }, {
+                    "reference": "John 9:41",
+                    "text": "If you were blind, you would have no guilt; but now that you say, 'We see,' your guilt remains.",
+                    "context_description": "After healing the man born blind, Jesus speaks to some Pharisees who ask if they too are blind. Jesus replies with this paradoxical statement. Essentially, He says if they acknowledged their spiritual blindness (ignorance), they would not be guilty (because they would seek sight). But since they arrogantly claim to see (to have spiritual insight), they remain guilty in their sin. This is a rebuke of their pride and refusal to admit need. Jesus turns their question into a pronouncement of judgment: their supposed sight is exactly what condemns them, because it’s false. It’s a cutting conclusion that leaves the self-assured Pharisees indicted."
+                }, {
+                    "reference": "John 10:32",
+                    "text": "I have shown you many good works from the Father; for which of them are you going to stone me?",
+                    "context_description": "When the Jewish leaders picked up stones to execute Jesus for blasphemy (after He said “I and the Father are one”), Jesus confronts them with this question. It’s a pointed challenge highlighting the irrationality of their violence. He had performed numerous miracles (“good works”) by God’s power among them. Jesus asks which miracle is the reason they want to kill Him. The implication is that none of His works deserve stoning and their real motive is their refusal to accept His claims about Himself. This question shames them and forces them to articulate that it’s not the works but what He said (claiming divinity) that offends them. It’s an ironic and bold rebuke couched in a question."
+                }, {
+                    "reference": "John 18:21",
+                    "text": "Why do you ask me? Ask those who have heard me what I said to them; they know what I said.",
+                    "context_description": "When being interrogated by the high priest Annas about His disciples and teaching, Jesus responds with this challenge. He points out that His ministry was public: He taught openly in synagogues and the temple, so witnesses should be available. “Why question me?” implies that the proper legal process would be to question witnesses rather than trying to trap Him by His own words. This answer is a subtle rebuke of the illegality and unfairness of the trial. One of the officers strikes Jesus for it (John 18:22). Jesus’ response here calls out the hypocrisy of the proceedings and shifts the burden back to His accusers."
+                }, {
+                    "reference": "John 18:23",
+                    "text": "If what I said is wrong, bear witness about the wrong; but if what I said is right, why do you strike me?",
+                    "context_description": "After Jesus’ reply to Annas, an officer slapped Him, saying “Is that how you answer the high priest?” Jesus responds with this calm but firm retort. He basically demands justification: if He spoke wrongly, they should explain how; if He spoke rightly, then the slap was unjustified. This is a dignified rebuke of the abuse He just suffered and the lack of due process. Jesus calls out the officer’s action as baseless if they cannot prove Him wrong. It’s a moment where Jesus, though on trial, asserts the principle of justice against an act of brutality."
+                }, {
+                    "reference": "John 19:11",
+                    "text": "You would have no authority over me at all unless it had been given you from above. Therefore he who delivered me over to you has the greater sin.",
+                    "context_description": "Speaking to Pontius Pilate during His trial, Jesus corrects Pilate’s assertion of power. Pilate had said he had authority to crucify or release Jesus (John 19:10). Jesus replies that any authority Pilate has is granted by God (“from above”). He also implies that the Jewish authorities (“he who delivered me over to you” – likely Caiaphas or Judas as representative) bear a greater guilt in this situation than Pilate does. While not directly insulting Pilate, Jesus’ statement humbles the Roman governor by reminding him that he’s not ultimately in charge. It also assigns moral responsibility, saying those who orchestrated the betrayal and handed Jesus over commit a worse offense. It’s a measured rebuke of human pride and a clarification of sin hierarchy in the injustice Jesus is undergoing."
+                }, {
+                    "reference": "John 20:29",
+                    "text": "Have you believed because you have seen me? Blessed are those who have not seen and yet have believed.",
+                    "context_description": "(Note: This verse appears in both positive and negative lists because it contains a mild reproof to Thomas while pronouncing a blessing.) After Thomas sees the risen Jesus and believes, Jesus asks this question. The query gently chastises Thomas for requiring physical sight to believe. Jesus then pronounces a beatitude on those who believe without seeing (which includes future believers). The implication is that Thomas’s faith, while real now, was inferior in that it demanded evidence. Thus, Jesus simultaneously encourages faith without sight and, in doing so, implicitly corrects Thomas’s earlier skepticism."
+                }, {
+                    "reference": "John 21:22",
+                    "text": "If it is my will that he remain until I come, what is that to you? You follow me!",
+                    "context_description": "After Jesus tells Peter about the manner of his future death (John 21:18-19), Peter notices John and asks, “Lord, what about this man?” Jesus responds with this blunt statement. Essentially, He tells Peter that John’s destiny is not Peter’s concern. Even if Jesus wanted John to live until His return, it shouldn’t affect Peter’s obedience. “What is that to you?” is a firm reproof of Peter’s curiosity or possible jealousy. Jesus then reissues the command to Peter: “You follow me!” This corrects Peter’s distraction and refocuses him on his own call of discipleship, rather than comparing to others."
+                }
+            ]
         }
+    ]
+}
     ]
 }
