@@ -27,7 +27,6 @@ jobs:
 
       - name: Verify Node version
         run: node --version
-        # should print something like v22.x.x
 
       - name: Install dependencies
         working-directory: frontend
@@ -44,5 +43,5 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId:              ${{ secrets.FIREBASE_PROJECT_ID }}
           channelId:              live
-          # If you have multiple hosting targets, uncomment the next line:
-          # target:                ${{ secrets.FIREBASE_TARGET }}
+          entryPoint:             frontend     # ← look here for firebase.json & .firebaserc
+          # target:                ${{ secrets.FIREBASE_TARGET }}  # optional if you use hosting.targets
