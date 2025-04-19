@@ -10,6 +10,12 @@ This document outlines the user interface design, layout, and component structur
  - Home View: Grid of topic cards
  - Detail View: Topic header, category tabs, and scripture cards
 
+The main page displays a list of topic.
+
+![image](https://github.com/user-attachments/assets/2f876088-7f80-4c38-9bd4-f8ca9ae82a6b)
+
+Clicking **Read More** on a topic card navigates to a detailed article view. Below is a wireframe mockup:
+
 ![Article Detail Mockup](./detail-mockup.png)
 
 ## Color Palette
