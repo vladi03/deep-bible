@@ -74,3 +74,4 @@ All schemas enforce `additionalProperties: false` to reject unknown fields.
 
 - Frontend React SPA documentation: [frontend/README.md](./frontend/README.md)
 - Pipeline Vars and Secrets: [README_pipe.md](./README_pipe.md)
+- UI Design: [README_ui_design.md](./README_ui_design.md)
