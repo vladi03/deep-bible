@@ -1,94 +1,114 @@
-# README_pipe.md
+# 🚀 Build & Deploy to Firebase Hosting – GitHub Actions Pipeline
 
-This document explains how to configure the GitHub Actions pipeline for deploying a Single Page Application (SPA) to Firebase Hosting. It covers the required secrets and parameters, and shows how to set them up in your repository.
+This GitHub Actions workflow automates the build and deployment process of your frontend application to Firebase Hosting.
 
----
+## 📄 Workflow File
 
-## 🔒 Configuring Secrets
-
-All sensitive values should be stored as **Repository secrets** under **Settings → Secrets and variables → Actions**. To add a new secret:
-
-1. In your GitHub repo, go to **Settings**.
-2. Select **Secrets and variables** → **Actions**.
-3. Click **New repository secret**.
-4. Enter the **Name** and **Value** for your secret.
-5. Click **Add secret**.
-
-| Secret Name              | Description                                                                                           |
-|--------------------------|-------------------------------------------------------------------------------------------------------|
-| `FIREBASE_TOKEN`         | CI token generated via `firebase login:ci`. Grants deploy permission to your Firebase project.         |
-| `FIREBASE_PROJECT_ID`    | Your Firebase project ID (e.g. `my-app-prod`).                                                         |
-| `FIREBASE_TARGET` (opt.) | Hosting target from `firebase.json`. Use if you defined [`hosting.targets`](https://firebase.google.com/docs/hosting/manage-hosting-resources). |
+**Workflow Name:** `Build & Deploy to Firebase Hosting`  
+**Trigger Events:**
+- On push to the `main` branch
+- On manual trigger via `workflow_dispatch`
 
 ---
 
-## ⚙️ Configuring Parameters
+## 🛠️ Configuration
 
-Non-sensitive configuration can be set either as **Secrets** or plain `env:` variables in your workflow. Below are the parameters you can override:
+### Environment Variables
 
-| Env Variable    | Default    | Description                                       |
-|-----------------|------------|---------------------------------------------------|
-| `NODE_VERSION`  | `16`       | Major Node.js version for CI (`actions/setup-node`). |
-| `BUILD_COMMAND` | `npm run build` | Command to build your SPA (`npm` or `yarn` based). |
-| `PUBLIC_DIR`    | `build`    | Output directory for static files (e.g. `build`, `dist`). |
+| Variable               | Source                     | Default        | Description                                      |
+|------------------------|----------------------------|----------------|--------------------------------------------------|
+| `NODE_VERSION`         | Hardcoded                  | `22`           | The Node.js version to use                       |
+| `BUILD_COMMAND`        | `secrets.BUILD_COMMAND`    | `npm run build`| Build command for the frontend                   |
+| `PUBLIC_DIR`           | `secrets.PUBLIC_DIR`       | `dist`         | Directory containing the compiled site           |
+| `FIREBASE_PROJECT`     | `vars.FIREBASE_PROJECT_ID` | —              | Firebase project ID                              |
+| `FIREBASE_TARGET`      | `secrets.FIREBASE_TARGET`  | `''`           | Optional Firebase hosting target name            |
 
-Set these under the `env:` section in your workflow file, for example:
+---
 
-```yaml
-env:
-  NODE_VERSION: ${{ secrets.NODE_VERSION || '16' }}
-  BUILD_COMMAND: ${{ secrets.BUILD_COMMAND || 'npm run build' }}
-  PUBLIC_DIR: ${{ secrets.PUBLIC_DIR || 'build' }}
-  FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-  FIREBASE_TARGET: ${{ secrets.FIREBASE_TARGET || '' }}
+## 🧩 Job: `build-and-deploy`
+
+Runs on the `ubuntu-latest` GitHub-hosted runner.
+
+### Steps
+
+1. **Checkout Repo**
+   - Uses `actions/checkout@v3`
+   - Clones the latest code from the `main` branch.
+
+2. **Setup Node.js**
+   - Uses `actions/setup-node@v4`
+   - Installs Node.js `22.x` version.
+
+3. **Verify Node Version**
+   - Outputs the Node.js version to confirm setup.
+
+4. **Install Dependencies**
+   - Uses `npm ci` for clean install.
+   - Runs inside the `frontend` directory.
+
+5. **Build Frontend**
+   - Executes the build command from secrets or defaults.
+   - Output goes to the directory specified by `PUBLIC_DIR`.
+
+6. **Deploy to Firebase Hosting**
+   - Uses `FirebaseExtended/action-hosting-deploy@v0`
+   - Deploys the built app to Firebase Hosting:
+     - Uses `secrets.FIREBASE_SERVICE_ACCOUNT` for authentication
+     - Uses `vars.FIREBASE_PROJECT_ID` for the target project
+     - Publishes to the `live` channel
+
+---
+
+## 🔐 Required GitHub Secrets & Variables
+
+### Secrets
+- `GITHUB_TOKEN` – Automatically provided by GitHub.
+- `FIREBASE_SERVICE_ACCOUNT` – A JSON service account key with deploy permissions.
+- `BUILD_COMMAND` *(optional)* – Custom build command (e.g., `yarn build`).
+- `PUBLIC_DIR` *(optional)* – Folder to deploy (e.g., `build`, `dist`, etc.).
+- `FIREBASE_TARGET` *(optional)* – Hosting target alias if used in `firebase.json`.
+
+### Variables
+- `FIREBASE_PROJECT_ID` – The Firebase project ID.
+
+---
+
+## 🔥 `firebase.json` Example
+
+Make sure you include this configuration file in the root of your repository:
+
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
 ```
 
----
-
-## 🚀 Example Workflow Snippet
-
-```yaml
-name: Deploy SPA to Firebase
-
-on:
-  push:
-    branches: [ main, staging ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: ${{ secrets.NODE_VERSION || '16' }}
-      BUILD_COMMAND: ${{ secrets.BUILD_COMMAND || 'npm run build' }}
-      PUBLIC_DIR: ${{ secrets.PUBLIC_DIR || 'build' }}
-      FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-      FIREBASE_TARGET: ${{ secrets.FIREBASE_TARGET || '' }}
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        run: ${{ env.BUILD_COMMAND }}
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@v1.5.0
-        with:
-          args: >
-            deploy --project ${{ env.FIREBASE_PROJECT_ID }} \
-            ${{ env.FIREBASE_TARGET && format('--only hosting:%s', env.FIREBASE_TARGET) }} \
-            --public ${{ env.PUBLIC_DIR }}
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-```
+> ✅ **Note:** Update the `"public"` directory if your build output is somewhere other than `dist`.
 
 ---
 
-## 📖 Further Reading
+## 🧪 Manual Run
 
-- [Firebase Hosting documentation](https://firebase.google.com/docs/hosting)
-- [GitHub Actions Secrets](https://docs.github.com/actions/security-guides/encrypted-secrets)
+You can manually trigger the deployment by clicking **"Run workflow"** in the GitHub Actions tab.
 
+---
+
+## 🧹 Optional Improvements
+
+- Add caching for `node_modules` to speed up builds.
+- Add test steps before deploying.
+- Add notifications (Slack, Discord, Email) on success or failure.
