@@ -1,3 +1,27 @@
+/* 1. Define your palette variables (from main.png & detail.png) */
+:root {
+  /* Raw palette */
+  --color-dim-gray:     #686868;   /* Dim gray */
+  --color-mauve:        #C2AFF0;   /* Mauve */
+  --color-indigo:       #9191E9;   /* Tropical indigo */
+  --color-steel-blue:   #457EAC;   /* Steel blue */
+  --color-lapis:        #2D5D7B;   /* Lapis Lazuli */
+
+}
+
+/* CSS Color Palette */
+:root {
+  --color-primary: var(--color-lapis);
+  --color-primary-hover: #535bf2;
+  --color-tab-active: #0d47a1;
+  --color-card-bg: #f2f5f8;
+  --color-text-secondary: #5c71c5;
+  --color-dark-bg: #242424;
+  --color-dark-text: #ffffff;
+  --color-light-bg: #ffffff;
+  --color-light-text: #213547;
+}
+
 #root {
   /* Removed default centering to make TopAppBar flush to edges */
   margin: 0;
@@ -11,10 +35,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--color-primary));
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--color-primary-hover));
 }
 
 .cardTitle {
@@ -60,9 +84,16 @@
 .mdc-top-app-bar {
   top: 0;
   left: 0;
+  /* App bar theme */
+  background-color: var(--color-primary);
+  color: var(--color-dark-text);
 }
 .read-the-docs {
-  color: #888;
+  color: var(--color-text-secondary);
+}
+/* Read More button color override */
+.read-more-button {
+  color: var(--color-text-secondary) !important;
 }
 /* Clamp overflowing description text in cards */
 .description {
@@ -89,6 +120,6 @@
   border-bottom: 2px solid transparent;
 }
 .tab.active {
-  border-color: #0d47a1;
+  border-color: var(--color-tab-active);
   font-weight: bold;
 }

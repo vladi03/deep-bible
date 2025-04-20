@@ -128,7 +128,7 @@ function App() {
                       <p
                         style={{
                           fontStyle: 'italic',
-                          color: '#555',
+                          color: 'var(--color-text-secondary)',
                           margin: 0
                         }}
                       >
@@ -149,7 +149,7 @@ function App() {
                       flexDirection: 'column',
                       width: '100%',
                       aspectRatio: '4 / 3',
-                      backgroundColor: '#fffff0'
+                      backgroundColor: 'var(--color-card-bg)'
                     }}
                   >
                     <CardPrimaryAction
@@ -179,7 +179,10 @@ function App() {
                     </CardPrimaryAction>
                     <CardActions style={{ marginTop: 'auto' }}>
                       <CardActionButtons>
-                        <CardActionButton onClick={() => setSelectedTopic(topic)}>
+                        <CardActionButton
+                          className="read-more-button"
+                          onClick={() => setSelectedTopic(topic)}
+                        >
                           Read More
                         </CardActionButton>
                       </CardActionButtons>
