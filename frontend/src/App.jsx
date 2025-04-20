@@ -41,7 +41,29 @@ function App() {
       <TopAppBar>
         <TopAppBarRow>
           <TopAppBarSection alignStart>
-            <TopAppBarTitle>Deep Bible</TopAppBarTitle>
+            <TopAppBarTitle>
+              <span
+                className="app-icon"
+                style={{
+                  display: 'inline-block',
+                  width: '24px',
+                  height: '24px',
+                  marginRight: '8px',
+                  verticalAlign: 'middle'
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="100%"
+                  height="100%"
+                >
+                  <path d="M18 2H6c-1.1 0-2 .9-2 2v16l4-2 4 2 4-2 4 2V4c0-1.1-.9-2-2-2z" />
+                </svg>
+              </span>
+              Deep Bible
+            </TopAppBarTitle>
           </TopAppBarSection>
         </TopAppBarRow>
       </TopAppBar>
@@ -57,11 +79,27 @@ function App() {
                   setSelectedTopic(null)
                   setActiveTab(0)
                 }}
-                style={{ marginBottom: '16px' }}
+                style={{ marginBottom: '16px', marginTop: '16px' }}
               >
                 ← Back to Topics
               </button>
-              <h1 class="topicTitle">{selectedTopic.title}</h1>
+              <h1 className="topicTitle">
+                {selectedTopic.icon && (
+                                    <span
+                                    className="topic-icon"
+                                    dangerouslySetInnerHTML={{ __html: selectedTopic.icon }}
+                                    style={{
+                                      display: 'inline-block',
+                                      width: '24px',
+                                      height: '24px',
+                                      marginRight:'15px',
+                                      paddingBottom: '60px',
+                                      verticalAlign: 'middle'
+                                    }}
+                                  />
+                )}
+                {selectedTopic.title}
+              </h1>
               <p class="topicDescription">{selectedTopic.description}</p>
               {/* Category Tabs */}
               <div className="tabs">
@@ -76,7 +114,9 @@ function App() {
                 ))}
               </div>
               <div style={{ marginTop: '16px' }}>
-                <h2 class="topicTitle">{selectedTopic.categories[activeTab].category_name}</h2>
+                <h2 className="topicTitle">
+                  {selectedTopic.categories[activeTab].category_name}
+                </h2>
                 <p class="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
                 {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
                   <Card key={i} style={{ margin: '8px 0' }}>
@@ -119,7 +159,22 @@ function App() {
                         overflow: 'hidden'
                       }}
                     >
-                      <h2 className='cardTitle'>{topic.title}</h2>
+                      <h2 className='cardTitle'>
+                        {topic.icon && (
+                          <span
+                            className="topic-icon"
+                            dangerouslySetInnerHTML={{ __html: topic.icon }}
+                            style={{
+                              display: 'inline-block',
+                              width: '1.5em',
+                              height: '1.5em',
+                              marginRight: '0.5em',
+                              verticalAlign: 'middle'
+                            }}
+                          />
+                        )}
+                        {topic.title}
+                      </h2>
                       <p className="description">{topic.description}</p>
                     </CardPrimaryAction>
                     <CardActions style={{ marginTop: 'auto' }}>
