@@ -18,11 +18,11 @@ Experience Scripture in a fresh, user‑friendly interface that brings clarity a
 
 The main page displays a list of topic.
 
-![image](https://github.com/user-attachments/assets/2f876088-7f80-4c38-9bd4-f8ca9ae82a6b)
+![image](./main.png)
 
 Clicking **Read More** on a topic card navigates to a detailed article view. Below is a wireframe mockup:
 
-![Article Detail Mockup](./detail-mockup.png)
+![Article Detail](./detail.png)
 
 ## 📖 Application Overview
 
