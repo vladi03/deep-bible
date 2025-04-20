@@ -2,6 +2,7 @@
     "major_topics": [{
       "title": "All the Nations",
       "description": "From the earliest chapters of Scripture, God reveals his purpose to redeem and bless people from every nation. This theme unfolds through God’s covenant with Abraham, the inclusion of non-Israelites in Old Testament worship, the prophetic visions of a worldwide kingdom, Jesus’s own ministry reaching beyond Israel, the Great Commission and apostolic mission to all nations, and finally the end-time fulfillment where believers from every people and language worship God together.",
+      "icon": "<!-- Globe / \"All the Nations\" --><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M12 2v20\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M2 12h20\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M7.071 7.071l9.858 9.858\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M16.929 7.071l-9.858 9.858\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
       "article_url": "https://www.crossway.org/articles/gods-mission-in-creation-why-did-he-make-us/",
       "categories": [
         {
@@ -339,6 +340,7 @@
     }, {
             "title": "Fear",
             "description": "This topic contains biblical scriptures categorized under various themes related to fear. It explores aspects such as reverence for God, fear of man or worldly threats, divine reassurance, human experiences of fear, fear of judgment, and overcoming fear through faith and love.",
+            "icon":"<!-- Warning Triangle / \"Fear\" --><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M12 2L2 22h20L12 2z\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M12 16v-4\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"12\" cy=\"18\" r=\"1\" fill=\"currentColor\"/></svg>",
             "article_url": "https://example.com/articles/fear",
             "categories": [{
                     "category_name": "Reverence for God",
@@ -647,6 +649,7 @@
         }, {
     "title": "Jesus' Interactions",
     "description": "Jesus interacted with people in a variety of ways. This deep dive shows that Jesus has just as many Negative Interactions as Positive",
+    "icon":"<!-- User Silhouette / \"Jesus’ Interactions\" --><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"8\" r=\"4\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M4 22c0-4 4-6 8-6s8 2 8 6\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
     "article_url": "https://example.com/articles/interactions",
     "categories": [{
             "category_name": "Positive Interactions",
