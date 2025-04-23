@@ -36,6 +36,38 @@ function App() {
       })
   }, [])
 
+  // Reflect selected topic in URL hash and handle navigation (back/forward)
+  useEffect(() => {
+    const handleHashChange = () => {
+      // Parse hash in form '#TopicName[/tabIndex]'
+      const raw = window.location.hash.slice(1);
+      if (raw) {
+        const [namePart, tabPart] = raw.split('/');
+        const topicTitle = decodeURIComponent(namePart);
+        const topic = topics.find(t => t.title === topicTitle);
+        if (topic) {
+          // Determine active tab index
+          let idx = 0;
+          if (tabPart != null) {
+            const n = parseInt(tabPart, 10);
+            if (!isNaN(n) && n >= 0 && n < (topic.categories?.length || 0)) {
+              idx = n;
+            }
+          }
+          setSelectedTopic(topic);
+          setActiveTab(idx);
+          return;
+        }
+      }
+      // No valid topic in hash: show list
+      setSelectedTopic(null);
+      setActiveTab(0);
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange();
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [topics]);
+
   return (
     <>
       <TopAppBar>
@@ -76,8 +108,7 @@ function App() {
             <div>
               <button
                 onClick={() => {
-                  setSelectedTopic(null)
-                  setActiveTab(0)
+                  window.location.hash = ''
                 }}
                 style={{ marginBottom: '16px', marginTop: '16px' }}
               >
@@ -107,7 +138,11 @@ function App() {
                   <button
                     key={cat.category_name}
                     className={`tab ${activeTab === idx ? 'active' : ''}`}
-                    onClick={() => setActiveTab(idx)}
+                    onClick={() => {
+                      // Update URL hash to include tab index
+                      const base = encodeURIComponent(selectedTopic.title);
+                      window.location.hash = `${base}/${idx}`;
+                    }}
                   >
                     {cat.category_name}
                   </button>
@@ -181,7 +216,9 @@ function App() {
                       <CardActionButtons>
                         <CardActionButton
                           className="read-more-button"
-                          onClick={() => setSelectedTopic(topic)}
+                          onClick={() => {
+                            window.location.hash = encodeURIComponent(topic.title)
+                          }}
                         >
                           Read More
                         </CardActionButton>
