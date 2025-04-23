@@ -11,7 +11,12 @@ import {
   CardPrimaryAction,
   CardActions,
   CardActionButtons,
-  CardActionButton
+  CardActionButton,
+  CollapsibleList,
+  ListItem,
+  ListItemGraphic,
+  ListItemText,
+  ListItemMeta
 } from 'rmwc'
 // Removed RMWC Tabs—using simple buttons for tabs
 
@@ -131,9 +136,12 @@ function App() {
                 )}
                 {selectedTopic.title}
               </h1>
-              <p class="topicDescription">{selectedTopic.description}</p>
-              {/* Category Tabs */}
-              <div className="tabs">
+              <p className="topicDescription">{selectedTopic.description}</p>
+              {/* Desktop View: Category Tabs */}
+              {activeTab >= 0 && (
+                <div className="desktop-only">
+                {/* Category Tabs */}
+                <div className="tabs">
                 {selectedTopic.categories.map((cat, idx) => (
                   <button
                     key={cat.category_name}
@@ -147,12 +155,12 @@ function App() {
                     {cat.category_name}
                   </button>
                 ))}
-              </div>
-              <div style={{ marginTop: '16px' }}>
+                </div>
+                <div style={{ marginTop: '16px' }}>
                 <h2 className="topicTitle">
                   {selectedTopic.categories[activeTab].category_name}
                 </h2>
-                <p class="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
+                <p className="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
                 {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
                   <Card key={i} style={{ margin: '8px 0' }}>
                     <CardPrimaryAction style={{ padding: '16px' }}>
@@ -172,7 +180,66 @@ function App() {
                     </CardPrimaryAction>
                   </Card>
                 ))}
-              </div>
+                </div>
+                </div>
+              )}
+             {/* Mobile View: Collapsible Accordion List */}
+             <div className="mobile-only">
+               {selectedTopic.categories.map((cat, idx) => (
+                 <CollapsibleList
+                   key={cat.category_name}
+                   handle={
+                     <ListItem>
+                       {selectedTopic.icon && (
+                         <span
+                           className="topic-icon"
+                           dangerouslySetInnerHTML={{ __html: selectedTopic.icon }}
+                           style={{
+                             display: 'inline-block',
+                             width: '24px',
+                             height: '24px',
+                             marginRight: '15px',
+                             verticalAlign: 'middle'
+                           }}
+                         />
+                       )}
+                       <ListItemText>{cat.category_name}</ListItemText>
+                       <ListItemMeta>
+                         <img
+                           src="/img/accord.png"
+                           alt="Toggle"
+                           style={{ width: '24px', height: '24px', marginLeft: 'auto' }}
+                         />
+                       </ListItemMeta>
+                     </ListItem>
+                   }
+                 >
+                   <div style={{ marginTop: '16px' }}>
+                     <h2 className="topicTitle">{cat.category_name}</h2>
+                     <p className="topicDescription">{cat.category_description}</p>
+                     {cat.scriptures.map((s, i) => (
+                       <Card key={i} style={{ margin: '8px 0' }}>
+                         <CardPrimaryAction style={{ padding: '16px' }}>
+                           <h3 style={{ margin: 0 }}>{s.reference}</h3>
+                           <p style={{ fontWeight: 'bold', margin: '8px 0 4px' }}>
+                             {s.text}
+                           </p>
+                           <p
+                             style={{
+                               fontStyle: 'italic',
+                               color: 'var(--color-text-secondary)',
+                               margin: 0
+                             }}
+                           >
+                             {s.context_description}
+                           </p>
+                         </CardPrimaryAction>
+                       </Card>
+                     ))}
+                   </div>
+                 </CollapsibleList>
+               ))}
+             </div>
             </div>
           ) : (
             <Grid style={{ alignItems: 'start', gap: '16px' }}>

@@ -8,6 +8,14 @@
   --color-lapis:        #2D5D7B;   /* Lapis Lazuli */
 
 }
+/* Utility to show/hide views based on screen size */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+@media (max-width: 600px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
+}
 
 /* CSS Color Palette */
 :root {
