@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
+import MobileAccordion from './components/MobileAccordion'
 import {
   TopAppBar,
   TopAppBarRow,
@@ -131,9 +132,12 @@ function App() {
                 )}
                 {selectedTopic.title}
               </h1>
-              <p class="topicDescription">{selectedTopic.description}</p>
-              {/* Category Tabs */}
-              <div className="tabs">
+              <p className="topicDescription">{selectedTopic.description}</p>
+              {/* Desktop View: Category Tabs */}
+              {activeTab >= 0 && (
+                <div className="desktop-only">
+                {/* Category Tabs */}
+                <div className="tabs">
                 {selectedTopic.categories.map((cat, idx) => (
                   <button
                     key={cat.category_name}
@@ -147,12 +151,12 @@ function App() {
                     {cat.category_name}
                   </button>
                 ))}
-              </div>
-              <div style={{ marginTop: '16px' }}>
+                </div>
+                <div style={{ marginTop: '16px' }}>
                 <h2 className="topicTitle">
                   {selectedTopic.categories[activeTab].category_name}
                 </h2>
-                <p class="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
+                <p className="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
                 {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
                   <Card key={i} style={{ margin: '8px 0' }}>
                     <CardPrimaryAction style={{ padding: '16px' }}>
@@ -172,7 +176,14 @@ function App() {
                     </CardPrimaryAction>
                   </Card>
                 ))}
-              </div>
+                </div>
+                </div>
+              )}
+             {/* Mobile View: Categories Accordion */}
+             <MobileAccordion
+               categories={selectedTopic.categories}
+               topicIcon={selectedTopic.icon}
+             />
             </div>
           ) : (
             <Grid style={{ alignItems: 'start', gap: '16px' }}>
