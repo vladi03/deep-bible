@@ -13,3 +13,11 @@
     display: block;
   }
 }
+/* Make the accordion headers stick to the top when scrolling content */
+.mobile-only .rmwc-collapsible-list__handle {
+  position: sticky;
+  top: 56px;
+  z-index: 2;
+  /* Ensure header background covers content behind */
+  background: var(--color-light-bg);
+}
