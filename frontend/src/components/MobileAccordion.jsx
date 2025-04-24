@@ -1,10 +1,12 @@
 import React from 'react';
+
 import {
   CollapsibleList,
   ListItem,
   ListItemText,
   ListItemMeta,
   Card,
+  Icon,
   CardPrimaryAction
 } from 'rmwc';
 import './MobileAccordion.css';
@@ -33,11 +35,7 @@ export default function MobileAccordion({ categories, topicIcon }) {
               )}
               <ListItemText>{cat.category_name}</ListItemText>
               <ListItemMeta>
-                <img
-                  src="/img/accord.png"
-                  alt="Toggle"
-                  style={{ width: '24px', height: '24px', marginLeft: 'auto' }}
-                />
+                <Icon icon="chevron_right" />
               </ListItemMeta>
             </ListItem>
           }
