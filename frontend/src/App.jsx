@@ -112,9 +112,10 @@ function App() {
                 onClick={() => {
                   window.location.hash = ''
                 }}
-                style={{ marginBottom: '16px', marginTop: '16px' }}
+                style={{ marginLeft: '8px', marginBottom: '16px', marginTop: '16px', display: 'flex', alignItems: 'center' }}
               >
-                ← Back to Topics
+                <Icon icon="arrow_back" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                Back to Topics
               </button>
               <h1 className="topicTitle">
                 {selectedTopic.icon && (
