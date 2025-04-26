@@ -41,12 +41,19 @@ export default function MobileAccordion({ categories, topicIcon }) {
           }
         >
           <div style={{ marginTop: '16px' }}>
-            <h2 className="topicTitle">{cat.category_name}</h2>
+            <h2 className="topicTitle">
+              {/* Category icon before title */}
+              <Icon icon="category" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+              {cat.category_name}
+            </h2>
             <p className="topicDescription">{cat.category_description}</p>
             {cat.scriptures.map((s, i) => (
-              <Card key={i} style={{ margin: '8px 0' }}>
-                <CardPrimaryAction style={{ padding: '16px' }}>
-                  <h3 style={{ margin: 0 }}>{s.reference}</h3>
+                <Card key={i} style={{ margin: '8px 0' }}>
+                  <CardPrimaryAction style={{ padding: '16px' }}>
+                    <h3 style={{ margin: 0 }}>
+                      <Icon icon="menu_book" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                      {s.reference}
+                    </h3>
                   <p style={{ fontWeight: 'bold', margin: '8px 0 4px' }}>
                     {s.text}
                   </p>
