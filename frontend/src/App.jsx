@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import MobileAccordion from './components/MobileAccordion'
+import DesktopCategoryView from './components/DesktopCategoryView'
 import {
   TopAppBar,
   TopAppBarRow,
@@ -108,89 +109,16 @@ function App() {
             <p>Loading topics...</p>
           ) : selectedTopic ? (
             <div>
-              <button
-                onClick={() => {
-                  window.location.hash = ''
-                }}
-                style={{ marginLeft: '8px', marginBottom: '16px', marginTop: '16px', display: 'flex', alignItems: 'center' }}
-              >
-                <Icon icon="arrow_back" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-                Back to Topics
-              </button>
-              <h1 className="topicTitle">
-                {selectedTopic.icon && (
-                                    <span
-                                    className="topic-icon"
-                                    dangerouslySetInnerHTML={{ __html: selectedTopic.icon }}
-                                    style={{
-                                      display: 'inline-block',
-                                      width: '24px',
-                                      height: '24px',
-                                      marginRight:'15px',
-                                      paddingBottom: '60px',
-                                      verticalAlign: 'middle'
-                                    }}
-                                  />
-                )}
-                {selectedTopic.title}
-              </h1>
-              <p className="topicDescription">{selectedTopic.description}</p>
-              {/* Desktop View: Category Tabs */}
-              {activeTab >= 0 && (
-                <div className="desktop-only">
-                {/* Category Tabs */}
-                <div className="tabs">
-                {selectedTopic.categories.map((cat, idx) => (
-                  <button
-                    key={cat.category_name}
-                    className={`tab ${activeTab === idx ? 'active' : ''}`}
-                    onClick={() => {
-                      // Update URL hash to include tab index
-                      const base = encodeURIComponent(selectedTopic.title);
-                      window.location.hash = `${base}/${idx}`;
-                    }}
-                  >
-                    {cat.category_name}
-                  </button>
-                ))}
-                </div>
-                <div style={{ marginTop: '16px' }}>
-                <h2 className="topicTitle">
-                  {/* Category icon */}
-                  <Icon icon="category" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-                  {selectedTopic.categories[activeTab].category_name}
-                </h2>
-                <p className="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
-                {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
-                  <Card key={i} style={{ margin: '8px 0' }}>
-                    <CardPrimaryAction style={{ padding: '16px' }}>
-                      <h3 style={{ margin: 0 }}>
-                        <Icon icon="menu_book" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-                        {s.reference}
-                      </h3>
-                      <p style={{ fontWeight: 'bold', margin: '8px 0 4px' }}>
-                        {s.text}
-                      </p>
-                      <p
-                        style={{
-                          fontStyle: 'italic',
-                          color: 'var(--color-text-secondary)',
-                          margin: 0
-                        }}
-                      >
-                        {s.context_description}
-                      </p>
-                    </CardPrimaryAction>
-                  </Card>
-                ))}
-                </div>
-                </div>
-              )}
-             {/* Mobile View: Categories Accordion */}
-             <MobileAccordion
-               categories={selectedTopic.categories}
-               topicIcon={selectedTopic.icon}
-             />
+              <DesktopCategoryView
+                selectedTopic={selectedTopic}
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+              {/* Mobile View: Categories Accordion */}
+              <MobileAccordion
+                categories={selectedTopic.categories}
+                topicIcon={selectedTopic.icon}
+              />
             </div>
           ) : (
             <Grid style={{ alignItems: 'start', gap: '16px' }}>
