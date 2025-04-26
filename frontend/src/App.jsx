@@ -12,7 +12,8 @@ import {
   CardPrimaryAction,
   CardActions,
   CardActionButtons,
-  CardActionButton
+  CardActionButton,
+  Icon
 } from 'rmwc'
 // Removed RMWC Tabs—using simple buttons for tabs
 
@@ -154,13 +155,18 @@ function App() {
                 </div>
                 <div style={{ marginTop: '16px' }}>
                 <h2 className="topicTitle">
+                  {/* Category icon */}
+                  <Icon icon="category" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
                   {selectedTopic.categories[activeTab].category_name}
                 </h2>
                 <p className="topicDescription">{selectedTopic.categories[activeTab].category_description}</p>
                 {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
                   <Card key={i} style={{ margin: '8px 0' }}>
                     <CardPrimaryAction style={{ padding: '16px' }}>
-                      <h3 style={{ margin: 0 }}>{s.reference}</h3>
+                      <h3 style={{ margin: 0 }}>
+                        <Icon icon="menu_book" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                        {s.reference}
+                      </h3>
                       <p style={{ fontWeight: 'bold', margin: '8px 0 4px' }}>
                         {s.text}
                       </p>
