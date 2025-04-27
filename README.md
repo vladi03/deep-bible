@@ -16,7 +16,7 @@ Experience Scripture in a fresh, user‑friendly interface that brings clarity a
 
 ## 📷 Article Detail Page Preview
 
-The main page displays a list of topic.
+The main page displays a list of topics.
 
 ![image](./main.png)
 
@@ -40,15 +40,18 @@ This repository contains JSON schemas defining the structure for:
 ### Articles Schema
 File: `schemas/articlesSchema.json`
 
-- **articles** (array): List of article objects.
-  - **id** (string): Unique identifier.
+* **articles** (array): List of article objects.
+  - **id** (string): Unique identifier (GUID).
   - **title** (string): Article title.
   - **author** (string): Author name.
   - **publishedDate** (string, date): Publication date.
-  - **summary** (string): Brief summary or excerpt.
-  - **content** (string): Main content (Markdown or HTML).
-  - **topics** (array of string): Categories or topics.
-  - **tags** (array of string): Tags for filtering.
+  - **summary** (string): Brief summary or excerpt (optional).
+  - **content** (array): Structured content divided into sections.
+    - Each section is an object with:
+      - **title** (string): Section title.
+      - **paragraphs** (array of string): Text paragraphs within the section.
+  - **topics** (array of string): Categories or topics associated with the article (optional).
+  - **tags** (array of string): Tags for filtering (optional).
   - *Required fields*: id, title, author, publishedDate, content.
 
 ### Bible Scripture Schema
