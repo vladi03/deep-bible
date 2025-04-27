@@ -1,68 +1,79 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Articles Schema",
-    "description": "Schema for a JSON file containing multiple articles. Each article includes metadata, summary, content, topics, and tags.",
-    "type": "object",
-    "properties": {
-      "articles": {
-        "type": "array",
-        "description": "An array of articles.",
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "description": "A unique identifier for the article."
-            },
-            "title": {
-              "type": "string",
-              "description": "The title of the article."
-            },
-            "author": {
-              "type": "string",
-              "description": "The author of the article."
-            },
-            "publishedDate": {
-              "type": "string",
-              "format": "date",
-              "description": "The publication date of the article."
-            },
-            "summary": {
-              "type": "string",
-              "description": "A brief summary or excerpt of the article."
-            },
-            "content": {
-              "type": "string",
-              "description": "The main content of the article (can be Markdown or HTML)."
-            },
-            "topics": {
-              "type": "array",
-              "description": "A list of topics or categories associated with the article.",
-              "items": {
-                "type": "string"
-              }
-            },
-            "tags": {
-              "type": "array",
-              "description": "A list of tags for filtering articles.",
-              "items": {
-                "type": "string"
-              }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Articles Schema",
+  "description": "Schema for a JSON file containing multiple articles. Each article includes metadata, summary, and structured content.",
+  "type": "object",
+  "properties": {
+    "articles": {
+      "type": "array",
+      "description": "An array of articles.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A unique identifier for the article a guid."
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the article."
+          },
+          "author": {
+            "type": "string",
+            "description": "The author of the article."
+          },
+          "publishedDate": {
+            "type": "string",
+            "format": "date",
+            "description": "The publication date of the article."
+          },
+          "summary": {
+            "type": "string",
+            "description": "A brief summary or excerpt of the article."
+          },
+          "content": {
+            "type": "array",
+            "description": "The main content of the article, structured into sections.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "The title of the section."
+                },
+                "paragraphs": {
+                  "type": "array",
+                  "description": "An array of paragraphs for this section.",
+                  "items": {
+                    "type": "string",
+                    "description": "A paragraph of text."
+                  }
+                }
+              },
+              "required": ["title", "paragraphs"],
+              "additionalProperties": false
             }
           },
-          "required": [
-            "id",
-            "title",
-            "author",
-            "publishedDate",
-            "content"
-          ],
-          "additionalProperties": false
-        }
+          "topics": {
+            "type": "array",
+            "description": "A list of topics or categories associated with the article.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "description": "A list of tags for filtering articles.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["id", "title", "author", "publishedDate", "content"],
+        "additionalProperties": false
       }
-    },
-    "required": [
-      "articles"
-    ],
-    "additionalProperties": false
-  }
+    }
+  },
+  "required": ["articles"],
+  "additionalProperties": false
+}
