@@ -3,14 +3,22 @@ import './App.css'
 import MobileAccordion from './components/MobileAccordion'
 import DesktopCategoryView from './components/DesktopCategoryView'
 import TopicCard from './components/TopicCard'
+// RMWC Components
 import {
   TopAppBar,
   TopAppBarRow,
   TopAppBarSection,
   TopAppBarTitle,
   Grid,
-  Icon
+  Icon,
+  Card,
+  CardPrimaryAction,
+  CardActions,
+  CardActionButtons,
+  CardActionButton,
+  GridCell
 } from 'rmwc'
+import ArticleView from './components/ArticleView'
 // Removed RMWC Tabs—using simple buttons for tabs
 
 function App() {
@@ -20,6 +28,7 @@ function App() {
   // State for detail view
   const [selectedTopic, setSelectedTopic] = useState(null)
   const [activeTab, setActiveTab] = useState(0)
+  const [articleId, setArticleId] = useState(null)
 
   useEffect(() => {
     fetch('/data/bible_scripture_categories.json')
@@ -37,34 +46,50 @@ function App() {
   // Reflect selected topic in URL hash and handle navigation (back/forward)
   useEffect(() => {
     const handleHashChange = () => {
-      // Parse hash in form '#TopicName[/tabIndex]'
+      // Parse hash in form '#article/{id}' or '#TopicName[/tabIndex]'
       const raw = window.location.hash.slice(1);
       if (raw) {
-        const [namePart, tabPart] = raw.split('/');
-        const topicTitle = decodeURIComponent(namePart);
+        const [prefix, param] = raw.split('/');
+        if (prefix === 'article' && param) {
+          setArticleId(param);
+          setSelectedTopic(null);
+          return;
+        }
+        const topicTitle = decodeURIComponent(prefix);
         const topic = topics.find(t => t.title === topicTitle);
         if (topic) {
           // Determine active tab index
           let idx = 0;
-          if (tabPart != null) {
-            const n = parseInt(tabPart, 10);
+          if (param != null) {
+            const n = parseInt(param, 10);
             if (!isNaN(n) && n >= 0 && n < (topic.categories?.length || 0)) {
               idx = n;
             }
           }
           setSelectedTopic(topic);
           setActiveTab(idx);
+          setArticleId(null);
           return;
         }
       }
-      // No valid topic in hash: show list
+      // No valid route: reset to home
       setSelectedTopic(null);
       setActiveTab(0);
+      setArticleId(null);
     };
     window.addEventListener('hashchange', handleHashChange);
     handleHashChange();
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [topics]);
+
+  // Load articles for home page
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+    fetch('/data/articles.json')
+      .then(res => res.json())
+      .then(data => setArticles(data.articles || []))
+      .catch(err => console.error('Error fetching articles:', err));
+  }, []);
 
   return (
     <>
@@ -102,6 +127,8 @@ function App() {
         <div className="container">
           {loading ? (
             <p>Loading topics...</p>
+          ) : articleId ? (
+            <ArticleView articleId={articleId} />
           ) : selectedTopic ? (
             <div>
               <DesktopCategoryView
@@ -116,17 +143,51 @@ function App() {
               />
             </div>
           ) : (
-            <Grid style={{ alignItems: 'start', gap: '16px' }}>
-              {topics.map((topic) => (
-                <TopicCard
-                  key={topic.title}
-                  topic={topic}
-                  onReadMore={() => {
-                    window.location.hash = encodeURIComponent(topic.title)
-                  }}
-                />
-              ))}
-            </Grid>
+            <>
+              <Grid style={{ alignItems: 'start', gap: '16px' }}>
+                {topics.map((topic) => (
+                  <TopicCard
+                    key={topic.title}
+                    topic={topic}
+                    onReadMore={() => { window.location.hash = encodeURIComponent(topic.title) }}
+                  />
+                ))}
+              </Grid>
+              {/* Articles List */}
+              <div style={{ marginTop: '32px' }}>
+                <h2 style={{marginLeft: '16px'}}>Articles</h2>
+                <Grid style={{ alignItems: 'start', gap: '16px' }}>
+                  {articles.map((article) => (
+                    <GridCell span={3} tablet={6} phone={12} key={article.id}>
+                      <Card
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          width: '100%',
+                          aspectRatio: '4 / 3',
+                          backgroundColor: 'var(--color-card-bg)'
+                        }}
+                      >
+                        <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
+                          <h2 className='cardTitle'>{article.title}</h2>
+                          {article.summary && <p className='description'>{article.summary}</p>}
+                        </CardPrimaryAction>
+                        <CardActions style={{ marginTop: 'auto' }}>
+                          <CardActionButtons>
+                            <CardActionButton
+                              className='read-more-button'
+                              onClick={() => { window.location.hash = `article/${article.id}` }}
+                            >
+                              Read Article
+                            </CardActionButton>
+                          </CardActionButtons>
+                        </CardActions>
+                      </Card>
+                    </GridCell>
+                  ))}
+                </Grid>
+              </div>
+            </>
           )}
         </div>
       </main>

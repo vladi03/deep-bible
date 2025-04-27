@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 // Import RMWC base styles for Material Design Web Components
 import 'rmwc/styles'
+// Import Icon styles
+import '@rmwc/icon/styles'
 // Import TabBar and Tab styles
 import '@rmwc/tabs/styles'
 // Import List styles for mobile collapsible list
