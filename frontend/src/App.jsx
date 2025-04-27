@@ -2,18 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import MobileAccordion from './components/MobileAccordion'
 import DesktopCategoryView from './components/DesktopCategoryView'
+import TopicCard from './components/TopicCard'
 import {
   TopAppBar,
   TopAppBarRow,
   TopAppBarSection,
   TopAppBarTitle,
   Grid,
-  GridCell,
-  Card,
-  CardPrimaryAction,
-  CardActions,
-  CardActionButtons,
-  CardActionButton,
   Icon
 } from 'rmwc'
 // Removed RMWC Tabs—using simple buttons for tabs
@@ -123,55 +118,13 @@ function App() {
           ) : (
             <Grid style={{ alignItems: 'start', gap: '16px' }}>
               {topics.map((topic) => (
-                <GridCell span={3} tablet={6} phone={12} key={topic.title}>
-                  <Card
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      width: '100%',
-                      aspectRatio: '4 / 3',
-                      backgroundColor: 'var(--color-card-bg)'
-                    }}
-                  >
-                    <CardPrimaryAction
-                      style={{
-                        padding: '16px',
-                        flex: '1 1 auto',
-                        overflow: 'hidden'
-                      }}
-                    >
-                      <h2 className='cardTitle'>
-                        {topic.icon && (
-                          <span
-                            className="topic-icon"
-                            dangerouslySetInnerHTML={{ __html: topic.icon }}
-                            style={{
-                              display: 'inline-block',
-                              width: '1.5em',
-                              height: '1.5em',
-                              marginRight: '0.5em',
-                              verticalAlign: 'middle'
-                            }}
-                          />
-                        )}
-                        {topic.title}
-                      </h2>
-                      <p className="description">{topic.description}</p>
-                    </CardPrimaryAction>
-                    <CardActions style={{ marginTop: 'auto' }}>
-                      <CardActionButtons>
-                        <CardActionButton
-                          className="read-more-button"
-                          onClick={() => {
-                            window.location.hash = encodeURIComponent(topic.title)
-                          }}
-                        >
-                          Read More
-                        </CardActionButton>
-                      </CardActionButtons>
-                    </CardActions>
-                  </Card>
-                </GridCell>
+                <TopicCard
+                  key={topic.title}
+                  topic={topic}
+                  onReadMore={() => {
+                    window.location.hash = encodeURIComponent(topic.title)
+                  }}
+                />
               ))}
             </Grid>
           )}
