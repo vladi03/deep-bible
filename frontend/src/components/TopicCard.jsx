@@ -1,9 +1,12 @@
-import React from 'react'
-import { GridCell, Card, CardPrimaryAction, CardActions, CardActionButtons, CardActionButton } from 'rmwc'
+import React, { useState } from 'react'
+import { GridCell, Card, CardPrimaryAction, CardActions, CardActionButtons, CardActionButton, Icon } from 'rmwc'
 import '../App.css'
 
 // Component for rendering a single topic card on the home page
 export default function TopicCard({ topic, onReadMore }) {
+  // Select a random fallback icon if none provided
+  const defaultIcons = ['book', 'favorite', 'star', 'label', 'lightbulb', 'bolt', 'explore'];
+  const [fallbackIcon] = useState(() => defaultIcons[Math.floor(Math.random() * defaultIcons.length)]);
   return (
     <GridCell span={3} tablet={6} phone={12}>
       <Card
@@ -19,7 +22,7 @@ export default function TopicCard({ topic, onReadMore }) {
           style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}
         >
           <h2 className='cardTitle'>
-            {topic.icon && (
+            {topic.icon ? (
               <span
                 className="topic-icon"
                 dangerouslySetInnerHTML={{ __html: topic.icon }}
@@ -29,6 +32,15 @@ export default function TopicCard({ topic, onReadMore }) {
                   height: '1.5em',
                   marginRight: '0.5em',
                   verticalAlign: 'middle'
+                }}
+              />
+            ) : (
+              <Icon
+                icon={fallbackIcon}
+                style={{
+                  fontSize: '24px',
+                  marginRight: '0.5em',
+                  alignSelf: 'center'
                 }}
               />
             )}

@@ -15,21 +15,21 @@ export default function DesktopCategoryView({ selectedTopic, activeTab, setActiv
         onClick={handleBack}
         style={{ marginBottom: '16px', marginTop: '16px', display: 'flex', alignItems: 'center' }}
       >
-        <Icon icon="arrow_back" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+        <Icon icon="arrow_back" style={{ fontSize: '24px', marginRight: '8px' }} />
         Back to Topics
       </button>
       <h1 className="topicTitle" style={{ display: 'flex', alignItems: 'center' }}>
         {selectedTopic.icon && (
-          <span
-            className="topic-icon"
-            dangerouslySetInnerHTML={{ __html: selectedTopic.icon }}
-            style={{
-              display: 'inline-flex',
-              width: '24px',
-              height: '24px',
-              marginRight: '15px'
-            }}
-          />
+            <span
+              className="topic-icon"
+              dangerouslySetInnerHTML={{ __html: selectedTopic.icon }}
+              style={{
+                display: 'inline-flex',
+                width: '24px',
+                height: '24px',
+                marginRight: '15px'
+              }}
+            />
         )}
         <span>{selectedTopic.title}</span>
       </h1>
@@ -52,8 +52,8 @@ export default function DesktopCategoryView({ selectedTopic, activeTab, setActiv
             ))}
           </div>
           <div style={{ marginTop: '16px' }}>
-            <h2 className="topicTitle">
-              <Icon icon="category" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+            <h2 className="topicTitle" style={{ display: 'flex', alignItems: 'center' }}>
+              <Icon icon="category" style={{ fontSize: '24px', marginRight: '8px' }} />
               {selectedTopic.categories[activeTab].category_name}
             </h2>
             <p className="topicDescription">
@@ -62,8 +62,8 @@ export default function DesktopCategoryView({ selectedTopic, activeTab, setActiv
             {selectedTopic.categories[activeTab].scriptures.map((s, i) => (
               <Card key={i} style={{ margin: '8px 0' }}>
                 <CardPrimaryAction style={{ padding: '16px' }}>
-                  <h3 style={{ margin: 0 }}>
-                    <Icon icon="menu_book" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                  <h3 style={{ margin: 0, display: 'flex', alignItems: 'center' }}>
+                    <Icon icon="menu_book" style={{ fontSize: '24px', marginRight: '8px' }} />
                     {s.reference}
                   </h3>
                   <p style={{ fontWeight: 'bold', margin: '8px 0 4px' }}>{s.text}</p>
