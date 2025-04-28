@@ -82,12 +82,24 @@ function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [topics]);
 
-  // Load articles for home page
+  // Load articles and generate random icons for home page
   const [articles, setArticles] = useState([]);
+  const [articleIcons, setArticleIcons] = useState({});
   useEffect(() => {
     fetch('/data/articles.json')
       .then(res => res.json())
-      .then(data => setArticles(data.articles || []))
+      .then(data => {
+        const list = data.articles || [];
+        setArticles(list);
+        // generate a random fallback icon for each article
+        const defaultIcons = ['article', 'description', 'menu_book', 'book', 'bookmark', 'label', 'star'];
+        const iconsMap = {};
+        list.forEach(a => {
+          const icon = defaultIcons[Math.floor(Math.random() * defaultIcons.length)];
+          iconsMap[a.id] = icon;
+        });
+        setArticleIcons(iconsMap);
+      })
       .catch(err => console.error('Error fetching articles:', err));
   }, []);
 
@@ -158,20 +170,26 @@ function App() {
                 <h2 style={{marginLeft: '16px'}}>Articles</h2>
                 <Grid style={{ alignItems: 'start', gap: '16px' }}>
                   {articles.map((article) => (
-                    <GridCell span={3} tablet={6} phone={12} key={article.id}>
-                      <Card
-                        style={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          width: '100%',
-                          aspectRatio: '4 / 3',
-                          backgroundColor: 'var(--color-card-bg)'
-                        }}
-                      >
-                        <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
-                          <h2 className='cardTitle'>{article.title}</h2>
-                          {article.summary && <p className='description'>{article.summary}</p>}
-                        </CardPrimaryAction>
+                <GridCell span={3} tablet={6} phone={12} key={article.id}>
+                  <Card
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      width: '100%',
+                      aspectRatio: '4 / 3',
+                      backgroundColor: 'var(--color-card-bg)'
+                    }}
+                  >
+                    <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
+                      <h2 className='cardTitle' style={{ display: 'flex', alignItems: 'center' }}>
+                      <Icon
+                        icon={articleIcons[article.id]}
+                        style={{ fontSize: '24px', marginRight: '0.5em', alignSelf: 'center' }}
+                      />
+                        {article.title}
+                      </h2>
+                      {article.summary && <p className='description'>{article.summary}</p>}
+                    </CardPrimaryAction>
                         <CardActions style={{ marginTop: 'auto' }}>
                           <CardActionButtons>
                             <CardActionButton

@@ -34,7 +34,7 @@ export default function ArticleView({ articleId }) {
         onClick={() => { window.location.hash = '' }}
         style={{ margin: '16px 0', display: 'flex', alignItems: 'center' }}
       >
-        <Icon icon="arrow_back" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+        <Icon icon="arrow_back" style={{ fontSize: '24px', marginRight: '8px' }} />
         Back
       </button>
       <h1>{article.title}</h1>
@@ -44,8 +44,8 @@ export default function ArticleView({ articleId }) {
       {article.summary && <p><strong>{article.summary}</strong></p>}
       {article.content.map((section, idx) => (
         <section key={idx} style={{ marginTop: '24px' }}>
-          <h2>
-            <Icon icon="menu_book" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+          <h2 style={{ display: 'flex', alignItems: 'center' }}>
+            <Icon icon="menu_book" style={{ fontSize: '24px', marginRight: '8px' }} />
             {section.title}
           </h2>
           {section.paragraphs.map((para, j) => (
