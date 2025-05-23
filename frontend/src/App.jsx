@@ -167,7 +167,24 @@ function Home({ topics, loading }) {
     });
     return () => window.removeEventListener('unhandledrejection', () => {});
   }, []);
-  if (fetchError) return <div style={{ color: 'red' }}>Error: {fetchError}</div>;
+  if (fetchError) return (
+    <div style={{ color: 'red', background: '#fff3f3', padding: 16, border: '1px solid #f99', borderRadius: 6, margin: 24 }}>
+      <h3>Error loading articles</h3>
+      <div>{fetchError}</div>
+      <div style={{ fontSize: '0.95em', marginTop: 8 }}>
+        <strong>Possible causes:</strong>
+        <ul>
+          <li>Is <code>frontend/public/data/articles.json</code> present and readable?</li>
+          <li>Is the Vite dev server running from the <code>frontend</code> directory?</li>
+          <li>Are you accessing the app via the correct dev server URL?</li>
+        </ul>
+        <div style={{ color: '#a33', marginTop: 8 }}>
+          Check the browser network tab for 404 or CORS errors.<br/>
+          If running a production build, ensure you ran <code>vite build</code> and <code>vite preview</code> from <code>frontend</code>.
+        </div>
+      </div>
+    </div>
+  );
   if (loading) return <p>Loading topics...</p>;
   console.log('[Home] Rendering Home return', { topics, articles });
   return (
