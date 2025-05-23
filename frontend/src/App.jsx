@@ -49,66 +49,7 @@ function App() {
       })
   }, [])
 
-  // Reflect selected topic in URL hash and handle navigation (back/forward)
-  useEffect(() => {
-    const handleHashChange = () => {
-      // Parse hash in form '#article/{id}' or '#TopicName[/tabIndex]'
-      const raw = window.location.hash.slice(1);
-      if (raw) {
-        const [prefix, param] = raw.split('/');
-        if (prefix === 'article' && param) {
-          setArticleId(param);
-          setSelectedTopic(null);
-          return;
-        }
-        const topicTitle = decodeURIComponent(prefix);
-        const topic = topics.find(t => t.title === topicTitle);
-        if (topic) {
-          // Determine active tab index
-          let idx = 0;
-          if (param != null) {
-            const n = parseInt(param, 10);
-            if (!isNaN(n) && n >= 0 && n < (topic.categories?.length || 0)) {
-              idx = n;
-            }
-          }
-          setSelectedTopic(topic);
-          setActiveTab(idx);
-          setArticleId(null);
-          return;
-        }
-      }
-      // No valid route: reset to home
-      setSelectedTopic(null);
-      setActiveTab(0);
-      setArticleId(null);
-    };
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange();
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, [topics]);
-
-  // Load articles and generate random icons for home page
-  const [articles, setArticles] = useState([]);
-  const [articleIcons, setArticleIcons] = useState({});
-  useEffect(() => {
-    fetch('/data/articles.json')
-      .then(res => res.json())
-      .then(data => {
-        const list = data.articles || [];
-        setArticles(list);
-        // generate a random fallback icon for each article
-        const defaultIcons = ['article', 'description', 'menu_book', 'book', 'bookmark', 'label', 'star'];
-        const iconsMap = {};
-        list.forEach(a => {
-          const icon = defaultIcons[Math.floor(Math.random() * defaultIcons.length)];
-          iconsMap[a.id] = icon;
-        });
-        setArticleIcons(iconsMap);
-      })
-      .catch(err => console.error('Error fetching articles:', err));
-  }, []);
-
+  // Add navigate from useNavigate for use in routes
   return (
     <Router>
       <TopAppBar>
@@ -144,69 +85,72 @@ function App() {
       <main className="mdc-top-app-bar--fixed-adjust">
         <div className="container">
           <Routes>
-            <Route path="/" element={
-              loading ? (
-                <p>Loading topics...</p>
-              ) : (
-                <>
-                  <Grid style={{ alignItems: 'start', gap: '16px' }}>
-                    {topics.map((topic) => (
-                      <TopicCard
-                        key={topic.title}
-                        topic={topic}
-                        onReadMore={() => navigate(`/topic/${encodeURIComponent(topic.title)}`)}
-                      />
-                    ))}
-                  </Grid>
-                  {/* Articles List */}
-                  <div style={{ marginTop: '32px' }}>
-                    <h2 style={{marginLeft: '16px'}}>Articles</h2>
-                    <Grid style={{ alignItems: 'start', gap: '16px' }}>
-                      {articles.map((article) => (
-                        <GridCell span={3} tablet={6} phone={12} key={article.id}>
-                          <Card
-                            style={{
-                              display: 'flex',
-                              flexDirection: 'column',
-                              width: '100%',
-                              aspectRatio: '4 / 3',
-                              backgroundColor: 'var(--color-card-bg)'
-                            }}
-                          >
-                            <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
-                              <h2 className='cardTitle' style={{ display: 'flex', alignItems: 'center' }}>
-                                <Icon
-                                  icon={articleIcons[article.id]}
-                                  style={{ fontSize: '24px', marginRight: '0.5em', alignSelf: 'center' }}
-                                />
-                                {article.title}
-                              </h2>
-                              {article.summary && <p className='description'>{article.summary}</p>}
-                            </CardPrimaryAction>
-                            <CardActions style={{ marginTop: 'auto' }}>
-                              <CardActionButtons>
-                                <CardActionButton
-                                  className='read-more-button'
-                                  onClick={() => navigate(`/article/${article.id}`)}
-                                >
-                                  Read Article
-                                </CardActionButton>
-                              </CardActionButtons>
-                            </CardActions>
-                          </Card>
-                        </GridCell>
-                      ))}
-                    </Grid>
-                  </div>
-                </>
-              )
-            } />
-            <Route path="/topic/:topicTitle/:tabIndex?" element={<TopicDetail topics={topics} articles={articles} articleIcons={articleIcons} />} />
+            <Route path="/" element={<Home topics={topics} articles={articles} articleIcons={articleIcons} loading={loading} />} />
+            <Route path="/topic/:topicTitle/:tabIndex?" element={<TopicDetail topics={topics} />} />
             <Route path="/article/:articleId" element={<ArticleDetail />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </main>
     </Router>
+  );
+}
+
+function Home({ topics, articles, articleIcons, loading }) {
+  const navigate = useNavigate();
+  if (loading) return <p>Loading topics...</p>;
+  return (
+    <>
+      <Grid style={{ alignItems: 'start', gap: '16px' }}>
+        {topics.map((topic) => (
+          <TopicCard
+            key={topic.title}
+            topic={topic}
+            onReadMore={() => navigate(`/topic/${encodeURIComponent(topic.title)}`)}
+          />
+        ))}
+      </Grid>
+      {/* Articles List */}
+      <div style={{ marginTop: '32px' }}>
+        <h2 style={{marginLeft: '16px'}}>Articles</h2>
+        <Grid style={{ alignItems: 'start', gap: '16px' }}>
+          {articles.map((article) => (
+            <GridCell span={3} tablet={6} phone={12} key={article.id}>
+              <Card
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '100%',
+                  aspectRatio: '4 / 3',
+                  backgroundColor: 'var(--color-card-bg)'
+                }}
+              >
+                <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
+                  <h2 className='cardTitle' style={{ display: 'flex', alignItems: 'center' }}>
+                    <Icon
+                      icon={articleIcons[article.id]}
+                      style={{ fontSize: '24px', marginRight: '0.5em', alignSelf: 'center' }}
+                    />
+                    {article.title}
+                  </h2>
+                  {article.summary && <p className='description'>{article.summary}</p>}
+                </CardPrimaryAction>
+                <CardActions style={{ marginTop: 'auto' }}>
+                  <CardActionButtons>
+                    <CardActionButton
+                      className='read-more-button'
+                      onClick={() => navigate(`/article/${article.id}`)}
+                    >
+                      Read Article
+                    </CardActionButton>
+                  </CardActionButtons>
+                </CardActions>
+              </Card>
+            </GridCell>
+          ))}
+        </Grid>
+      </div>
+    </>
   );
 }
 
@@ -238,6 +182,10 @@ function ArticleDetail() {
   const { articleId } = useParams();
   const navigate = useNavigate();
   return <ArticleView articleId={articleId} onBack={() => navigate('/')} />;
+}
+
+function NotFound() {
+  return <h2>404 - Page Not Found</h2>;
 }
 
 export default App
