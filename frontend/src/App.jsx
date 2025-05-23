@@ -27,6 +27,33 @@ import {
   useParams
 } from 'react-router-dom';
 
+function ErrorBoundary({ children }) {
+  const [error, setError] = useState(null);
+  if (error) {
+    return (
+      <div style={{ color: 'red', padding: 24 }}>
+        <h2>Something went wrong.</h2>
+        <pre>{error.message}</pre>
+        <pre>{error.stack}</pre>
+      </div>
+    );
+  }
+  return (
+    <React.ErrorBoundary
+      fallbackRender={({ error }) => (
+        <div style={{ color: 'red', padding: 24 }}>
+          <h2>Something went wrong.</h2>
+          <pre>{error.message}</pre>
+          <pre>{error.stack}</pre>
+        </div>
+      )}
+      onError={setError}
+    >
+      {children}
+    </React.ErrorBoundary>
+  );
+}
+
 function App() {
   // State for major topics data
   const [topics, setTopics] = useState([])
@@ -51,53 +78,64 @@ function App() {
 
   // Add navigate from useNavigate for use in routes
   return (
-    <Router>
-      <TopAppBar>
-        <TopAppBarRow>
-          <TopAppBarSection alignStart>
-            <TopAppBarTitle>
-              <span
-                className="app-icon"
-                style={{
-                  display: 'inline-block',
-                  width: '24px',
-                  height: '24px',
-                  marginRight: '8px',
-                  verticalAlign: 'middle'
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  width="100%"
-                  height="100%"
+    <ErrorBoundary>
+      <Router>
+        <TopAppBar>
+          <TopAppBarRow>
+            <TopAppBarSection alignStart>
+              <TopAppBarTitle>
+                <span
+                  className="app-icon"
+                  style={{
+                    display: 'inline-block',
+                    width: '24px',
+                    height: '24px',
+                    marginRight: '8px',
+                    verticalAlign: 'middle'
+                  }}
                 >
-                  <path d="M18 2H6c-1.1 0-2 .9-2 2v16l4-2 4 2 4-2 4 2V4c0-1.1-.9-2-2-2z" />
-                </svg>
-              </span>
-              Deep Bible
-            </TopAppBarTitle>
-          </TopAppBarSection>
-        </TopAppBarRow>
-      </TopAppBar>
-      {/* Apply fixed adjust to offset content for Top App Bar height */}
-      <main className="mdc-top-app-bar--fixed-adjust">
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home topics={topics} loading={loading} />} />
-            <Route path="/topic/:topicTitle/:tabIndex?" element={<TopicDetail topics={topics} />} />
-            <Route path="/article/:articleId" element={<ArticleDetail />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </main>
-    </Router>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="100%"
+                    height="100%"
+                  >
+                    <path d="M18 2H6c-1.1 0-2 .9-2 2v16l4-2 4 2 4-2 4 2V4c0-1.1-.9-2-2-2z" />
+                  </svg>
+                </span>
+                Deep Bible
+              </TopAppBarTitle>
+            </TopAppBarSection>
+          </TopAppBarRow>
+        </TopAppBar>
+        {/* Apply fixed adjust to offset content for Top App Bar height */}
+        <main className="mdc-top-app-bar--fixed-adjust">
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Home topics={topics} loading={loading} />} />
+              <Route path="/topic/:topicTitle/:tabIndex?" element={<TopicDetail topics={topics} />} />
+              <Route path="/article/:articleId" element={<ArticleDetail />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+        </main>
+      </Router>
+    </ErrorBoundary>
   );
 }
 
+// Add error handling to data fetches
 function Home({ topics, loading }) {
   const navigate = useNavigate();
+  const [fetchError, setFetchError] = useState(null);
+  useEffect(() => {
+    window.addEventListener('unhandledrejection', e => {
+      setFetchError(e.reason?.message || 'Unknown error');
+    });
+    return () => window.removeEventListener('unhandledrejection', () => {});
+  }, []);
+  if (fetchError) return <div style={{ color: 'red' }}>Error: {fetchError}</div>;
   if (loading) return <p>Loading topics...</p>;
   return (
     <>
@@ -157,6 +195,14 @@ function Home({ topics, loading }) {
 function TopicDetail({ topics }) {
   const { topicTitle, tabIndex } = useParams();
   const navigate = useNavigate();
+  const [fetchError, setFetchError] = useState(null);
+  useEffect(() => {
+    window.addEventListener('unhandledrejection', e => {
+      setFetchError(e.reason?.message || 'Unknown error');
+    });
+    return () => window.removeEventListener('unhandledrejection', () => {});
+  }, []);
+  if (fetchError) return <div style={{ color: 'red' }}>Error: {fetchError}</div>;
   if (!topics || topics.length === 0) return <p>Loading topic...</p>;
   const topic = topics.find(t => t.title === decodeURIComponent(topicTitle));
   const [activeTab, setActiveTab] = useState(Number(tabIndex) || 0);
@@ -182,13 +228,18 @@ function TopicDetail({ topics }) {
 function ArticleDetail() {
   const { articleId } = useParams();
   const navigate = useNavigate();
-  // Add loading check for articles
   const [articles, setArticles] = useState(null);
+  const [fetchError, setFetchError] = useState(null);
   useEffect(() => {
     fetch('/data/articles.json')
-      .then(res => res.json())
-      .then(data => setArticles(data.articles || []));
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch articles: ' + res.status);
+        return res.json();
+      })
+      .then(data => setArticles(data.articles || []))
+      .catch(err => setFetchError(err.message));
   }, []);
+  if (fetchError) return <div style={{ color: 'red' }}>Error: {fetchError}</div>;
   if (!articles) return <p>Loading article...</p>;
   const article = articles.find(a => a.id === articleId);
   if (!article) return <p>Article not found.</p>;
