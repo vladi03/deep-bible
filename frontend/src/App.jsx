@@ -129,6 +129,7 @@ function App() {
 
 // Add error handling to data fetches
 function Home({ topics, loading }) {
+  console.log('[Home] Home component loaded', { topics, loading });
   const navigate = useNavigate();
   const [fetchError, setFetchError] = useState(null);
   // Add missing state for articles and articleIcons
@@ -167,55 +168,62 @@ function Home({ topics, loading }) {
   }, []);
   if (fetchError) return <div style={{ color: 'red' }}>Error: {fetchError}</div>;
   if (loading) return <p>Loading topics...</p>;
+  console.log('[Home] Rendering Home return', { topics, articles });
   return (
     <>
       <Grid style={{ alignItems: 'start', gap: '16px' }}>
-        {topics.map((topic) => (
-          <TopicCard
-            key={topic.title}
-            topic={topic}
-            onReadMore={() => navigate(`/topic/${encodeURIComponent(topic.title)}`)}
-          />
-        ))}
+        {topics.map((topic) => {
+          console.log('[Home] Rendering TopicCard', topic);
+          return (
+            <TopicCard
+              key={topic.title}
+              topic={topic}
+              onReadMore={() => navigate(`/topic/${encodeURIComponent(topic.title)}`)}
+            />
+          );
+        })}
       </Grid>
       {/* Articles List */}
       <div style={{ marginTop: '32px' }}>
         <h2 style={{marginLeft: '16px'}}>Articles</h2>
         <Grid style={{ alignItems: 'start', gap: '16px' }}>
-          {articles.map((article) => (
-            <GridCell span={3} tablet={6} phone={12} key={article.id}>
-              <Card
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  width: '100%',
-                  aspectRatio: '4 / 3',
-                  backgroundColor: 'var(--color-card-bg)'
-                }}
-              >
-                <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
-                  <h2 className='cardTitle' style={{ display: 'flex', alignItems: 'center' }}>
-                    <Icon
-                      icon={articleIcons[article.id]}
-                      style={{ fontSize: '24px', marginRight: '0.5em', alignSelf: 'center' }}
-                    />
-                    {article.title}
-                  </h2>
-                  {article.summary && <p className='description'>{article.summary}</p>}
-                </CardPrimaryAction>
-                <CardActions style={{ marginTop: 'auto' }}>
-                  <CardActionButtons>
-                    <CardActionButton
-                      className='read-more-button'
-                      onClick={() => navigate(`/article/${article.id}`)}
-                    >
-                      Read Article
-                    </CardActionButton>
-                  </CardActionButtons>
-                </CardActions>
-              </Card>
-            </GridCell>
-          ))}
+          {articles.map((article) => {
+            console.log('[Home] Rendering Article Card', article);
+            return (
+              <GridCell span={3} tablet={6} phone={12} key={article.id}>
+                <Card
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    width: '100%',
+                    aspectRatio: '4 / 3',
+                    backgroundColor: 'var(--color-card-bg)'
+                  }}
+                >
+                  <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
+                    <h2 className='cardTitle' style={{ display: 'flex', alignItems: 'center' }}>
+                      <Icon
+                        icon={articleIcons[article.id]}
+                        style={{ fontSize: '24px', marginRight: '0.5em', alignSelf: 'center' }}
+                      />
+                      {article.title}
+                    </h2>
+                    {article.summary && <p className='description'>{article.summary}</p>}
+                  </CardPrimaryAction>
+                  <CardActions style={{ marginTop: 'auto' }}>
+                    <CardActionButtons>
+                      <CardActionButton
+                        className='read-more-button'
+                        onClick={() => navigate(`/article/${article.id}`)}
+                      >
+                        Read Article
+                      </CardActionButton>
+                    </CardActionButtons>
+                  </CardActions>
+                </Card>
+              </GridCell>
+            );
+          })}
         </Grid>
       </div>
     </>
