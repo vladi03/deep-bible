@@ -44,8 +44,8 @@ class ErrorBoundary extends React.Component {
       return (
         <div style={{ color: 'red', padding: 24 }}>
           <h2>Something went wrong.</h2>
-          <pre>{this.state.error.message}</pre>
-          <pre>{this.state.error.stack}</pre>
+          <pre>{this.state.error && (this.state.error.stack || this.state.error.message || this.state.error.toString())}</pre>
+          <pre>{JSON.stringify(this.state.error, Object.getOwnPropertyNames(this.state.error), 2)}</pre>
         </div>
       );
     }
