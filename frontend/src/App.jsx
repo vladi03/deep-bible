@@ -157,6 +157,7 @@ function Home({ topics, loading }) {
 function TopicDetail({ topics }) {
   const { topicTitle, tabIndex } = useParams();
   const navigate = useNavigate();
+  if (!topics || topics.length === 0) return <p>Loading topic...</p>;
   const topic = topics.find(t => t.title === decodeURIComponent(topicTitle));
   const [activeTab, setActiveTab] = useState(Number(tabIndex) || 0);
   if (!topic) return <p>Topic not found.</p>;
@@ -181,6 +182,16 @@ function TopicDetail({ topics }) {
 function ArticleDetail() {
   const { articleId } = useParams();
   const navigate = useNavigate();
+  // Add loading check for articles
+  const [articles, setArticles] = useState(null);
+  useEffect(() => {
+    fetch('/data/articles.json')
+      .then(res => res.json())
+      .then(data => setArticles(data.articles || []));
+  }, []);
+  if (!articles) return <p>Loading article...</p>;
+  const article = articles.find(a => a.id === articleId);
+  if (!article) return <p>Article not found.</p>;
   return <ArticleView articleId={articleId} onBack={() => navigate('/')} />;
 }
 
