@@ -85,7 +85,7 @@ function App() {
       <main className="mdc-top-app-bar--fixed-adjust">
         <div className="container">
           <Routes>
-            <Route path="/" element={<Home topics={topics} articles={articles} articleIcons={articleIcons} loading={loading} />} />
+            <Route path="/" element={<Home topics={topics} loading={loading} />} />
             <Route path="/topic/:topicTitle/:tabIndex?" element={<TopicDetail topics={topics} />} />
             <Route path="/article/:articleId" element={<ArticleDetail />} />
             <Route path="*" element={<NotFound />} />
@@ -96,7 +96,7 @@ function App() {
   );
 }
 
-function Home({ topics, articles, articleIcons, loading }) {
+function Home({ topics, loading }) {
   const navigate = useNavigate();
   if (loading) return <p>Loading topics...</p>;
   return (
