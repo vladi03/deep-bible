@@ -81,7 +81,7 @@ function App() {
   // Add navigate from useNavigate for use in routes
   return (
     <ErrorBoundary>
-      <Router>
+      <Router future={{ v7_relativeSplatPath: true }}>
         <TopAppBar>
           <TopAppBarRow>
             <TopAppBarSection alignStart>
@@ -139,6 +139,7 @@ function Home({ topics, loading }) {
     console.log('[Home] useEffect: fetching /data/articles.json');
     fetch('/data/articles.json')
       .then(res => {
+        console.log('[Home] fetch /data/articles.json response', res);
         if (!res.ok) throw new Error('Failed to fetch articles: ' + res.status);
         return res.json();
       })
@@ -156,7 +157,7 @@ function Home({ topics, loading }) {
         setArticleIcons(iconsMap);
       })
       .catch(err => {
-        console.error('[Home] Error fetching articles:', err);
+        console.error('[Home] Error fetching articles:', err, err && err.stack);
         setFetchError(err.message)
       });
   }, []);

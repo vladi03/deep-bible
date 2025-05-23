@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import App from './App.jsx';
 import '@testing-library/jest-dom';
 
@@ -38,6 +38,8 @@ describe('App UI', () => {
   beforeAll(() => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
+        ok: true,
+        status: 200,
         json: () => Promise.resolve({
           major_topics: [],
           articles: []
@@ -46,20 +48,26 @@ describe('App UI', () => {
     );
   });
 
-  it('renders topics and articles on home', () => {
+  it('renders topics and articles on home', async () => {
     render(<App />);
-    expect(screen.getByText(/loading topics/i)).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText(/loading topics/i)).toBeInTheDocument();
+    });
   });
 
   it('navigates to topic detail', async () => {
     window.history.pushState({}, '', '/topic/Faith');
     render(<App />);
-    expect(screen.getByText(/loading topic|topic not found/i)).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText(/loading topic|topic not found/i)).toBeInTheDocument();
+    });
   });
 
-  it('shows 404 for unknown route', () => {
+  it('shows 404 for unknown route', async () => {
     window.history.pushState({}, '', '/random');
     render(<App />);
-    expect(screen.getByText(/404/i)).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText(/404/i)).toBeInTheDocument();
+    });
   });
 });
