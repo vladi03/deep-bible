@@ -53,6 +53,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+console.log('[App] App component loaded');
 function App() {
   // State for major topics data
   const [topics, setTopics] = useState([])
@@ -63,14 +64,16 @@ function App() {
   const [articleId, setArticleId] = useState(null)
 
   useEffect(() => {
+    console.log('[App] useEffect: fetching /data/bible_scripture_categories.json');
     fetch('/data/bible_scripture_categories.json')
       .then((res) => res.json())
       .then((data) => {
+        console.log('[App] Fetched topics:', data);
         setTopics(data.major_topics || [])
         setLoading(false)
       })
       .catch((err) => {
-        console.error('Error fetching topics:', err)
+        console.error('[App] Error fetching topics:', err)
         setLoading(false)
       })
   }, [])
@@ -132,12 +135,14 @@ function Home({ topics, loading }) {
   const [articles, setArticles] = useState([]);
   const [articleIcons, setArticleIcons] = useState({});
   useEffect(() => {
+    console.log('[Home] useEffect: fetching /data/articles.json');
     fetch('/data/articles.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch articles: ' + res.status);
         return res.json();
       })
       .then(data => {
+        console.log('[Home] Fetched articles:', data);
         const list = data.articles || [];
         setArticles(list);
         // generate a random fallback icon for each article
@@ -149,7 +154,10 @@ function Home({ topics, loading }) {
         });
         setArticleIcons(iconsMap);
       })
-      .catch(err => setFetchError(err.message));
+      .catch(err => {
+        console.error('[Home] Error fetching articles:', err);
+        setFetchError(err.message)
+      });
   }, []);
   useEffect(() => {
     window.addEventListener('unhandledrejection', e => {
@@ -253,13 +261,20 @@ function ArticleDetail() {
   const [articles, setArticles] = useState(null);
   const [fetchError, setFetchError] = useState(null);
   useEffect(() => {
+    console.log('[ArticleDetail] useEffect: fetching /data/articles.json');
     fetch('/data/articles.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch articles: ' + res.status);
         return res.json();
       })
-      .then(data => setArticles(data.articles || []))
-      .catch(err => setFetchError(err.message));
+      .then(data => {
+        console.log('[ArticleDetail] Fetched articles:', data);
+        setArticles(data.articles || [])
+      })
+      .catch(err => {
+        console.error('[ArticleDetail] Error fetching articles:', err);
+        setFetchError(err.message)
+      });
   }, []);
   if (fetchError) return <div style={{ color: 'red' }}>Error: {fetchError}</div>;
   if (!articles) return <p>Loading article...</p>;
