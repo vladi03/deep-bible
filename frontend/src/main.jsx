@@ -10,9 +10,12 @@ import '@rmwc/tabs/styles'
 // Import List styles for mobile collapsible list
 import '@rmwc/list/styles'
 import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 )

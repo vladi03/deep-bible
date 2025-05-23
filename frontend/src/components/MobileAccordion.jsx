@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   CollapsibleList,
@@ -75,3 +76,7 @@ export default function MobileAccordion({ categories, topicIcon }) {
     </div>
   );
 }
+MobileAccordion.propTypes = {
+  categories: PropTypes.array.isRequired,
+  topicIcon: PropTypes.string
+};

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { GridCell, Card, CardPrimaryAction, CardActions, CardActionButtons, CardActionButton, Icon } from 'rmwc'
+import PropTypes from 'prop-types';
 import '../App.css'
 
 // Component for rendering a single topic card on the home page
@@ -20,6 +21,7 @@ export default function TopicCard({ topic, onReadMore }) {
       >
         <CardPrimaryAction
           style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}
+          onClick={onReadMore}
         >
           <h2 className='cardTitle'>
             {topic.icon ? (
@@ -59,3 +61,7 @@ export default function TopicCard({ topic, onReadMore }) {
     </GridCell>
   )
 }
+TopicCard.propTypes = {
+  topic: PropTypes.object.isRequired,
+  onReadMore: PropTypes.func.isRequired
+};

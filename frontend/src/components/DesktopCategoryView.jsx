@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon, Card, CardPrimaryAction } from 'rmwc';
 // Desktop view uses App.css for shared styles; no additional CSS import needed
 
@@ -6,7 +7,8 @@ import { Icon, Card, CardPrimaryAction } from 'rmwc';
 export default function DesktopCategoryView({ selectedTopic, activeTab, setActiveTab }) {
   // Back action resets URL hash
   const handleBack = () => {
-    window.location.hash = '';
+    // Use setActiveTab(-1) to signal back navigation, let parent handle navigation
+    setActiveTab(-1);
   };
 
   return (
@@ -79,3 +81,8 @@ export default function DesktopCategoryView({ selectedTopic, activeTab, setActiv
     </>
   );
 }
+DesktopCategoryView.propTypes = {
+  selectedTopic: PropTypes.object.isRequired,
+  activeTab: PropTypes.number.isRequired,
+  setActiveTab: PropTypes.func.isRequired
+};

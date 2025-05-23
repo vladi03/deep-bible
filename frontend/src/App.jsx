@@ -19,7 +19,13 @@ import {
   GridCell
 } from 'rmwc'
 import ArticleView from './components/ArticleView'
-// Removed RMWC Tabs—using simple buttons for tabs
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+  useParams
+} from 'react-router-dom';
 
 function App() {
   // State for major topics data
@@ -104,7 +110,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       <TopAppBar>
         <TopAppBarRow>
           <TopAppBarSection alignStart>
@@ -137,80 +143,101 @@ function App() {
       {/* Apply fixed adjust to offset content for Top App Bar height */}
       <main className="mdc-top-app-bar--fixed-adjust">
         <div className="container">
-          {loading ? (
-            <p>Loading topics...</p>
-          ) : articleId ? (
-            <ArticleView articleId={articleId} />
-          ) : selectedTopic ? (
-            <div>
-              <DesktopCategoryView
-                selectedTopic={selectedTopic}
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-              />
-              {/* Mobile View: Categories Accordion */}
-              <MobileAccordion
-                categories={selectedTopic.categories}
-                topicIcon={selectedTopic.icon}
-              />
-            </div>
-          ) : (
-            <>
-              <Grid style={{ alignItems: 'start', gap: '16px' }}>
-                {topics.map((topic) => (
-                  <TopicCard
-                    key={topic.title}
-                    topic={topic}
-                    onReadMore={() => { window.location.hash = encodeURIComponent(topic.title) }}
-                  />
-                ))}
-              </Grid>
-              {/* Articles List */}
-              <div style={{ marginTop: '32px' }}>
-                <h2 style={{marginLeft: '16px'}}>Articles</h2>
-                <Grid style={{ alignItems: 'start', gap: '16px' }}>
-                  {articles.map((article) => (
-                <GridCell span={3} tablet={6} phone={12} key={article.id}>
-                  <Card
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      width: '100%',
-                      aspectRatio: '4 / 3',
-                      backgroundColor: 'var(--color-card-bg)'
-                    }}
-                  >
-                    <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
-                      <h2 className='cardTitle' style={{ display: 'flex', alignItems: 'center' }}>
-                      <Icon
-                        icon={articleIcons[article.id]}
-                        style={{ fontSize: '24px', marginRight: '0.5em', alignSelf: 'center' }}
+          <Routes>
+            <Route path="/" element={
+              loading ? (
+                <p>Loading topics...</p>
+              ) : (
+                <>
+                  <Grid style={{ alignItems: 'start', gap: '16px' }}>
+                    {topics.map((topic) => (
+                      <TopicCard
+                        key={topic.title}
+                        topic={topic}
+                        onReadMore={() => navigate(`/topic/${encodeURIComponent(topic.title)}`)}
                       />
-                        {article.title}
-                      </h2>
-                      {article.summary && <p className='description'>{article.summary}</p>}
-                    </CardPrimaryAction>
-                        <CardActions style={{ marginTop: 'auto' }}>
-                          <CardActionButtons>
-                            <CardActionButton
-                              className='read-more-button'
-                              onClick={() => { window.location.hash = `article/${article.id}` }}
-                            >
-                              Read Article
-                            </CardActionButton>
-                          </CardActionButtons>
-                        </CardActions>
-                      </Card>
-                    </GridCell>
-                  ))}
-                </Grid>
-              </div>
-            </>
-          )}
+                    ))}
+                  </Grid>
+                  {/* Articles List */}
+                  <div style={{ marginTop: '32px' }}>
+                    <h2 style={{marginLeft: '16px'}}>Articles</h2>
+                    <Grid style={{ alignItems: 'start', gap: '16px' }}>
+                      {articles.map((article) => (
+                        <GridCell span={3} tablet={6} phone={12} key={article.id}>
+                          <Card
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              width: '100%',
+                              aspectRatio: '4 / 3',
+                              backgroundColor: 'var(--color-card-bg)'
+                            }}
+                          >
+                            <CardPrimaryAction style={{ padding: '16px', flex: '1 1 auto', overflow: 'hidden' }}>
+                              <h2 className='cardTitle' style={{ display: 'flex', alignItems: 'center' }}>
+                                <Icon
+                                  icon={articleIcons[article.id]}
+                                  style={{ fontSize: '24px', marginRight: '0.5em', alignSelf: 'center' }}
+                                />
+                                {article.title}
+                              </h2>
+                              {article.summary && <p className='description'>{article.summary}</p>}
+                            </CardPrimaryAction>
+                            <CardActions style={{ marginTop: 'auto' }}>
+                              <CardActionButtons>
+                                <CardActionButton
+                                  className='read-more-button'
+                                  onClick={() => navigate(`/article/${article.id}`)}
+                                >
+                                  Read Article
+                                </CardActionButton>
+                              </CardActionButtons>
+                            </CardActions>
+                          </Card>
+                        </GridCell>
+                      ))}
+                    </Grid>
+                  </div>
+                </>
+              )
+            } />
+            <Route path="/topic/:topicTitle/:tabIndex?" element={<TopicDetail topics={topics} articles={articles} articleIcons={articleIcons} />} />
+            <Route path="/article/:articleId" element={<ArticleDetail />} />
+          </Routes>
         </div>
       </main>
-    </>
-  )
+    </Router>
+  );
+}
+
+function TopicDetail({ topics }) {
+  const { topicTitle, tabIndex } = useParams();
+  const navigate = useNavigate();
+  const topic = topics.find(t => t.title === decodeURIComponent(topicTitle));
+  const [activeTab, setActiveTab] = useState(Number(tabIndex) || 0);
+  if (!topic) return <p>Topic not found.</p>;
+  return (
+    <div>
+      <DesktopCategoryView
+        selectedTopic={topic}
+        activeTab={activeTab}
+        setActiveTab={idx => {
+          setActiveTab(idx);
+          navigate(`/topic/${encodeURIComponent(topic.title)}/${idx}`);
+        }}
+      />
+      <MobileAccordion
+        categories={topic.categories}
+        topicIcon={topic.icon}
+      />
+    </div>
+  );
+}
+
+function ArticleDetail() {
+  const { articleId } = useParams();
+  const navigate = useNavigate();
+  return <ArticleView articleId={articleId} onBack={() => navigate('/')} />;
 }
 
 export default App
