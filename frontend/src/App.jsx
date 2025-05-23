@@ -27,31 +27,30 @@ import {
   useParams
 } from 'react-router-dom';
 
-function ErrorBoundary({ children }) {
-  const [error, setError] = useState(null);
-  if (error) {
-    return (
-      <div style={{ color: 'red', padding: 24 }}>
-        <h2>Something went wrong.</h2>
-        <pre>{error.message}</pre>
-        <pre>{error.stack}</pre>
-      </div>
-    );
+// Proper class-based ErrorBoundary for React
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null };
   }
-  return (
-    <React.ErrorBoundary
-      fallbackRender={({ error }) => (
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
+  componentDidCatch(error, errorInfo) {
+    // You can log errorInfo if needed
+  }
+  render() {
+    if (this.state.error) {
+      return (
         <div style={{ color: 'red', padding: 24 }}>
           <h2>Something went wrong.</h2>
-          <pre>{error.message}</pre>
-          <pre>{error.stack}</pre>
+          <pre>{this.state.error.message}</pre>
+          <pre>{this.state.error.stack}</pre>
         </div>
-      )}
-      onError={setError}
-    >
-      {children}
-    </React.ErrorBoundary>
-  );
+      );
+    }
+    return this.props.children;
+  }
 }
 
 function App() {
@@ -129,6 +128,29 @@ function App() {
 function Home({ topics, loading }) {
   const navigate = useNavigate();
   const [fetchError, setFetchError] = useState(null);
+  // Add missing state for articles and articleIcons
+  const [articles, setArticles] = useState([]);
+  const [articleIcons, setArticleIcons] = useState({});
+  useEffect(() => {
+    fetch('/data/articles.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch articles: ' + res.status);
+        return res.json();
+      })
+      .then(data => {
+        const list = data.articles || [];
+        setArticles(list);
+        // generate a random fallback icon for each article
+        const defaultIcons = ['article', 'description', 'menu_book', 'book', 'bookmark', 'label', 'star'];
+        const iconsMap = {};
+        list.forEach(a => {
+          const icon = defaultIcons[Math.floor(Math.random() * defaultIcons.length)];
+          iconsMap[a.id] = icon;
+        });
+        setArticleIcons(iconsMap);
+      })
+      .catch(err => setFetchError(err.message));
+  }, []);
   useEffect(() => {
     window.addEventListener('unhandledrejection', e => {
       setFetchError(e.reason?.message || 'Unknown error');
