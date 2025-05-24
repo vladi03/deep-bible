@@ -7,9 +7,18 @@
     <!-- Load Material Icons font for RMWC Icon component -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <title>Deep Bible</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2D5D7B" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
   </body>
 </html>

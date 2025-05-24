@@ -1,14 +1,20 @@
 {
+  "name": "Deep Bible",
   "short_name": "DeepBible",
-  "name": "Deep Bible SPA",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#242424",
-  "description": "A single page application for Bible study topics and articles.",
+  "background_color": "#2D5D7B",
+  "theme_color": "#2D5D7B",
+  "description": "A modern, installable Bible study app.",
   "icons": [
     {
       "src": "/deep-bible.svg",
       "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/deep-bible.svg",
+      "sizes": "512x512",
       "type": "image/svg+xml"
     }
   ]
