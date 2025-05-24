@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Icon } from 'rmwc'
+import PropTypes from 'prop-types';
 import '../App.css'
 
 // Component to display a single article by ID
-export default function ArticleView({ articleId }) {
+export default function ArticleView({ articleId, onBack }) {
   const [article, setArticle] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -31,7 +32,7 @@ export default function ArticleView({ articleId }) {
   return (
     <div style={{ margin: '16px' }}>
       <button
-        onClick={() => { window.location.hash = '' }}
+        onClick={onBack}
         style={{ margin: '16px 0', display: 'flex', alignItems: 'center' }}
       >
         <Icon icon="arrow_back" style={{ fontSize: '24px', marginRight: '8px' }} />
@@ -61,3 +62,7 @@ export default function ArticleView({ articleId }) {
     </div>
   )
 }
+ArticleView.propTypes = {
+  articleId: PropTypes.string.isRequired,
+  onBack: PropTypes.func.isRequired
+};
