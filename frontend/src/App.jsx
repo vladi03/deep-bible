@@ -260,8 +260,17 @@ function TopicDetail({ topics }) {
   const topic = topics.find(t => t.title === decodeURIComponent(topicTitle));
   const [activeTab, setActiveTab] = useState(Number(tabIndex) || 0);
   if (!topic) return <p>Topic not found.</p>;
+  // Fix: Back button should navigate to home, not setActiveTab(-1)
+  const handleBack = () => navigate('/');
   return (
     <div>
+      <button
+        onClick={handleBack}
+        style={{ marginBottom: '16px', marginTop: '16px', display: 'flex', alignItems: 'center' }}
+      >
+        <Icon icon="arrow_back" style={{ fontSize: '24px', marginRight: '8px' }} />
+        Back to Topics
+      </button>
       <DesktopCategoryView
         selectedTopic={topic}
         activeTab={activeTab}
