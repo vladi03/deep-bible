@@ -20,7 +20,6 @@ import {
 } from 'rmwc'
 import ArticleView from './components/ArticleView'
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   useNavigate,
@@ -81,7 +80,6 @@ function App() {
   // Add navigate from useNavigate for use in routes
   return (
     <ErrorBoundary>
-      <Router future={{ v7_relativeSplatPath: true }}>
         <TopAppBar>
           <TopAppBarRow>
             <TopAppBarSection alignStart>
@@ -122,7 +120,6 @@ function App() {
             </Routes>
           </div>
         </main>
-      </Router>
     </ErrorBoundary>
   );
 }
