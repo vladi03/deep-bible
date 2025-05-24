@@ -19,3 +19,27 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
+
+// Register service worker for caching articles.json
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then(reg => {
+      // After page is fully rendered, ask SW to check for new articles
+      window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage('checkForNewArticles');
+          }
+        }, 1000); // Delay to ensure page is rendered
+      });
+      // Listen for update notification
+      navigator.serviceWorker.addEventListener('message', event => {
+        if (event.data && event.data.type === 'articles-updated') {
+          // Optionally, reload or notify user
+          console.log('New articles data available.');
+          // You could show a toast or reload articles here
+        }
+      });
+    });
+  });
+}
