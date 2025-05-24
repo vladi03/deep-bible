@@ -13,13 +13,6 @@ export default function DesktopCategoryView({ selectedTopic, activeTab, setActiv
 
   return (
     <>
-      <button
-        onClick={handleBack}
-        style={{ marginBottom: '16px', marginTop: '16px', display: 'flex', alignItems: 'center' }}
-      >
-        <Icon icon="arrow_back" style={{ fontSize: '24px', marginRight: '8px' }} />
-        Back to Topics
-      </button>
       <h1 className="topicTitle" style={{ display: 'flex', alignItems: 'center' }}>
         {selectedTopic.icon && (
             <span
