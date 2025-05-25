@@ -249,18 +249,30 @@ function TopicDetail({ topics }) {
   const { topicTitle, tabIndex } = useParams();
   const navigate = useNavigate();
   const [fetchError, setFetchError] = useState(null);
+  const [activeTab, setActiveTab] = useState(0);
   useEffect(() => {
     window.addEventListener('unhandledrejection', e => {
       setFetchError(e.reason?.message || 'Unknown error');
     });
     return () => window.removeEventListener('unhandledrejection', () => {});
   }, []);
+  useEffect(() => {
+    // Update activeTab when tabIndex changes
+    if (typeof tabIndex !== 'undefined') {
+      const idx = Number(tabIndex);
+      setActiveTab(Number.isNaN(idx) ? 0 : idx);
+    } else {
+      setActiveTab(0);
+    }
+  }, [tabIndex]);
   if (fetchError) return <div style={{ color: 'red' }}>Error: {fetchError}</div>;
   if (!topics || topics.length === 0) return <p>Loading topic...</p>;
   const topic = topics.find(t => t.title === decodeURIComponent(topicTitle));
-  const [activeTab, setActiveTab] = useState(Number(tabIndex) || 0);
   if (!topic) return <p>Topic not found.</p>;
-  // Fix: Back button should navigate to home, not setActiveTab(-1)
+  // Validate activeTab is in range
+  if (activeTab < 0 || activeTab >= topic.categories.length) {
+    return <p>Invalid category tab.</p>;
+  }
   const handleBack = () => navigate('/');
   return (
     <div>
