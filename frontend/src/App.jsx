@@ -278,7 +278,7 @@ function TopicDetail({ topics }) {
     <div>
       <button
         onClick={handleBack}
-        style={{ marginBottom: '16px', marginTop: '16px', display: 'flex', alignItems: 'center' }}
+        style={{ marginLeft: '16px', marginBottom: '16px', marginTop: '16px', display: 'flex', alignItems: 'center' }}
       >
         <Icon icon="arrow_back" style={{ fontSize: '24px', marginRight: '8px' }} />
         Back to Topics
