@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import App from './App.jsx';
 import '@testing-library/jest-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 // Mock data for topics and articles
 const mockTopics = [
@@ -49,7 +50,11 @@ describe('App UI', () => {
   });
 
   it('renders topics and articles on home', async () => {
-    render(<App />);
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
     await waitFor(() => {
       expect(screen.getByText(/loading topics/i)).toBeInTheDocument();
     });
@@ -57,7 +62,11 @@ describe('App UI', () => {
 
   it('navigates to topic detail', async () => {
     window.history.pushState({}, '', '/topic/Faith');
-    render(<App />);
+    render(
+      <MemoryRouter initialEntries={["/topic/Faith"]}>
+        <App />
+      </MemoryRouter>
+    );
     await waitFor(() => {
       expect(screen.getByText(/loading topic|topic not found/i)).toBeInTheDocument();
     });
@@ -65,7 +74,11 @@ describe('App UI', () => {
 
   it('shows 404 for unknown route', async () => {
     window.history.pushState({}, '', '/random');
-    render(<App />);
+    render(
+      <MemoryRouter initialEntries={["/random"]}>
+        <App />
+      </MemoryRouter>
+    );
     await waitFor(() => {
       expect(screen.getByText(/404/i)).toBeInTheDocument();
     });
