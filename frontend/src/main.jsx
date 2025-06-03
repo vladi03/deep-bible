@@ -23,14 +23,12 @@ createRoot(document.getElementById('root')).render(
 // Register service worker for caching articles.json
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js').then(reg => {
-      // After page is fully rendered, ask SW to check for new articles
-      window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-          if (navigator.serviceWorker.controller) {
-            navigator.serviceWorker.controller.postMessage('checkForNewArticles');
-          }
-        }, 1000); // Delay to ensure page is rendered
+    navigator.serviceWorker.register('/service-worker.js').then(() => {
+      // Ask the service worker to check for new articles after registration
+      setTimeout(() => {
+        if (navigator.serviceWorker.controller) {
+          navigator.serviceWorker.controller.postMessage('checkForNewArticles');
+        }
       });
       // Listen for update notification
       navigator.serviceWorker.addEventListener('message', event => {
