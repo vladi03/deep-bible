@@ -35,18 +35,36 @@ const mockArticles = [
   }
 ];
 
+const originalFetch = global.fetch;
+
 describe('App UI', () => {
-  beforeAll(() => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
+  beforeEach(() => {
+    global.fetch = jest.fn(url => {
+      if (url.includes('bible_scripture_categories.json')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({ major_topics: mockTopics })
+        });
+      }
+      if (url.includes('articles.json')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({ articles: mockArticles })
+        });
+      }
+      return Promise.resolve({
         ok: true,
         status: 200,
-        json: () => Promise.resolve({
-          major_topics: [],
-          articles: []
-        })
-      })
-    );
+        json: () => Promise.resolve({})
+      });
+    });
+  });
+
+  afterEach(() => {
+    global.fetch.mockClear();
+    global.fetch = originalFetch;
   });
 
   it('renders topics and articles on home', async () => {
@@ -55,9 +73,11 @@ describe('App UI', () => {
         <App />
       </MemoryRouter>
     );
-    await waitFor(() => {
-      expect(screen.getByText(/loading topics/i)).toBeInTheDocument();
-    });
+
+    // wait for fetches to resolve and content to render
+    await screen.findByText('Faith');
+    expect(screen.getByText('Faith')).toBeInTheDocument();
+    expect(screen.getByText('Faith Article')).toBeInTheDocument();
   });
 
   it('navigates to topic detail', async () => {
@@ -67,9 +87,10 @@ describe('App UI', () => {
         <App />
       </MemoryRouter>
     );
-    await waitFor(() => {
-      expect(screen.getByText(/loading topic|topic not found/i)).toBeInTheDocument();
-    });
+
+    await screen.findByText('Faith');
+    const descs = screen.getAllByText('Belief desc');
+    expect(descs.length).toBeGreaterThan(0);
   });
 
   it('shows 404 for unknown route', async () => {
