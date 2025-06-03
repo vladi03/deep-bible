@@ -24,7 +24,7 @@ This project uses [RMWC (React Material Web Components)](https://rmwc.io/) for M
    ```
 
 ## Icons
-To use icon this has to be addded to the index.html header section
+To use icons this has to be added to the index.html header section
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 ```
