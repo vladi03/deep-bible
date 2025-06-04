@@ -3,6 +3,7 @@ import './App.css'
 import MobileAccordion from './components/MobileAccordion'
 import DesktopCategoryView from './components/DesktopCategoryView'
 import TopicCard from './components/TopicCard'
+import RandomScripture from './components/RandomScripture'
 // RMWC Components
 import {
   TopAppBar,
@@ -186,6 +187,7 @@ function Home({ topics, loading }) {
   console.log('[Home] Rendering Home return', { topics, articles });
   return (
     <>
+      <RandomScripture topics={topics} />
       <Grid style={{ alignItems: 'start', gap: '16px' }}>
         {topics.map((topic) => {
           console.log('[Home] Rendering TopicCard', topic);

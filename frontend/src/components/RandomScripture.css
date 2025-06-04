@@ -1,0 +1,14 @@
+.random-scripture {
+  width: 100%;
+  background-color: var(--color-card-bg);
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.random-scripture h2,
+.random-scripture h3 {
+  margin: 0 0 8px;
+}
+.random-scripture p {
+  margin: 4px 0;
+}

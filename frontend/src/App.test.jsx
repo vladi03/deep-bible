@@ -68,6 +68,7 @@ describe('App UI', () => {
   });
 
   it('renders topics and articles on home', async () => {
+    jest.spyOn(Math, 'random').mockReturnValue(0);
     render(
       <MemoryRouter>
         <App />
@@ -76,8 +77,11 @@ describe('App UI', () => {
 
     // wait for fetches to resolve and content to render
     await screen.findByText('Faith');
-    expect(screen.getByText('Faith')).toBeInTheDocument();
+    await screen.findByText('Hebrews 11:1');
+    expect(screen.getAllByText('Faith')[0]).toBeInTheDocument();
     expect(screen.getByText('Faith Article')).toBeInTheDocument();
+    expect(screen.getByText('Hebrews 11:1')).toBeInTheDocument();
+    Math.random.mockRestore();
   });
 
   it('navigates to topic detail', async () => {
