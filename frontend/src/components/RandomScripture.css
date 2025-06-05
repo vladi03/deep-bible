@@ -1,0 +1,20 @@
+.random-scripture {
+  background-color: var(--color-card-bg);
+  padding: 16px;
+  margin: 0 16px 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.random-scripture h2,
+.random-scripture h3 {
+  margin: 0 0 8px;
+}
+.random-scripture p {
+  margin: 4px 0;
+}
+.random-context {
+  background: #dde6f1;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
