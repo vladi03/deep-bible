@@ -1,9 +1,9 @@
 .random-scripture {
-  width: 100%;
   background-color: var(--color-card-bg);
   padding: 16px;
-  margin-bottom: 16px;
-  border-radius: 4px;
+  margin: 0 16px 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 .random-scripture h2,
 .random-scripture h3 {
@@ -11,4 +11,10 @@
 }
 .random-scripture p {
   margin: 4px 0;
+}
+.random-context {
+  background: #eef4fb;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 8px;
 }
