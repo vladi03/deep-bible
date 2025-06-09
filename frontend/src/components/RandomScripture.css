@@ -13,8 +13,9 @@
   margin: 4px 0;
 }
 .random-context {
-  background: #dde6f1;
+  background: var(--color-card-bg);
   padding: 8px;
   border-radius: 8px;
   margin-top: 8px;
+  color: var(--color-text);
 }

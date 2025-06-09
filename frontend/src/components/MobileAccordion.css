@@ -19,5 +19,5 @@
   top: 0px;
   z-index: 4;
   /* Ensure header background covers content behind */
-  background: var(--color-light-bg);
+  background: var(--color-bg);
 }

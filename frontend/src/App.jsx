@@ -4,6 +4,7 @@ import MobileAccordion from './components/MobileAccordion'
 import DesktopCategoryView from './components/DesktopCategoryView'
 import TopicCard from './components/TopicCard'
 import RandomScripture from './components/RandomScripture'
+import ColorSwitcher from './components/ColorSwitcher'
 // RMWC Components
 import {
   TopAppBar,
@@ -107,6 +108,9 @@ function App() {
                 </span>
                 Deep Bible
               </TopAppBarTitle>
+            </TopAppBarSection>
+            <TopAppBarSection alignEnd>
+              <ColorSwitcher />
             </TopAppBarSection>
           </TopAppBarRow>
         </TopAppBar>
