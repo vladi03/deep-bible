@@ -31,7 +31,7 @@ export default function ColorSwitcher() {
         <DialogTitle>Select Theme</DialogTitle>
         <DialogContent>
           <div className="color-switcher">
-            {themes.map(t => (
+            {themes.map((t, i) => (
               <button
                 key={t}
                 type="button"
@@ -41,7 +41,7 @@ export default function ColorSwitcher() {
                   setOpen(false);
                 }}
                 style={{
-                  backgroundColor: `var(--color-${t})`,
+                  backgroundColor: `var(--color-option-${i + 1})`,
                   width: '20px',
                   height: '20px',
                   borderRadius: '50%',
