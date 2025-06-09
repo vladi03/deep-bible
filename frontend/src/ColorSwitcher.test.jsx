@@ -9,12 +9,10 @@ afterEach(() => {
 });
 
 describe('ColorSwitcher', () => {
-  it('changes theme and dark mode', () => {
+  it('changes theme when a swatch is clicked', () => {
     render(<ColorSwitcher />);
-    fireEvent.change(screen.getByLabelText('color select'), { target: { value: 'theme2' } });
+    const buttons = screen.getAllByRole('button');
+    fireEvent.click(buttons[1]);
     expect(document.body.classList.contains('theme2')).toBe(true);
-    const checkbox = screen.getByRole('checkbox');
-    fireEvent.click(checkbox);
-    expect(document.body.classList.contains('dark')).toBe(true);
   });
 });
