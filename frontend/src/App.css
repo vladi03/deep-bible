@@ -31,6 +31,11 @@
   --color-hover-option-2: #e8d5ff;
   --color-hover-option-3: #6ba4d2;
   --color-scheme: light;
+  /* Material theme variables for RMWC */
+  --mdc-theme-background: var(--color-bg);
+  --mdc-theme-surface: var(--color-bg);
+  --mdc-theme-on-surface: var(--color-text);
+  --mdc-theme-text-primary-on-background: var(--color-text);
 }
 
 #root {
@@ -153,6 +158,11 @@ body.dark {
   --color-text: var(--color-dark-text);
   --color-card-bg: #303030;
   --color-scheme: dark;
+  /* Override RMWC surface variables for dark mode */
+  --mdc-theme-background: var(--color-bg);
+  --mdc-theme-surface: var(--color-bg);
+  --mdc-theme-on-surface: var(--color-text);
+  --mdc-theme-text-primary-on-background: var(--color-text);
 }
 
 /* Color switcher layout */
