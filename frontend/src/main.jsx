@@ -1,5 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
+// Apply saved theme classes before React renders
+const savedTheme = localStorage.getItem('theme') || 'theme1'
+document.body.classList.add(savedTheme)
+if (localStorage.getItem('dark') === 'true') {
+  document.body.classList.add('dark')
+}
 import './index.css'
 // Import RMWC base styles for Material Design Web Components
 import 'rmwc/styles'

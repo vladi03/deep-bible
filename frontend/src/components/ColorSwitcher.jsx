@@ -25,6 +25,7 @@ export default function ColorSwitcher() {
       <label>
         <input
           type="checkbox"
+          aria-label="dark mode toggle"
           checked={dark}
           onChange={e => setDark(e.target.checked)}
         />{' '}Dark

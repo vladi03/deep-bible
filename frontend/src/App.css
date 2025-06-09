@@ -12,7 +12,7 @@
 /* CSS Color Palette */
 :root {
   --color-primary: var(--color-lapis);
-  --color-primary-hover: #535bf2;
+  --color-primary-hover: var(--color-hover-option-1); /* default for option 1 */
   --color-tab-active: #0d47a1;
   --color-card-bg: #f2f5f8;
   --color-text-secondary: #5c71c5;
@@ -27,6 +27,9 @@
   --color-option-1: var(--color-lapis);
   --color-option-2: var(--color-mauve);
   --color-option-3: var(--color-steel-blue);
+  --color-hover-option-1: #5383a1;
+  --color-hover-option-2: #e8d5ff;
+  --color-hover-option-3: #6ba4d2;
   --color-scheme: light;
 }
 
@@ -135,12 +138,15 @@
 /* Theme classes using palette variables */
 body.theme1 {
   --color-primary: var(--color-option-1);
+  --color-primary-hover: var(--color-hover-option-1);
 }
 body.theme2 {
   --color-primary: var(--color-option-2);
+  --color-primary-hover: var(--color-hover-option-2);
 }
 body.theme3 {
   --color-primary: var(--color-option-3);
+  --color-primary-hover: var(--color-hover-option-3);
 }
 body.dark {
   --color-bg: var(--color-dark-bg);
