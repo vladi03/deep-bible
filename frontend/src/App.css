@@ -20,6 +20,14 @@
   --color-dark-text: #ffffff;
   --color-light-bg: #ffffff;
   --color-light-text: #213547;
+  /* Base page colors */
+  --color-bg: var(--color-light-bg);
+  --color-text: var(--color-light-text);
+  /* Theme palette options */
+  --color-option-1: var(--color-lapis);
+  --color-option-2: var(--color-mauve);
+  --color-option-3: var(--color-steel-blue);
+  --color-scheme: light;
 }
 
 #root {
@@ -122,4 +130,28 @@
 .tab.active {
   border-color: var(--color-tab-active);
   font-weight: bold;
+}
+
+/* Theme classes using palette variables */
+body.theme1 {
+  --color-primary: var(--color-option-1);
+}
+body.theme2 {
+  --color-primary: var(--color-option-2);
+}
+body.theme3 {
+  --color-primary: var(--color-option-3);
+}
+body.dark {
+  --color-bg: var(--color-dark-bg);
+  --color-text: var(--color-dark-text);
+  --color-card-bg: #303030;
+  --color-scheme: dark;
+}
+
+/* Color switcher layout */
+.color-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
