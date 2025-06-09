@@ -36,7 +36,7 @@ export default function MobileAccordion({ categories, topicIcon }) {
               )}
               <ListItemText>{cat.category_name}</ListItemText>
               <ListItemMeta>
-                <Icon icon="chevron_right" />
+                <Icon icon="chevron_right" style={{ color: 'var(--color-text)' }} />
               </ListItemMeta>
             </ListItem>
           }

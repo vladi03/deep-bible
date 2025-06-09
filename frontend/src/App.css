@@ -36,6 +36,7 @@
   --mdc-theme-surface: var(--color-bg);
   --mdc-theme-on-surface: var(--color-text);
   --mdc-theme-text-primary-on-background: var(--color-text);
+  --mdc-theme-text-icon-on-background: var(--color-text);
 }
 
 #root {
@@ -163,6 +164,7 @@ body.dark {
   --mdc-theme-surface: var(--color-bg);
   --mdc-theme-on-surface: var(--color-text);
   --mdc-theme-text-primary-on-background: var(--color-text);
+  --mdc-theme-text-icon-on-background: var(--color-text);
 }
 
 /* Color switcher layout */
