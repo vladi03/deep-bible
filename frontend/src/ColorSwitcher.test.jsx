@@ -11,8 +11,9 @@ afterEach(() => {
 describe('ColorSwitcher', () => {
   it('changes theme when a swatch is clicked', () => {
     render(<ColorSwitcher />);
-    const buttons = screen.getAllByRole('button');
-    fireEvent.click(buttons[1]);
+    fireEvent.click(screen.getByLabelText('open color picker'));
+    const swatches = screen.getAllByLabelText(/set theme/);
+    fireEvent.click(swatches[1]);
     expect(document.body.classList.contains('theme2')).toBe(true);
   });
 });

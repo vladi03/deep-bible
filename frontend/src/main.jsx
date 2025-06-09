@@ -9,10 +9,12 @@ import './index.css'
 import 'rmwc/styles'
 // Import Icon styles
 import '@rmwc/icon/styles'
+import '@rmwc/icon-button/styles'
 // Import TabBar and Tab styles
 import '@rmwc/tabs/styles'
 // Import List styles for mobile collapsible list
 import '@rmwc/list/styles'
+import '@rmwc/dialog/styles'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
 
