@@ -36,6 +36,7 @@ export default function ColorSwitcher() {
                 key={t}
                 type="button"
                 aria-label={`set ${t}`}
+                {...(theme === t ? { 'data-mdc-dialog-initial-focus': '' } : {})}
                 onClick={() => {
                   setTheme(t);
                   setOpen(false);
