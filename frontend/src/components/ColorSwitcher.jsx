@@ -42,11 +42,7 @@ export default function ColorSwitcher() {
                 }}
                 style={{
                   backgroundColor: `var(--color-option-${i + 1})`,
-                  width: '20px',
-                  height: '20px',
-                  borderRadius: '50%',
-                  border: theme === t ? '2px solid #000' : '1px solid #ccc',
-                  cursor: 'pointer'
+                  border: theme === t ? '2px solid #000' : '1px solid #ccc'
                 }}
               />
             ))}

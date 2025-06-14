@@ -179,5 +179,13 @@ body.theme5 {
 .color-switcher {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
+}
+
+.color-switcher button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
