@@ -1,35 +1,58 @@
 import React, { useState, useEffect } from 'react';
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  DialogButton,
+  IconButton
+} from 'rmwc';
+
+const themes = ['theme1', 'theme2', 'theme3', 'theme4', 'theme5'];
 
 export default function ColorSwitcher() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'theme1');
-  const [dark, setDark] = useState(() => localStorage.getItem('dark') === 'true');
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.body.classList.remove('theme1', 'theme2', 'theme3');
+    document.body.classList.remove(...themes);
     document.body.classList.add(theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  useEffect(() => {
-    document.body.classList.toggle('dark', dark);
-    localStorage.setItem('dark', dark);
-  }, [dark]);
-
   return (
-    <div className="color-switcher">
-      <select value={theme} onChange={e => setTheme(e.target.value)} aria-label="color select">
-        <option value="theme1">Option 1</option>
-        <option value="theme2">Option 2</option>
-        <option value="theme3">Option 3</option>
-      </select>
-      <label>
-        <input
-          type="checkbox"
-          aria-label="dark mode toggle"
-          checked={dark}
-          onChange={e => setDark(e.target.checked)}
-        />{' '}Dark
-      </label>
-    </div>
+    <>
+      <IconButton
+        icon="palette"
+        aria-label="open color picker"
+        onClick={() => setOpen(true)}
+      />
+      <Dialog open={open} onClose={() => setOpen(false)}>
+        <DialogTitle>Select Theme</DialogTitle>
+        <DialogContent>
+          <div className="color-switcher">
+            {themes.map((t, i) => (
+              <button
+                key={t}
+                type="button"
+                aria-label={`set ${t}`}
+                {...(theme === t ? { 'data-mdc-dialog-initial-focus': '' } : {})}
+                onClick={() => {
+                  setTheme(t);
+                  setOpen(false);
+                }}
+                style={{
+                  backgroundColor: `var(--color-option-${i + 1})`,
+                  border: theme === t ? '2px solid #000' : '1px solid #ccc'
+                }}
+              />
+            ))}
+          </div>
+        </DialogContent>
+        <DialogActions>
+          <DialogButton action="close">Close</DialogButton>
+        </DialogActions>
+      </Dialog>
+    </>
   );
 }
