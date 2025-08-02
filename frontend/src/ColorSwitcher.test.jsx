@@ -9,12 +9,22 @@ afterEach(() => {
 });
 
 describe('ColorSwitcher', () => {
-  it('changes theme and dark mode', () => {
+  it('changes theme when a swatch is clicked', () => {
     render(<ColorSwitcher />);
-    fireEvent.change(screen.getByLabelText('color select'), { target: { value: 'theme2' } });
+    fireEvent.click(screen.getByLabelText('open color picker'));
+    const swatches = screen.getAllByLabelText(/set theme/);
+    fireEvent.click(swatches[1]);
     expect(document.body.classList.contains('theme2')).toBe(true);
-    const checkbox = screen.getByRole('checkbox');
-    fireEvent.click(checkbox);
-    expect(document.body.classList.contains('dark')).toBe(true);
+  });
+
+  it('focuses the active swatch when opened', () => {
+    render(<ColorSwitcher />);
+    fireEvent.click(screen.getByLabelText('open color picker'));
+    let active = screen.getByLabelText('set theme1');
+    expect(active).toHaveAttribute('data-mdc-dialog-initial-focus');
+    fireEvent.click(screen.getAllByLabelText(/set theme/)[2]);
+    fireEvent.click(screen.getByLabelText('open color picker'));
+    active = screen.getByLabelText('set theme3');
+    expect(active).toHaveAttribute('data-mdc-dialog-initial-focus');
   });
 });
