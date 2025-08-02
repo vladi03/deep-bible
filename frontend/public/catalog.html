@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Seminary Book Catalog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+    }
+    h1 {
+      text-align: center;
+    }
+    .books {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5em;
+    }
+    .book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .book img,
+    .book .placeholder {
+      width: 120px;
+      height: 180px;
+      margin-bottom: 0.5em;
+      object-fit: cover;
+    }
+    .book .placeholder {
+      background: #ccc;
+      margin-right: 10px;
+    }
+    .book-details {
+      text-align: center;
+      max-width: 500px;
+    }
+    .book-details h2 {
+      margin: 0.5em 0;
+      font-size: 1.2em;
+    }
+    @media (min-width: 600px) {
+      .books { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .books { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Modal styles */
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    #modal .close {
+      position: absolute;
+      top: 1em; right: 1em;
+      color: #fff;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    #modal-img {
+      max-width: 80%;
+      max-height: 80%;
+      margin-bottom: 1em;
+    }
+    #caption {
+      color: #fff;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+    .modal-actions {
+      display: flex;
+      gap: 0.5em;
+    }
+    #modal-link {
+      color: #fff;
+      background: #1a73e8;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .secondary-button {
+      color: #fff;
+      background: transparent;
+      border: 2px solid #fff;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Seminary Book Catalog</h1>
+
+  <div class="books" id="book-grid"></div>
+
+  <!-- Data as JSON -->
+  <script id="book-data" type="application/json">
+  [
+    {
+      "title": "40 Questions About Interpreting the Bible",
+      "author": "Plummer, Robert L. & Benjamin L. Merkle",
+      "description": "Second edition. Grand Rapids, MI: Kregel Academic, 2021.",
+      "img": "images/40_Questions_About_Interpreting_the_Bible.jpg"
+    },
+    {
+      "title": "How to Read the Bible for All Its Worth",
+      "author": "Fee, Gordon D. & Douglas K. Stuart",
+      "description": "Fourth edition. Grand Rapids, Michigan: Zondervan, 2014.",
+      "img": "images/How_to_Read_the_Bible_for_All_Its_Worth.jpg"
+    },
+    {
+      "title": "The Christ-Centered Expositor: A Field Guide for Word-Driven Disciple Makers",
+      "author": "Merida, Tony",
+      "description": "Nashville, Tennessee: B & H Academic, 2016.",
+      "img": "images/The_Christ-Centered_Expositor.jpg"
+    },
+    {
+      "title": "Ten Men Who Changed the World",
+      "author": "Akin, Daniel",
+      "description": "Nashville: B&H, 2012.",
+      "img": "images/Ten_Men_Who_Changed_the_World.png"
+    },
+    {
+      "title": "Foundations, vol. 4, International Mission Board",
+      "author": "International Mission Board",
+      "description": "2022. Online: https://issuu.com/trainingdev/docs/imb_foundations",
+      "img": "images/Foundations_vol_4_International_Mission_Board.jpg"
+    },
+    {
+      "title": "Together on God's Mission: How Southern Baptists Cooperate to Fulfill the Great Commission",
+      "author": "Hildreth, Scott",
+      "description": "Nashville: B&H, 2018.",
+      "img": "images/Together_on_Gods_Mission.png"
+    },
+    {
+      "title": "Salvation to the Ends of the Earth: A Biblical Theology of Mission",
+      "author": "Köstenberger, Andreas",
+      "description": "Downers Grove: IVP, 2020.",
+      "img": "images/Salvation_to_the_Ends_of_the_Earth.jpg"
+    },
+    {
+      "title": "Answering God's Call: Finding, Following, and Fulfilling God's Will for Your Life",
+      "author": "Pace, Scott",
+      "description": "Nashville: B&H, 2020.",
+      "img": "images/Answering_Gods_Call.png"
+    },
+    {
+      "title": "A Theology for the Church",
+      "author": "Akin, Daniel",
+      "description": "Revised edition. Nashville: B&H Academic, 2014.",
+      "img": "images/A_Theology_for_the_Church.jpg"
+    },
+    {
+      "title": "Theology in the Context of World Christianity",
+      "author": "Tennent, Timothy C.",
+      "description": "Grand Rapids: Zondervan, 2007.",
+      "img": "images/Theology_in_the_Context_of_World_Christianity.jpg"
+    },
+    {
+      "title": "Salvation and Sovereignty: A Molinist Approach",
+      "author": "Keathley, Kenneth",
+      "description": "Nashville: B&H, 2010.",
+      "img": "images/Salvation_and_Sovereignty.png"
+    },
+    {
+      "title": "40 Questions About the Historical Jesus",
+      "author": "Pate, C. Marvin",
+      "description": "Grand Rapids: Kregel, 2015.",
+      "img": "images/40_Questions_About_the_Historical_Jesus.jpg"
+    },
+    {
+      "title": "Master Plan of Evangelism",
+      "author": "Coleman, Robert",
+      "description": "Grand Rapids: Revell, 2010.",
+      "img": "images/Master_Plan_of_Evangelism.jpg"
+    },
+    {
+      "title": "Mentor: How Along the Way Discipleship Will Change Your Life",
+      "author": "Lawless, Chuck",
+      "description": "Nashville: Lifeway Press, 2018.",
+      "img": "images/Mentor_How_Along_the_Way_Discipleship_Will_Change_Your_Life.jpg"
+    },
+    {
+      "title": "Spiritual Disciplines for the Christian Life",
+      "author": "Whitney, Donald S.",
+      "description": "Colorado Springs: Tyndale House Publishers, 2014.",
+      "img": "images/Spiritual_Disciplines_for_the_Christian_Life.jpg"
+    },
+    {
+      "title": "Deep Discipleship: How the Church Can Make Whole Disciples of Jesus",
+      "author": "English, J. T.",
+      "description": "Nashville: B&H, 2020.",
+      "img": "images/Deep_Discipleship.png"
+    },
+    {
+      "title": "Real Life Discipleship",
+      "author": "Putnam, Jim",
+      "description": "Colorado Springs: NavPress, 2010.",
+      "img": "images/Real_Life_Discipleship.jpg"
+    }
+  ]
+  </script>
+
+  <!-- Modal -->
+  <div id="modal">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="Cover">
+    <div id="caption"></div>
+    <div class="modal-actions">
+      <a id="modal-link" href="" target="_blank">Search on Google</a>
+      <button id="modal-close-btn" class="secondary-button">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const books = JSON.parse(document.getElementById('book-data').textContent);
+    const grid  = document.getElementById('book-grid');
+
+    function renderBook(book, index) {
+      const container = document.createElement('div');
+      container.className = 'book';
+
+      if (book.img) {
+        const img = document.createElement('img');
+        img.src = book.img;
+        img.alt = `${book.title} cover`;
+        img.dataset.index = index;
+        container.appendChild(img);
+      } else {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'placeholder';
+        container.appendChild(placeholder);
+      }
+
+      const details = document.createElement('div');
+      details.className = 'book-details';
+      details.innerHTML = `
+        <h2>${book.title}</h2>
+        <p><em>${book.author}</em></p>
+        <p>${book.description}</p>
+      `;
+      container.appendChild(details);
+
+      return container;
+    }
+
+    books.forEach((b,i) => grid.appendChild(renderBook(b,i)));
+
+    // Modal logic
+    const modal     = document.getElementById('modal');
+    const modalImg  = document.getElementById('modal-img');
+    const caption   = document.getElementById('caption');
+    const link      = document.getElementById('modal-link');
+    const spanClose = modal.querySelector('.close');
+    const btnClose  = document.getElementById('modal-close-btn');
+
+    grid.addEventListener('click', e => {
+      if (e.target.tagName === 'IMG') {
+        const idx = e.target.dataset.index;
+        const book = books[idx];
+        modalImg.src    = book.img;
+        caption.textContent = book.title;
+        link.href       = 'https://www.google.com/search?q=' + encodeURIComponent(book.title);
+        modal.style.display = 'flex';
+      }
+    });
+
+    spanClose.addEventListener('click', () => modal.style.display = 'none');
+    btnClose.addEventListener('click', () => modal.style.display = 'none');
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
