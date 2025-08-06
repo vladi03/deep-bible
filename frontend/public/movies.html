@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-body h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    .card-body p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    @media (min-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 599px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container" id="movieGrid"></div>  <script>
+    fetch('complete_movie_data.json')
+      .then(res => res.json())
+      .then(data => {
+        const grid = document.getElementById('movieGrid');
+        data.forEach(movie => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${movie.poster}" alt="Poster for ${movie.title}">
+            <div class="card-body">
+              <h3>${movie.title}</h3>
+              <p><strong>Year:</strong> ${movie.year}</p>
+              <p><strong>Genre:</strong> ${movie.genre}</p>
+              <p><strong>Actors:</strong> ${movie.actors}</p>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Failed to load movie data:', error);
+      });
+  </script></body>
+</html>
