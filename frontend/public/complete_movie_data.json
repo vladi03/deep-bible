@@ -175,18 +175,17 @@
   },
   {
     "name": "Seven",
-    "title": "Seven Samurai",
-    "year": 1954,
+    "title": "Seven",
+    "year": 1995,
     "actors": [
-      "Toshirô Mifune",
-      "Takashi Shimura",
-      "Keiko Tsushima"
+      "Brad Pitt" , "Morgan Freeman" , "Gwyneth Paltrow", "R. Lee Ermey"
     ],
     "genre": [
-      "Action",
-      "Drama"
+      "Suspense",
+      "Dark",
+      "Psychological"
     ],
-    "poster_link": "https://m.media-amazon.com/images/M/MV5BZjliMWExOTMtZDQ3ZS00NWU3LWIyN2EtMjllNzk3ZTNlYzg4XkEyXkFqcGc@._V1_SX300.jpg"
+    "poster_link": "https://m.media-amazon.com/images/I/71VT4EwvAAL._AC_UY327_FMwebp_QL65_.jpg"
   },
   {
     "name": "The Client",
@@ -1017,7 +1016,7 @@
   {
     "name": "IQ",
     "title": "IQ (Power of student)",
-    "year": 2023,
+    "year": 1994,
     "actors": [
       "Pallavi",
       "Lekha Prajapati",
@@ -1391,18 +1390,15 @@
   {
     "name": "Pride and Prejudice",
     "title": "Pride and Prejudice",
-    "year": 1940,
+    "year": 2005,
     "actors": [
-      "Greer Garson",
-      "Laurence Olivier",
-      "Mary Boland"
+      "Keira Knightley", "Matthew Macfadyen"
     ],
     "genre": [
-      "Comedy",
       "Drama",
       "Romance"
     ],
-    "poster_link": "https://m.media-amazon.com/images/M/MV5BNzc4Y2YzMjQtM2YwMS00NzU2LThkNmItZGZmMDMyZTVkYjdmXkEyXkFqcGc@._V1_SX300.jpg"
+    "poster_link": "https://m.media-amazon.com/images/I/81X55P6CozL._AC_UY327_FMwebp_QL65_.jpg"
   },
   {
     "name": "The Hunger Games",
