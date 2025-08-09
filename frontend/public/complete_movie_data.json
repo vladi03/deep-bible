@@ -1549,11 +1549,11 @@
   },
   {
     "name": "Love and Other Drugs",
-    "title": null,
-    "year": null,
-    "actors": [],
-    "genre": [],
-    "poster_link": null,
+    "title": Love and Other Drugs,
+    "year": 2010,
+    "actors": [ "Jake Gyllenhaal", "Anne Hathaway", "Oliver Platt" ],
+    "genre": [ "Romance", "Comedy", "Drama" ],
+    "poster_link": "https://m.media-amazon.com/images/I/81KgTAIeHbL._AC_UY327_FMwebp_QL65_.jpg",
     "error": "Movie not found!"
   },
   {
@@ -1628,7 +1628,7 @@
     "genre": [
       "Drama"
     ],
-    "poster_link": null
+    "poster_link": "https://m.media-amazon.com/images/I/91xhpS9unLL._AC_UY327_FMwebp_QL65_.jpg"
   },
   {
     "name": "Dune",
@@ -2565,11 +2565,15 @@
   },
   {
     "name": "Benny and Joon",
-    "title": null,
-    "year": null,
-    "actors": [],
-    "genre": [],
-    "poster_link": null,
+    "title": "Benny and Joon",
+    "year": 1993,
+    "actors": ["Johnny Depp", "Mary Stuart Masterson", "Aidan Quinn"],
+    "genre": [      
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "poster_link": "https://m.media-amazon.com/images/I/71wvSExFaUL._AC_UY327_FMwebp_QL65_.jpg",
     "error": "Movie not found!"
   },
   {
