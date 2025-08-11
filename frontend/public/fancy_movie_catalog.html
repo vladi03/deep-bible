@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="favicon.ico" sizes="any">
-  <title>Movie Catalog</title>
+  <title>🎬 Movie Catalog</title>
   <style>
     :root{
       --bg:#0b1020;          /* deep space */
@@ -352,7 +352,42 @@
     // Week grid & spin button
     const weekGrid = document.getElementById('weekGrid');
     const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    function cssEscape(s){ return String(s).replace(/"/g, '\\"'); }
+    function cssEscape(s){ return String(s).replace(/\"/g, '\\"'); }
+
+    // —— Persistence for Spin (7‑day expiration) ——
+    const STORAGE_KEY = 'fmcSpinV1';
+    const EXP_MS = 7*24*60*60*1000;
+    function saveSpin(genres){ try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ weeklyGenres: genres, expiresAt: Date.now() + EXP_MS })); } catch(_){} }
+    function loadSpin(){
+      try{
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if(!raw) return null;
+        const obj = JSON.parse(raw);
+        if(!obj || !Array.isArray(obj.weeklyGenres) || typeof obj.expiresAt !== 'number') return null;
+        if(Date.now() > obj.expiresAt){ localStorage.removeItem(STORAGE_KEY); return null; }
+        return obj;
+      }catch(_){ return null; }
+    }
+    function updateTodayFromWeekly(){
+      const genreOfDayEl = document.getElementById('genreOfDay');
+      const todaysPickEl = document.getElementById('todaysPick');
+      const today = new Date();
+      const idx = today.getDay();
+      const res = pickForDay(idx, today);
+      if(genreOfDayEl){ genreOfDayEl.textContent = res.genre || '—'; genreOfDayEl.classList.remove('anim-flip'); void genreOfDayEl.offsetWidth; genreOfDayEl.classList.add('anim-flip'); }
+      if(todaysPickEl){ todaysPickEl.textContent = res.pick ? res.pick.title : '—'; todaysPickEl.classList.remove('anim-roll'); void todaysPickEl.offsetWidth; todaysPickEl.classList.add('anim-roll'); }
+    }
+    function applyPersistedOrSpin(){
+      const saved = loadSpin();
+      if(saved){
+        weeklyGenres = saved.weeklyGenres.slice(0,7);
+        renderWeek();
+        updateTodayFromWeekly();
+      } else {
+        spinAndPersist();
+      }
+    }
+    function spinAndPersist(){ spinToday(); saveSpin(weeklyGenres); }
 
     function renderWeek(){
       if(!weekGrid) return;
@@ -408,7 +443,7 @@
 
     const spinBtn = document.getElementById('spinBtn');
     const filterTodayBtn = document.getElementById('filterTodayBtn');
-    if(spinBtn) spinBtn.onclick = spinToday;
+    if(spinBtn) spinBtn.onclick = spinAndPersist;
     if(filterTodayBtn) filterTodayBtn.onclick = ()=>{
       const today = new Date();
       const idx = today.getDay();
@@ -418,8 +453,7 @@
 
     // Initialize
     renderChips(); updateFiltersLabel();
-    renderWeek();
-    spinToday();
+    applyPersistedOrSpin();
     render();
 
     // --- Self-tests (console only) ---
@@ -440,6 +474,14 @@
         spinToday();
         const after = document.getElementById('todaysPick')?.textContent;
         console.assert(after && after !== '', "spinToday should set today's pick text");
+        // persistence tests
+        spinAndPersist();
+        const savedObj = JSON.parse(localStorage.getItem('fmcSpinV1')||'null');
+        console.assert(savedObj && Array.isArray(savedObj.weeklyGenres) && savedObj.weeklyGenres.length === 7, 'Spin should persist weeklyGenres (7)');
+        console.assert(typeof savedObj.expiresAt === 'number' && savedObj.expiresAt > Date.now(), 'Saved spin should include a future expiresAt');
+        localStorage.setItem('fmcSpinV1', JSON.stringify({weeklyGenres:['Action'], expiresAt: Date.now()-1000}));
+        console.assert(loadSpin() === null, 'Expired spin should not load');
+        saveSpin(weeklyGenres);
 
         // RNG / seeding sanity
         const r1 = rngFromSeed('unit-test-seed')();
