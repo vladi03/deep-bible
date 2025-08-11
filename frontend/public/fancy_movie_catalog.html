@@ -219,7 +219,7 @@
         genres: Array.isArray(m.genre)? m.genre.filter(g=>g && g!== 'N/A') : []
       };
     }
-    if (Array.isArray(MOVIES) && MOVIES.length > 30) { MOVIES = MOVIES.slice(0, 30); }
+    //if (Array.isArray(MOVIES) && MOVIES.length > 30) { MOVIES = MOVIES.slice(0, 30); }
     const movies = MOVIES.map(norm);
 
     // Unique genres & counts
